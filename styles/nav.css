@@ -1,0 +1,199 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+::selection
+{
+	color: #ffffff;
+	background-color: #db1d1de5;
+}
+.iconsSocialNav
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.svgHomeTop
+{
+	position: fixed;
+	z-index: 1000000000000000000000;
+	bottom: 0;
+	right: 0;
+	width: 5%;
+	height: 5em;
+	color: black;
+}
+
+.iconsSocialNav a {
+	padding: 3px 10px;
+	font-size: 30px;
+	color: #f7a707;
+	text-decoration: none;
+}
+.iconsSocialNav a:hover
+{
+	background-color: #db1d1de5;
+	color: white;
+}
+.iconsSocialNav a:nth-child(even)
+{
+	color: #f7a707;
+}
+.iconsSocialNav a:hover
+{
+	background-color: #f7a707;
+	color: white;
+}
+
+
+nav {
+	position: absolute;
+}
+
+/* ::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+	background: #1db9c3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #5c7aea;
+} */
+
+.navMain {
+	position: relative;
+	width: 100%;
+}
+.navMain .content {
+	/* box-shadow: 0px 0px 20px 1px rgb(247, 167, 7); */
+	display: flex;
+	z-index: 100000000000;
+	background-color: rgb(179, 43, 41);
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0px 10px 50px;
+}
+.navLinks
+{
+	margin-left: 6%;
+}
+
+.navLinks li a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-size: 22px;
+	margin-left: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: capitalize;
+	padding: 18px;
+	font-weight: 600;
+}
+
+
+.navLinks li a:hover {
+	background-color: rgb(255, 255, 255);
+	color: #b32b29;
+	border-radius: 0% 50% 0% 50%;
+	font-weight: 600;
+}
+
+.navMain .navLinks {
+	display: inline-flex;
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.logo
+{
+	width: 22%;
+	height: 50%;
+	background-color: rgb(255, 255, 255);
+	/* box-shadow: rgba(247, 167, 7, 0.4) -5px 5px, rgba(247, 167, 7, 0.3) -10px 10px,
+		rgba(247, 167, 7, 0.2) -15px 15px, rgba(247, 167, 7, 0.1) -20px 20px,
+		rgba(247, 167, 7, 0.05) -25px 25px; */
+}
+
+.logo a {
+	font-size: 26px;
+	letter-spacing: 3px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.logoBrabu {
+	width: 100%;
+	height: 50%;
+	transition: all 0.1s ease-in-out;
+	
+}
+
+.logo:hover {
+	box-shadow: rgba(247, 167, 7, 0.4) 5px 5px, rgba(247, 167, 7, 0.3) 10px 10px,
+	rgba(247, 167, 7, 0.2) 15px 15px, rgba(247, 167, 7, 0.1) 20px 20px,
+	rgba(247, 167, 7, 0.05) 25px 25px;
+}
+
+.icon {
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	cursor: pointer;
+	display: none;
+}
+.cancel-btn {
+	position: absolute;
+	right: 30px;
+	top: 20px;
+}
+
+@media (max-width: 800px) {
+	.navMain .navLinks {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		display: block;
+		height: 100vh;
+		background: rgb(255, 255, 255);
+		max-width: 400px;
+		width: 100%;
+		color: black;
+		padding: 50px 0;
+		text-align: center;
+		transition: all 0.3s ease;
+		z-index: 5;
+	}
+	.navMain .navLinks.active {
+		left: 0%;
+	}
+
+	.navLinks li {
+		margin-top: 45px;
+	}
+	.navLinks li a {
+		font-size: 25px;
+		font-weight: 500;
+		margin: 0;
+	}
+	.icon {
+		display: block;
+		overflow: hidden;
+	}
+	body.noscroll {
+		overflow: hidden;
+	}
+	.navLinks li a:hover,
+	.navLinks li a:active {
+		color: #000;
+	}
+}
+

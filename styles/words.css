@@ -1,0 +1,45 @@
+
+.body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 50%;
+}
+
+.waviy {
+	position: relative;
+	-webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+	font-size: 60px;
+}
+.waviy span {
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	display: inline-block;
+	color: rgba(219, 29, 29, 0.897);
+	font-size: 40px;
+	text-transform: uppercase;
+	animation: waviy 1s infinite;
+	animation-delay: calc(0.1s * var(--i));
+}
+
+.onetwothree
+{
+	width: 100%;
+}
+
+
+.waviy span .yellowText
+{
+	color: rgb(247,167,7);
+}
+
+@keyframes waviy {
+	0%,
+	40%,
+	100% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(-10px);
+	}
+}
