@@ -1,0 +1,33 @@
+{
+  "name": "brabuprintsmysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prasanna-13-RV/Brabu-Prints.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prasanna-13-RV/Brabu-Prints/issues"
+  },
+  "homepage": "https://github.com/Prasanna-13-RV/Brabu-Prints#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.14",
+    "path": "^0.12.7"
+  }
+}

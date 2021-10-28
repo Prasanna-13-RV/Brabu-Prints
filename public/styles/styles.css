@@ -1,0 +1,1268 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+	padding: 0%;
+	margin: 0%;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	/* background-color: #1f1f1fce; */
+	/* background: linear-gradient(45deg , #eb041f , #f7a707); */
+	/* background: linear-gradient(45deg, #f0850d, #db1d1d); */
+}
+
+.sliderFrontPage {
+	height: 85vh;
+	position: relative;
+	width: 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: row;
+}
+.spillDiv {
+	position: relative;
+	width: 35%;
+	height: 100%;
+}
+.laptop {
+	position: relative;
+	width: 94%;
+	height: 90%;
+	bottom: 7%;
+	z-index: 1;
+}
+
+.layer1 {
+	position: absolute;
+	top: 5%;
+	width: 84%;
+	left: 6%;
+	height: 85%;
+	z-index: 2;
+}
+
+.swiper {
+	background: url(http://localhost:8080/img/spill.png) cover/center;
+	width: 65%;
+	height: 90%;
+	margin-right: 1%;
+	top: 4%;
+	box-shadow: rgba(0, 0, 0, 0.4) -10px 10px, rgba(0, 0, 0, 0.3) -10px 10px,
+		rgba(0, 0, 0, 0.2) -15px 15px, rgba(0, 0, 0, 0.1) -20px 20px,
+		rgba(0, 0, 0, 0.05) -25px 25px;
+	border-radius: 10px;
+}
+.imagecarousel {
+	height: fit-content;
+}
+
+.aboutUsSection {
+	position: relative;
+	height: 50vh;
+	width: 100%;
+	display: flex;
+	color: black;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	left: -100%;
+}
+.aboutUsSection h1 {
+	/* color: rgba(219, 29, 29, 0.897); */
+	font-size: 45px;
+	z-index: 10;
+}
+.aboutUscontent::before {
+	display: none;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	bottom: 115%;
+	left: 0;
+	background: linear-gradient(to top, transparent, rgba(219, 29, 29, 0.897));
+	z-index: 100;
+}
+
+.aboutUscontent {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.aboutUscontent h3 {
+	text-align: center;
+	font-size: 35px;
+	color: black;
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+.aboutUscontent p {
+	font-size: 1.3rem;
+	color: black;
+	text-align: justify;
+}
+
+.aboutImage {
+	position: relative;
+	color: rgb(0, 0, 0);
+}
+
+.aboutVideodiv video {
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.aboutVideodiv::after {
+	position: absolute;
+	width: 82%;
+	height: 100%;
+	content: "";
+	left: 9%;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #0000007a;
+}
+
+.imagediv1 {
+	position: relative;
+	background: url(../img/EP1A3512.jpg) center/cover;
+	background-repeat: none;
+	width: 50%;
+	height: 100%;
+}
+.imagediv2 {
+	background: url(../img/EP1A3514.jpg) center/cover;
+	background-repeat: none;
+	width: 50%;
+	height: 100%;
+}
+.imagediv3 {
+	background: url(../img/EP1A3515.jpg) center/cover;
+	background-repeat: none;
+	width: 50%;
+	height: 100%;
+}
+.imagediv4 {
+	background: url(../img/EP1A3517.jpg) center/cover;
+	background-repeat: none;
+	width: 50%;
+	height: 100%;
+}
+
+.parallax11 {
+	display: block;
+}
+
+.heading1 {
+	height: 13vh;
+	width: 100%;
+	font-size: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ourOtherServices {
+	height: 87vh;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0% 5%;
+}
+
+.boxServices {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../img/EP1A4264.jpg) center/cover;
+}
+
+.boxServices1 {
+	background: url(https://www.slbprinting.com/wp-content/uploads/2018/07/Posters-Standard_Sizesjpg.jpg)
+		center/cover;
+}
+.boxServices2 {
+	background: url(http://www.unitedgmg.com/wp-content/uploads/2018/01/Book-Magazine-Printing-Services.jpg)
+		center/cover;
+}
+.boxServices3 {
+	background: url(https://m.media-amazon.com/images/I/71nBnVYXClL._SL1200_.jpg)
+		center/cover;
+}
+.boxServices4 {
+	background: url(https://m.media-amazon.com/images/I/71nBnVYXClL._SL1200_.jpg)
+		center/cover;
+}
+.boxServices5 {
+	background: url(https://vwi.co.in/wp-content/uploads/2015/05/vwi-new-delhi-designed-acrylic-vwi-10062-wedding-card-designer-invitation-card.jpg)
+		center/cover;
+}
+.boxServices6 {
+	background: url(https://pcprd.azureedge.net/content/different-types-of-calendars-used-around-the-world-8437894942255.jpg)
+		center/cover;
+}
+
+.parallax1 {
+	background: url(../img/EP1A3570.jpg) center/cover;
+	width: 100%;
+	height: 40rem;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.leaf {
+	position: relative;
+	width: 23em;
+	height: 50%;
+	background-color: #da2c27;
+	border-radius: 0% 50% 0% 50%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+	z-index: 1;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.leafSpan1,
+.leafSpan2,
+.leafSpan3,
+.leafUl {
+	opacity: 0;
+}
+
+.leafContent {
+	position: relative;
+	z-index: 3;
+	color: white;
+	padding: 10%;
+	transition: all 1s ease-in-out;
+}
+
+.leafContent1 {
+	padding: 10%;
+	font-size: 1.3rem;
+}
+.leafContent3 {
+	padding: 4% 6% 0% 8%;
+}
+
+.leafreadMore1,
+.leafreadMore2,
+.leafreadMore3 {
+	background-color: #f7a707;
+	font-size: 1.3rem;
+	display: block;
+	margin: 5% 27%;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+}
+
+.paralaxH1 {
+	position: relative;
+	text-align: left;
+	padding-left: 10%;
+	z-index: 4;
+	color: white;
+	font-size: 35px;
+}
+.leafContent h1 {
+	text-align: left;
+}
+
+.frame {
+	position: relative;
+	text-align: center;
+}
+
+.details {
+	width: 60%;
+	height: 40%;
+	padding: 5% 8%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateY(90deg);
+	transform-origin: 50%;
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 10px;
+	opacity: 0;
+	transition: all 0.4s ease-in;
+	font-family: "Roboto", sans-serif;
+}
+.frame:hover .details {
+	transform: translate(-50%, -50%) rotateY(0deg);
+	opacity: 1;
+	font-size: 20px;
+}
+.detailsH1Box {
+	font-size: 2rem;
+}
+
+.sectionClass {
+	height: 50vh;
+	/* background: linear-gradient(45deg, #f0850d, #db1d1d); */
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.sectionVideo {
+	/* display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.videoAbsoluteSection {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.mediaQueryPageSwipe {
+	display: none;
+}
+
+.divpage {
+	width: 40%;
+	height: 50vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	position: relative;
+	transition: all 0.5s ease-in-out;
+	overflow-x: hidden;
+	transform: translateY(-100px);
+}
+
+.pageSwipe {
+	position: relative;
+	height: 80%;
+	margin: 5px;
+	transition: all 0.5s ease-in-out;
+	position: relative;
+	display: flex;
+	z-index: 3;
+	justify-content: center;
+	border-radius: 10px;
+	color: white;
+	overflow: hidden;
+	background-color: rgb(247, 167, 7);
+	color: black;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.322);
+	/* text-shadow: 2px 2px 5px rgb(68, 64, 64); */
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #ff000063;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #ff0000f3;
+}
+
+.sectiononediv {
+	display: flex;
+	flex-direction: row;
+}
+.image {
+	width: 95%;
+	height: 185px;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	top: 4%;
+	opacity: 1;
+	z-index: 5;
+	transition: all 1s ease-in-out;
+	border-radius: 10px;
+}
+.pageSwipe:hover {
+	position: relative;
+	height: 95%;
+}
+
+.pageSwipecontent {
+	position: relative;
+	font-size: 25px;
+	display: flex;
+	flex-direction: column-reverse;
+	color: white;
+	letter-spacing: 1px;
+	word-spacing: 3px;
+	align-items: center;
+	height: fit-content;
+	justify-content: baseline;
+	text-align: center;
+	padding: 30px;
+	overflow: scroll;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.pageSwipecontent p {
+	position: relative;
+	height: 15rem;
+	text-align: left;
+	overflow: hidden;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	margin-top: 5%;
+	line-height: 1.7rem;
+}
+
+.pageSwipe:hover .pageSwipecontent {
+	opacity: 1;
+	margin-top: 5%;
+	overflow: scroll;
+}
+.pageSwipe {
+	position: relative;
+}
+
+.pageSwipe:hover .image {
+	display: none;
+}
+
+.h2 {
+	position: absolute;
+	top: 120px;
+	font-size: 30px;
+	background-color: transparent;
+	z-index: 5;
+	color: white;
+	opacity: 1;
+}
+
+.pageSwipe .h2 {
+	color: black;
+	top: 65%;
+	padding: 8px;
+	border-radius: 12px;
+	background-color: white;
+	font-size: 23px;
+}
+.pageSwipe:hover .h2 {
+	top: 5%;
+	color: black;
+}
+
+.image1 {
+	background: url(../img/EP1A3512.jpg) center/contain;
+	background-repeat: no-repeat;
+}
+.image2 {
+	background: url(../img/EP1A3514.jpg) center/contain;
+	background-repeat: no-repeat;
+}
+.image3 {
+	background: url(../img/EP1A3515.jpg) center/contain;
+	background-repeat: no-repeat;
+}
+.image4 {
+	background: url(../img/EP1A3517.jpg) center/contain;
+	background-repeat: no-repeat;
+}
+
+.projectsSection {
+	width: 100%;
+	height: 100vh;
+}
+.projectsSection h1 {
+	font-size: 40px;
+	margin: 5%;
+	text-align: center;
+}
+
+.projectBox {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 100%;
+	height: 75vh;
+	padding: 0% 5%;
+	/* overflow: hidden; */
+}
+
+.projectPart3 {
+	width: 100%;
+	height: 100%;
+}
+
+.rightProjectPart1 {
+	background: url(https://cdn.hotbot.com/wp-content/uploads/2020/08/Online-Banking-With-a-VPN-Header-1.png)
+		center/cover;
+	background-repeat: no-repeat;
+}
+.rightProjectPart2 {
+	background: url(https://www.racingjunk.com/news/wp-content/uploads/2019/09/CI_Showroom-min-1-678x381.jpg)
+		center/cover;
+	background-repeat: no-repeat;
+}
+.rightProjectPart3 {
+	background: url(https://i.guim.co.uk/img/media/c6af49070512c0a410854a21ccc278910fb23d8b/0_179_5386_3234/master/5386.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=17fc129fc7019a9d6e6646a1a33d3937)
+		center/cover;
+	background-repeat: no-repeat;
+}
+.rightProjectPart4 {
+	background: url(https://i.ytimg.com/vi/qT8FzQhMrL4/maxresdefault.jpg)
+		center/cover;
+	background-repeat: no-repeat;
+}
+.rightProjectPart5 {
+	background: url(https://www.nationalgeographic.com/moments-of-joy/assets/images/social2.jpg)
+		center/cover;
+	background-repeat: no-repeat;
+}
+.rightProjectPart6 {
+	background: url(https://sparkevents.ch/wp-content/uploads/2018/12/SPARK-EVENTS-LOGO-FINAL2.png)
+		center/cover;
+	background-repeat: no-repeat;
+}
+.rightProjectPart7 {
+	background: url(https://static.euronews.com/articles/stories/04/26/73/54/1200x675_cmsv2_e69d8c2b-fbbb-5209-a38c-55515df49960-4267354.jpg)
+		center/cover;
+	background-repeat: no-repeat;
+}
+.rightProjectPart8 {
+	background: url(https://sakhilebuthelezi.com/wp-content/uploads/2015/05/zazoo-logo-mockup.jpg)
+		center/cover;
+	background-repeat: no-repeat;
+}
+
+.info {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+}
+/* #e4510d */
+.infoBtn {
+	position: relative;
+	box-shadow: 0px 8px 15px #db1d1de5;
+	background-color: #db1d1d;
+	padding: 1rem;
+	width: 35%;
+	border-radius: 10px;
+	text-decoration: none;
+	color: white;
+	margin: 1rem;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.infoBtn:hover {
+	background-color: #db1d1dde;
+	color: white;
+	text-decoration: none;
+}
+
+.contactSection {
+	margin-top: 2%;
+}
+.contactUsH1 {
+	text-align: center;
+}
+.contactDetail {
+	position: relative;
+	width: 80%;
+	border-radius: 20px;
+	background: url(https://wallpaperaccess.com/full/241312.jpg) center/cover;
+	height: fit-content;
+	padding-bottom: 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1;
+	padding-top: 2rem;
+	overflow: hidden;
+}
+
+.contactDetail::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	left: 0;
+	z-index: -1;
+	top: 0;
+	background-color: #0000008e;
+}
+.map {
+	width: 45%;
+}
+.map iframe {
+	width: 100%;
+	border-radius: 20px;
+	height: 100%;
+	border: none;
+}
+.contactInput {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.projectsMainSection {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.projectsMainSectionH1 {
+	text-align: center;
+	font-size: 40px;
+}
+
+.projectsMainDivFlex1,
+.projectsMainDivFlex2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 0% 3%;
+}
+.projectsMainDivFlex2 {
+	margin-bottom: 6%;
+}
+
+.projectsSubDiv {
+	position: relative;
+	width: 25%;
+	height: 15rem;
+	background-color: #1100ff;
+	overflow: hidden;
+	transition: all 0.8s ease-in-out;
+}
+
+.projectsSubDivDetails {
+	position: relative;
+	padding: 10% 7%;
+	transition: all 0.5s ease-in-out 0.5s;
+	color: white;
+	font-size: 20px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: centerfv;
+	z-index: 2;
+	opacity: 0;
+}
+
+.projectsSubDivDetails h1,
+.projectsSubDivDetails h3 {
+	text-align: center;
+	padding-bottom: 2%;
+}
+
+.projectsMainDivFlex1 .projectsSubDiv:nth-child(1) {
+	background: url(https://cdn.hotbot.com/wp-content/uploads/2020/08/Online-Banking-With-a-VPN-Header-1.png)
+		center/cover;
+	background-repeat: none;
+}
+.projectsMainDivFlex1 .projectsSubDiv:nth-child(2) {
+	background: url(https://www.racingjunk.com/news/wp-content/uploads/2019/09/CI_Showroom-min-1-678x381.jpg)
+		center/cover;
+	background-repeat: none;
+}
+.projectsMainDivFlex1 .projectsSubDiv:nth-child(3) {
+	background: url(https://i.guim.co.uk/img/media/c6af49070512c0a410854a21ccc278910fb23d8b/0_179_5386_3234/master/5386.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=17fc129fc7019a9d6e6646a1a33d3937)
+		center/cover;
+	background-repeat: none;
+}
+.projectsMainDivFlex1 .projectsSubDiv:nth-child(4) {
+	background: url(https://i.ytimg.com/vi/qT8FzQhMrL4/maxresdefault.jpg)
+		center/cover;
+	background-repeat: none;
+}
+.projectsMainDivFlex2 .projectsSubDiv:nth-child(1) {
+	background: url(https://www.nationalgeographic.com/moments-of-joy/assets/images/social2.jpg)
+		center/cover;
+	background-repeat: none;
+}
+.projectsMainDivFlex2 .projectsSubDiv:nth-child(2) {
+	background: url(https://sparkevents.ch/wp-content/uploads/2018/12/SPARK-EVENTS-LOGO-FINAL2.png)
+		center/cover;
+	background-repeat: none;
+}
+.projectsMainDivFlex2 .projectsSubDiv:nth-child(3) {
+	background: url(https://i.ytimg.com/vi/McsNzYtIynE/maxresdefault.jpg)
+		center/cover;
+	background-repeat: none;
+}
+.projectsMainDivFlex2 .projectsSubDiv:nth-child(4) {
+	background: url(https://sakhilebuthelezi.com/wp-content/uploads/2015/05/zazoo-logo-mockup.jpg)
+		center/cover;
+	background-repeat: none;
+}
+
+.projectsSubDiv:hover {
+	width: 100%;
+	height: 30rem;
+	border-radius: 2rem;
+}
+
+.projectsSubDiv:hover::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #2e2e2eb9;
+	z-index: 1;
+}
+
+.projectsSubDiv:hover .projectsSubDivDetails {
+	opacity: 1;
+	z-index: 2;
+}
+
+.ourTeamSection {
+	height: fit-content;
+	width: 100%;
+	margin-bottom: 3%;
+	transition: all 2s ease-in-out;
+}
+
+.ourTeamParagraph {
+	font-size: 25px;
+	width: 100%;
+	padding: 0% 5%;
+	text-align: center;
+}
+
+.ourTeamPhotoDiv {
+	position: relative;
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: all 2s ease-in-out;
+}
+.our-team-div {
+	position: relative;
+	background-color: #db1d1d;
+	padding: 1%;
+}
+.ourTeamDivPhoto {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 20rem;
+	align-items: center;
+	overflow: hidden;
+	/* transition: all 2s ease-in-out; */
+	color: black;
+	margin: 1%;
+	box-shadow: 0px 0px 10px black;
+}
+.separateDiv {
+	margin: 3%;
+	position: relative;
+	background-color: #db1d1d;
+	box-shadow: 0px 0px 10px white;
+	padding: 3%;
+	color: white;
+	transition: all 1s ease-in-out;
+}
+
+.ourTeamDivPhotoimg {
+	object-fit: cover;
+	width: 12rem;
+	border-radius: 50%;
+	height: 12rem;
+}
+.ourTeamPhotoContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.ourTeamPhotoContent h1 {
+	font-size: 25px;
+}
+.ourTeamPhotoContent h2 {
+	font-size: 20px;
+}
+
+.ourTeamPhoto {
+	position: relative;
+	width: 17rem;
+	height: 15rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5% 0%;
+	transition: all 0.3s ease-in-out;
+}
+
+.shortSectionH1 {
+	text-align: center;
+	font-size: 40px;
+}
+
+.imagesShortSection {
+	padding: 1% 8%;
+	margin: 3% 0%;
+	background-color: rgba(255, 251, 0, 0.534);
+	display: flex;
+	flex-direction: row;
+  flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.imageImgSection {
+  position: relative;
+  height: 5rem;
+}
+
+.postersSection {
+	position: relative;
+	height: 200vh;
+	width: 100%;
+	padding: 0% 2%;
+	object-fit: cover;
+}
+
+.posterImage {
+	position: absolute;
+	cursor: pointer;
+	width: 20%;
+}
+
+.posterImage::after {
+	position: absolute;
+	content: "loading";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: white;
+	left: 0;
+}
+
+.posterImage:nth-child(1) {
+	top: 0%;
+	right: 70%;
+}
+.posterImage:nth-child(2) {
+	top: -0.5%;
+	right: 50%;
+}
+.posterImage:nth-child(3) {
+	top: 0%;
+	right: 30%;
+}
+.posterImage:nth-child(4) {
+	top: 17%;
+	right: 70%;
+}
+.posterImage:nth-child(5) {
+	top: 14%;
+	right: 49.5%;
+}
+.posterImage:nth-child(6) {
+	top: 14%;
+	right: 29%;
+}
+.posterImage:nth-child(7) {
+	top: 29%;
+	right: 9%;
+}
+.posterImage:nth-child(8) {
+	top: 0%;
+	right: 9%;
+}
+.posterImage:nth-child(9) {
+	top: 34%;
+	right: 70%;
+}
+.posterImage:nth-child(10) {
+	top: 66%;
+	right: 70%;
+}
+.posterImage:nth-child(11) {
+	top: 76%;
+	right: 8.5%;
+}
+.posterImage:nth-child(12) {
+	top: 42.5%;
+	right: 29.2%;
+}
+.posterImage:nth-child(13) {
+	top: 74%;
+	right: 49.5%;
+}
+.posterImage:nth-child(14) {
+	top: 45%;
+	right: 49.5%;
+}
+.posterImage:nth-child(15) {
+	top: 83%;
+	right: 70.4%;
+}
+.posterImage:nth-child(16) {
+	top: 72.5%;
+	right: 29%;
+}
+.posterImage:nth-child(17) {
+	top: 59%;
+	right: 9%;
+}
+.posterImage:nth-child(18) {
+	top: 99%;
+	right: 70%;
+}
+
+.posterImage:hover .posterImage::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0;
+	background-color: #1100ff;
+}
+
+.gallerySection {
+	height: 140vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+.galleryDiv {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 20px 70px 0px 60px;
+	overflow: hidden;
+}
+
+.gallery h1 {
+	text-align: center;
+	font-size: 45px;
+	margin: 15% 0% 0% 0%;
+	transform: translateY(-50px);
+}
+.gallery span {
+	border-bottom: 3px solid black;
+}
+
+.galleryBox {
+	background-color: rgb(87, 85, 85);
+	width: 100%;
+	margin: 20px;
+	background: url("https://wayup.my/wp-content/uploads/2020/12/digitaltransformation.jpg")
+		center/cover;
+	height: 180px;
+	overflow: hidden;
+	transform-origin: bottom;
+}
+
+.galleryaTag1 {
+	display: none;
+}
+
+.galleryBox1 {
+	background: url(../img/EP1A3512.jpg) center/cover;
+}
+.galleryBox2 {
+	background: url(../img/EP1A3514.jpg) center/cover;
+}
+.galleryBox3 {
+	background: url(../img/EP1A3515.jpg) center/cover;
+}
+.galleryBox4 {
+	background: url(../img/EP1A3517.jpg) center/cover;
+}
+.galleryBox5 {
+	background: url(../img/EP1A3521.jpg) center/cover;
+}
+.galleryBox6 {
+	background: url(../img/EP1A3522.jpg) center/cover;
+}
+.galleryBox7 {
+	background: url(../img/EP1A3565.jpg) center/cover;
+}
+.galleryBox8 {
+	background: url(../img/EP1A3570.jpg) center/cover;
+}
+.galleryBox9 {
+	background: url(../img/EP1A3596.jpg) center/cover;
+}
+.galleryBox10 {
+	background: url(../img/EP1A3603.jpg) center/cover;
+}
+.galleryBox11 {
+	background: url(../img/EP1A3689.jpg) center/cover;
+}
+.galleryBox12 {
+	background: url(../img/EP1A3695.jpg) center/cover;
+}
+.galleryBox13 {
+	background: url(../img/EP1A3698.jpg) center/cover;
+}
+.galleryBox14 {
+	background: url(../img/EP1A3703.jpg) center/cover;
+}
+.galleryBox15 {
+	background: url(../img/EP1A3711.jpg) center/cover;
+}
+.galleryBox16 {
+	background: url(../img/EP1A3715.jpg) center/cover;
+}
+
+.galleryaTag {
+	position: relative;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	background-color: rgb(29, 87, 161);
+	padding: 10px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 12%;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 4% 0%;
+	cursor: pointer;
+}
+
+.gallery {
+	overflow: hidden;
+}
+
+.showMore1 {
+	display: none;
+}
+
+.info {
+	transform: translateY(-50px);
+	transform: translateX(-100%);
+	overflow: hidden;
+}
+
+.atag {
+	color: black;
+}
+
+.sectionBlogger {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+.bloggerMainDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.bloggerImage {
+	background-color: rgb(247, 167, 7);
+	border-radius: 1rem;
+	margin: 5%;
+	object-fit: cover;
+}
+.bloggerImage img {
+	width: 100%;
+	height: 12em;
+	object-fit: cover;
+}
+/* .bloggerImage img {
+	width: 90%;
+	height: 50%;
+	background-color: rgb(247, 167, 7);
+	border-radius: 1rem;
+	margin: 5%;
+	object-fit: cover;
+} */
+
+.bloggerDiv {
+	position: relative;
+	height: 30rem;
+	border-radius: 1rem;
+	width: 30%;
+	margin: 1%;
+	background-color: rgba(219, 29, 29, 0.897);
+}
+
+.bloggerContent {
+	color: white;
+	margin: 5%;
+	position: relative;
+}
+.bloggerContent h1 {
+	text-align: center;
+}
+.bloggerContent p {
+	overflow: hidden;
+	width: 100%;
+
+	word-wrap: break-word;
+}
+
+@media (max-width: 400px) {
+	.spillDiv {
+		display: none;
+	}
+	.sliderFrontPage {
+		flex-direction: column;
+	}
+	.swiper {
+		width: 75%;
+		height: 60%;
+		margin-right: auto;
+	}
+	.sectionClass {
+		flex-direction: column;
+	}
+	.aboutUsSection {
+		height: fit-content;
+	}
+	.divpage {
+		width: 90%;
+	}
+	.twoSection {
+		display: none;
+	}
+	.mediaQueryPageSwipe {
+		display: block;
+	}
+	.h2mediaQuery {
+		text-align: center;
+	}
+	.pageSwipemediaQuery {
+		background-color: #f7a707;
+	}
+	.pageSwipecontentmediaQuery p {
+		font-size: 1.3em;
+		padding: 5%;
+		text-align: justify;
+	}
+	.parallax1 {
+		height: fit-content;
+		flex-direction: column;
+	}
+	.leaf {
+		margin: 5%;
+	}
+	.spanright {
+		position: relative;
+		width: 90%;
+		left: 10%;
+	}
+	.spanright1 {
+		position: relative;
+		width: 90%;
+		left: 10%;
+	}
+	.qualityUl {
+		position: relative;
+		left: 10%;
+	}
+	.leafreadMore1,
+	.leafreadMore2,
+	.leafreadMore3 {
+		display: none;
+	}
+	.leafSpan1,
+	.leafSpan2,
+	.leafSpan3,
+	.leafUl {
+		opacity: 1;
+	}
+	.leafContent3 p {
+		margin-bottom: auto;
+	}
+	.ourOtherServices {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.heading1 {
+		text-align: center;
+		margin: 10% 0%;
+	}
+	.detailsH1Box {
+		font-size: 1rem;
+	}
+	.projectsMainDivFlex1,
+	.projectsMainDivFlex2 {
+		flex-direction: column;
+	}
+	/* .projectsSubDiv::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #2e2e2eb9;
+    z-index: 1;
+  } */
+	.projectsSubDiv {
+		width: 85%;
+	}
+	.projectsSubDivDetails {
+		overflow: scroll;
+	}
+	.contactDetail {
+		flex-direction: column;
+	}
+	.map {
+		width: 90%;
+		margin: 5%;
+	}
+	.contactInput {
+		width: 100%;
+	}
+
+	.ourTeamPhotoDiv {
+		flex-direction: column;
+	}
+}
