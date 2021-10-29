@@ -21,18 +21,14 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.urlencoded({ extended : false }));
-app.use(bodyPaser.json());
 
-app.get("/", (req,res) => {
-	res.render("index");
-});
-app.get("/gallery", (req,res) => {
-	res.render("gallery");
-});
-app.get("/blogs", (req,res) => {
-	res.render("blogs");
-});
+// app.use(bodyPaser.json());
+
+
+const routes = require("./server/routes/user")
+app.use("/" , routes)
+
+
 
 
 

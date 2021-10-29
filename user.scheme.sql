@@ -1,0 +1,1 @@
+CREATE TABLE `brabuprints`.`blogs` ( `id` INT NOT NULL , `blog_title` VARCHAR(50) NOT NULL , `blog_content` VARCHAR(300) NOT NULL , `status` VARCHAR(10) NOT NULL DEFAULT 'active' , PRIMARY KEY (`id`)) ENGINE = InnoDB;
