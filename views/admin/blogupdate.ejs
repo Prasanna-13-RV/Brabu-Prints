@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% for(var i=0; i < data.length; i++) { %>
+        <form method="post" action="/admin/blog/<%= data[i].id %>">
+        <div>
+            <label for="blog_title">Blog Title</label>
+            <input type="text" class="blog_title" name="blog_title" id="blog_title" value="<%= data[i].blog_title %>">
+        </div>
+        <div>
+            <label for="blog_content">Blog Content</label>
+            <input type="text" class="blog_content" name="blog_content" id="blog_content" value="<%= data[i].blog_content %>">
+        </div>
+        <div>
+            <label for="image">Blog Image</label>
+            <input type="file" class="image" name="image" id="image">
+        </div>
+        <input type="submit">
+    </form>
+    <% } %> 
+</body>
+
+</html>

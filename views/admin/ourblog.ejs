@@ -13,24 +13,48 @@
 <body>
     <%- include('../partials/admin-header.ejs') %>
 
+
+    <div class="container">
+        <a href="/admin/blog/create">Create Item</a>
+    </div>
         <div class="container pt-3 pl-3">
             <table class="table table-bordered">
                 <tr>
                     <th scope="col">#</th>
+                    <th scope="col">Blog Image</th>
                     <th scope="col">Blog Title</th>
                     <th scope="col">Blog</th>
                     <th scope="col" class="text-end">Actions</th>
                 </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Blog</td>
-                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, natus?</td>
-                    <td class="text-end">
-                        <a href="#" type="button" class="btn btn-light btn-small">View</a>
-                        <a href="#" type="button" class="btn btn-light btn-small">Edit</a>
-                        <a href="#" type="button" class="btn btn-light btn-small">Delete</a>
-                    </td>
-                </tr>
+                <% if (data.length<=0) {%>
+                    <tr>
+                        <td>
+                            No records to show!
+                        </td>
+                    </tr>
+                    <% } else {%>
+                        <% for(var i=0; i < data.length; i++) { %>
+                            <tr>
+                                <th scope="row">
+                                    <%= data[i].id %>
+                                </th>
+                                <td>
+                                    <%= data[i].image %>
+                                </td>
+                                <td>
+                                    <%= data[i].blog_title %>
+                                </td>
+                                <td>
+                                    <%= data[i].blog_content %>
+                                </td>
+                                <td class="text-end">
+                                    <a href="/admin/blog/<%= data[i].id %>" type="button" class="btn btn-light btn-small">View</a>
+                                    <a href="/admin/blog/update/<%= data[i].id %>" type="button" class="btn btn-light btn-small">Edit</a>
+                                    <a href="/admin/blog/delete/<%= data[i].id %>" type="button" class="btn btn-light btn-small">Delete</a>
+                                </td>
+                            </tr>
+                            <% } %>
+                                <% } %>
             </table>
         </div>
 
