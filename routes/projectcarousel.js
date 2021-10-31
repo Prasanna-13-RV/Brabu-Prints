@@ -10,10 +10,9 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const mysqlConnection = require("../database");
 
 router.get('/', function (req, res, next) {
-	mysqlConnection.query("SELECT * FROM gallerys", (err, rows, fields) => {
+	mysqlConnection.query("SELECT * FROM projectcarousels", (err, rows, fields) => {
 		if (!err) {
-            console.log(rows);
-			res.render("./admin/ourgallery", { data: rows })
+			res.render("./admin/ourprojectcarousel", { data: rows })
 		}
 		else {
 			console.log(err);
@@ -21,27 +20,27 @@ router.get('/', function (req, res, next) {
 	});
 });
 
-// create gallery
+// create projectcarousel
 router.get("/create", (req, res) => {
-    res.render("./admin/galleryCreate")
+    res.render("./admin/projectcarouselCreate")
 })
-router.post("/create", upload.single("gallery_image"), (req, res) => {
-    mysqlConnection.query("INSERT INTO gallerys (gallery_image) values(?)", [req.file.path], (err, rows, response) => {
+router.post("/create", upload.single("projectcarousel_image"), (req, res) => {
+    mysqlConnection.query("INSERT INTO projectcarousels (projectcarousel_image) values(?)", [req.file.path], (err, rows, response) => {
         if (!err) {
-            res.render("./admin/galleryconform")
+            res.render("./admin/projectcarouselconform")
         } else {
             console.log(err);
         }
     })
 });
 
-// delete gallery
+// delete projectcarousel
 router.get("/delete/:id", async (req, res) => {
-    mysqlConnection.query("DELETE FROM gallerys WHERE id = ?", [req.params.id], async (err, rows) => {
+    mysqlConnection.query("DELETE FROM projectcarousels WHERE id = ?", [req.params.id], async (err, rows) => {
         if (!err) {
             const url = req.query.cloudinaryName.split("BrabuPrintsMYSQL/")[1].slice(0,-4);
             await cloudinary.uploader.destroy("BrabuPrintsMYSQL/"+url);
-            res.redirect("/admin/gallery")
+            res.redirect("/admin/projectcarousel")
         }
         else {
             console.log(err);

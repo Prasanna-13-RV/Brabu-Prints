@@ -69,7 +69,7 @@
 		<div class="swiper swiperDiv">
 			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-inner">
-					
+
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
 					data-bs-slide="prev">
@@ -473,9 +473,13 @@
 		<h1 class="shortSectionH1">Our Clients</h1>
 		<div class="imagesShortSection">
 			<div>
-				<img class="imageImgSection" src="./img/Clientwebp/ANNAI_JEWELLERS.webp" alt="">
+				<% for(var i=0; i < data.length; i++) { %>
+
+					<img class="imageImgSection" src="<%= data[i].client_logo %> " alt="">
+					<% } %>
+
 			</div>
-			<div>
+			<!-- <div>
 				<img class="imageImgSection" src="./img/Clientwebp/APC.webp" alt="">
 			</div>
 			<div>
@@ -504,7 +508,7 @@
 			</div>
 			<div>
 				<img class="imageImgSection" src="./img/Clientwebp/LG.webp" alt="">
-			</div>
+			</div> -->
 		</div>
 	</section>
 
@@ -583,6 +587,7 @@
 			</div>
 		</div>
 	</section>
+	
 
 
 
