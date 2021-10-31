@@ -13,21 +13,21 @@
 <body>
     <%- include('../partials/admin-header.ejs') %>
 
-    <form method="post" action="/admin/blog/create" enctype="multipart/form-data">
-        <div>
-            <label for="blog_title">Blog Content</label>
-            <input type="text" class="blog_title" name="blog_title" id="blog_title">
-        </div>
-        <div>
-            <label for="blog_content">Blog Title</label>
-            <input type="text" class="blog_content" name="blog_content" id="blog_content">
-        </div>
-        <div>
-            <label for="image">Blog Title</label>
-            <input type="file" class="image" name="image" id="image">
-        </div>
-        <input type="submit">
-    </form>
+        <form method="post" action="/admin/blog/create" enctype="multipart/form-data">
+            <div>
+                <label for="blog_title">Blog Content</label>
+                <input type="text" class="blog_title" name="blog_title" id="blog_title">
+            </div>
+            <div>
+                <label for="blog_content">Blog Title</label>
+                <textarea type="text" class="blog_content" name="blog_content" id="blog_content"></textarea>
+            </div>
+            <div>
+                <label for="image">Blog Title</label>
+                <input type="file" class="image" name="image" id="image">
+            </div>
+            <input type="submit">
+        </form>
 </body>
 
 </html>

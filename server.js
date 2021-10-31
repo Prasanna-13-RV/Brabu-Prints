@@ -12,6 +12,8 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const brabuprints = require("./routes/home");
 const brabuprintsBlog = require("./routes/blog");
 const brabuprintsClient = require("./routes/client");
+const brabuprintsGallery = require("./routes/gallery");
+const brabuprintsCarousel = require("./routes/carousel");
 const mysqlConnection = require("./database");
 
 const app = express();
@@ -31,6 +33,8 @@ app.use(bodyParser.json())
 app.use("/" , brabuprints)
 app.use("/admin/blog" , brabuprintsBlog)
 app.use("/admin/client" , brabuprintsClient)
+app.use("/admin/gallery" , brabuprintsGallery)
+app.use("/admin/carousel" , brabuprintsCarousel)
 
 
 
