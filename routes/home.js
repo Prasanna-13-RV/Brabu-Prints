@@ -9,19 +9,19 @@ const upload = multer({ storage });
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const mysqlConnection = require("../database")
 
-router.get("/", (req, res) => {
-	mysqlConnection.query("SELECT * FROM clients", (err, rows, fields) => {
+router.get("/", async (req, res) => {
+	await mysqlConnection.query("SELECT * FROM clients ; Select * FROM carousels", async (err, rows, fields) => {
 		if (!err) {
 			res.render("index", { data: rows })
 		}
 		else {
 			console.log(err);
 		}
-	});
+	})
 })
 
 router.get("/gallery", (req, res) => {
-	mysqlConnection.query("SELECT gallery_image FROM gallerys", (err, rows, fields) => {
+	mysqlConnection.query("SELECT * FROM gallerys", (err, rows, fields) => {
 		if (!err) {
 			res.render("gallery", { data: rows })
 		}

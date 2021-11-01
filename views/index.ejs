@@ -69,7 +69,9 @@
 		<div class="swiper swiperDiv">
 			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-inner">
-
+					<% for(var i=0; i < data.length; i++) { %>
+						<img src="<%= data[i].carousel_image %> " alt="">
+						<% } %>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
 					data-bs-slide="prev">
@@ -587,7 +589,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 
 
 

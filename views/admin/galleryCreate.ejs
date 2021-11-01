@@ -12,14 +12,17 @@
 
 <body>
     <%- include('../partials/admin-header.ejs') %>
-
-    <form method="post" action="/admin/gallery/create" enctype="multipart/form-data">
-        <div>
-            <label for="gallery_image">Gallery Image</label>
-            <input type="file" class="gallery_image" name="gallery_image" id="gallery_image">
+        <div class="container pt-5">
+            <form method="post" action="/admin/gallery/create" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="gallery_image">
+                        <h1>Gallery Image</h1>
+                    </label>
+                    <input type="file" class="form-control form-control-sm" name="gallery_image" id="gallery_image">
+                </div>
+                <input class="btn btn-primary" type="submit">
+            </form>
         </div>
-        <input type="submit">
-    </form>
 </body>
 
 </html>

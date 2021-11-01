@@ -12,14 +12,17 @@
 
 <body>
     <%- include('../partials/admin-header.ejs') %>
-
-    <form method="post" action="/admin/carousel/create" enctype="multipart/form-data">
-        <div>
-            <label for="carousel_image">Carousel Image</label>
-            <input type="file" class="carousel_image" name="carousel_image" id="carousel_image">
+        <div class="container pt-5">
+            <form method="post" action="/admin/carousel/create" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="carousel_image">
+                        <h1>Carousel Image</h1>
+                    </label>
+                    <input type="file" class="form-control form-control-sm" name="carousel_image" id="carousel_image">
+                </div>
+                <input class="btn btn-primary" type="submit">
+            </form>
         </div>
-        <input type="submit">
-    </form>
 </body>
 
 </html>

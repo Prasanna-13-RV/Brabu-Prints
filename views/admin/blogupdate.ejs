@@ -12,24 +12,25 @@
 
 <body>
     <%- include('../partials/admin-header.ejs') %>
-
-    <% for(var i=0; i < data.length; i++) { %>
-        <form method="post" action="/admin/blog/<%= data[i].id %>">
-        <div>
-            <label for="blog_title">Blog Title</label>
-            <input type="text" class="blog_title" name="blog_title" id="blog_title" value="<%= data[i].blog_title %>">
-        </div>
-        <div>
-            <label for="blog_content">Blog Content</label>
-            <textarea type="text" class="blog_content" name="blog_content" id="blog_content"><%= data[i].blog_content %></textarea>
-        </div>
-        <div>
-            <label for="image">Blog Image</label>
-            <input type="file" class="image" name="image" id="image">
-        </div>
-        <input type="submit">
-    </form>
-    <% } %> 
+        <% for(var i=0; i < data.length; i++) { %>
+            <form method="post" action="/admin/blog/<%= data[i].id %>">
+                <div>
+                    <label for="blog_title">Blog Title</label>
+                    <input type="text" class="blog_title" name="blog_title" id="blog_title"
+                        value="<%= data[i].blog_title %>">
+                </div>
+                <div>
+                    <label for="blog_content">Blog Content</label>
+                    <textarea type="text" class="blog_content" name="blog_content"
+                        id="blog_content"><%= data[i].blog_content %></textarea>
+                </div>
+                <div>
+                    <label for="image">Blog Image</label>
+                    <input type="file" class="image" name="image" id="image">
+                </div>
+                <input class="btn btn-primary" type="submit">
+            </form>
+            <% } %>
 </body>
 
 </html>

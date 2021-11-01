@@ -53,32 +53,53 @@ router.get("/:id", (req, res) => {
 });
 
 // update client
-router.get("/update/:id", (req, res) => {
-	mysqlConnection.query("SELECT * FROM clients", (err, rows) => {
-		if (!err) {
-			res.render("./admin/clientupdate", { data: rows })
-		}
-		else {
-			console.log(err)
-		}
-	})
-})
-router.post("/:id", (req, res) => {
-	mysqlConnection.query("UPDATE clients SET client_name=? , client_logo=? , client_poster=? WHERE id=?", [req.body.client_name, req.file.path, req.file.path, req.params.id], (err, rows) => {
-		if (!err) {
-			mysqlConnection.query("SELECT * FROM clients WHERE id = ?", [req.params.id], (err, rows) => {
-				if (!err) {
-					res.render("./admin/clientview", { data: rows })
-				} else {
-					console.log(err)
-				}
-			})
-		}
-		else {
-			console.log(err)
-		}
-	})
-})
+// router.get("/update/:id", (req, res) => {
+// 	mysqlConnection.query("SELECT * FROM clients WHERE id=?", [req.params.id], (err, rows) => {
+// 		if (!err) {
+// 			res.render("./admin/clientupdate", { data: rows })
+// 		}
+// 		else {
+// 			console.log(err)
+// 		}
+// 	})
+// })
+
+// router.post("/:id", upload.fields([
+// 	{ name: "client_logo" },
+// 	{ name: "client_poster" },
+// ]), async (req, res) => {
+// 	console.log(req.files)
+// 	if (req.files["client_logo"] && req.files["client_poster"]) {
+// 		mysqlConnection.query("UPDATE clients SET client_name=? , client_logo=? , client_poster=? WHERE id=?", [req.body.client_name, req.files["client_logo"][0].path, req.files["client_poster"][0].path, req.params.id], async (err, rows) => {
+// 			if (!err) {
+// 				await res.render("./admin/clientview", { data: rows })
+// 			}
+// 			else {
+// 				console.log(err)
+// 			}
+// 		})
+// 	} else if (req.files["client_logo"]) {
+// 		mysqlConnection.query("UPDATE clients SET client_name=? , client_logo=? ,  WHERE id=?", [req.body.client_name, req.files["client_logo"][0].path, req.params.id], async (err, rows) => {
+// 			if (!err) {
+// 				await res.render("./admin/clientview", { data: rows })
+// 			}
+// 			else {
+// 				console.log(err)
+// 			}
+// 		})
+// 	}
+
+// 	else if (req.files["client_poster"]) {
+// 		mysqlConnection.query("UPDATE clients SET client_name=? , client_poster=? ,  WHERE id=?", [req.body.client_name, req.files["client_poster"][0].path, req.params.id], async (err, rows) => {
+// 			if (!err) {
+// 				await res.render("./admin/clientview", { data: rows })
+// 			}
+// 			else {
+// 				console.log(err)
+// 			}
+// 		})
+// 	}
+// })
 
 
 
@@ -89,11 +110,8 @@ router.get("/delete/:id", async (req, res) => {
 			console.log(req.query);
 			const url1 = req.query.client_logo.split("BrabuPrintsMYSQL/")[1].slice(0, -4);
 			const url2 = req.query.client_poster.split("BrabuPrintsMYSQL/")[1].slice(0, -4);
-			console.log(url2)
-			// await cloudinary.uploader.destroy("BrabuPrintsMYSQL/"+url);
-			// const url = req.query.cloudinaryName.split("BrabuPrintsMYSQL/")[1].slice(0, -4);
-			await cloudinary.uploader.destroy("BrabuPrintsMYSQL/"+url1);
-			await cloudinary.uploader.destroy("BrabuPrintsMYSQL/"+url2);
+			await cloudinary.uploader.destroy("BrabuPrintsMYSQL/" + url1);
+			await cloudinary.uploader.destroy("BrabuPrintsMYSQL/" + url2);
 			res.redirect("/admin/client")
 		}
 		else {

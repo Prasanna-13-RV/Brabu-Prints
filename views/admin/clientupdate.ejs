@@ -12,25 +12,26 @@
 
 <body>
     <%- include('../partials/admin-header.ejs') %>
-
-        <% for(var i=0; i < data.length; i++) { %>
-            <form method="post" action="/admin/client/<%= data[i].id %>">
-                <div>
-                    <label for="client_name">Client Name</label>
-                    <input type="text" class="client_name" name="client_name" id="client_name"
-                        value="<%= data[i].client_name %>">
-                </div>
-                <div>
-                    <label for="client_logo">Client Logo</label>
-                    <input type="text" class="client_logo" name="client_logo" id="client_logo">
-                </div>
-                <div>
-                    <label for="client_poster">Client Poster</label>
-                    <input type="file" class="client_poster" name="client_poster" id="client_poster">
-                </div>
-                <input type="submit">
-            </form>
-            <% } %>
+        <div class="container pt-3">
+            <% for(var i=0; i < data.length; i++) { %>
+                <form method="post" action="/admin/client/<%= data[i].id %>" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label" for="client_name">Client Name</label>
+                        <input type="text" class="form-control form-control-sm" name="client_name" id="client_name"
+                            value="<%= data[i].client_name %>">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="client_logo">Client Logo</label>
+                        <input type="file" class="form-control form-control-sm" name="client_logo" id="client_logo">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="client_poster">Client Poster</label>
+                        <input type="file" class="form-control form-control-sm" name="client_poster" id="client_poster">
+                    </div>
+                    <input class="btn btn-primary" type="submit">
+                </form>
+                <% } %>
+        </div>
 </body>
 
 </html>

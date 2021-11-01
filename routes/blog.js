@@ -50,7 +50,7 @@ router.get("/:id", (req, res) => {
 
 // update blog
 router.get("/update/:id", (req, res) => {
-    mysqlConnection.query("SELECT * FROM blogs", (err, rows) => {
+    mysqlConnection.query("SELECT * FROM blogs WHERE id=?" , [req.params.id], (err, rows) => {
         if (!err) {
             res.render("./admin/blogupdate", { data: rows })
         }
@@ -59,6 +59,7 @@ router.get("/update/:id", (req, res) => {
         }
     })
 })
+
 router.post("/:id", (req, res) => {
     mysqlConnection.query("UPDATE blogs SET blog_title=? , blog_content=? WHERE id=?", [req.body.blog_title, req.body.blog_content, req.params.id], (err, rows) => {
         if (!err) {
@@ -82,8 +83,8 @@ router.post("/:id", (req, res) => {
 router.get("/delete/:id", async (req, res) => {
     mysqlConnection.query("DELETE FROM blogs WHERE id = ?", [req.params.id], async (err, rows) => {
         if (!err) {
-            const url = req.query.cloudinaryName.split("BrabuPrintsMYSQL/")[1].slice(0,-4);
-            await cloudinary.uploader.destroy("BrabuPrintsMYSQL/"+url);
+            const url = req.query.cloudinaryName.split("BrabuPrintsMYSQL/")[1].slice(0, -4);
+            await cloudinary.uploader.destroy("BrabuPrintsMYSQL/" + url);
             res.redirect("/admin/blog")
         }
         else {

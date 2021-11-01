@@ -16,13 +16,12 @@
     <%- include('../partials/admin-header.ejs') %>
 
 
-        <div class="container">
-            <a href="/admin/client/create">Create Item</a>
+        <div class="container pt-3">
+            <a class="btn btn-primary" href="/admin/client/create">Create Item</a>
         </div>
         <div class="container pt-3 pl-3">
-            <table class="table table-bordered">
+            <table class="table table-striped table-hover table align-middle">
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Client Name</th>
                     <th scope="col">Client Logo</th>
                     <th scope="col">Poster Image</th>
@@ -37,25 +36,23 @@
                     <% } else {%>
                         <% for(var i=0; i < data.length; i++) { %>
                             <tr>
-                                <th scope="row">
-                                    <%= data[i].id %>
-                                </th>
                                 <td>
                                     <%= data[i].client_name %>
                                 </td>
                                 <td>
-                                    <img src="<%= data[i].client_logo %>" alt="">
+                                    <img class="img-fluid rounded float-start" src="<%= data[i].client_logo %>" alt="">
                                 </td>
                                 <td>
-                                    <img src="<%= data[i].client_poster %>" alt="">
+                                    <img class="img-fluid rounded float-start" src="<%= data[i].client_poster %>"
+                                        alt="">
                                 </td>
                                 <td class="text-end">
                                     <a href="/admin/client/<%= data[i].id %>" type="button"
-                                        class="btn btn-light btn-small">View</a>
-                                    <a href="/admin/client/update/<%= data[i].id %>" type="button"
-                                        class="btn btn-light btn-small">Edit</a>
+                                        class="btn btn-outline-primary m-2">View</a>
+                                    <!-- <a href="/admin/client/update/<%= data[i].id %>" type="button"
+                                        class="btn btn-outline-success m-2">Edit</a> -->
                                     <a href="/admin/client/delete/<%= data[i].id %>?client_logo=<%= data[i].client_logo %>&client_poster=<%= data[i].client_poster %>"
-                                        type="button" class="btn btn-light btn-small">Delete</a>
+                                        type="button" class="btn btn-outline-danger m-2">Delete</a>
                                 </td>
                             </tr>
                             <% } %>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,15 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
 </head>
+
 <body>
     <%- include('../partials/admin-header.ejs') %>
-
-    <h1>Blogs is successfully inserted</h1>
-    <a href="/admin/blog">Back to home</a>
+        <div class="container pt-5">
+            <h1 class="text-center">Blogs is successfully inserted</h1>
+            <div class="d-grid gap-2 col-6 mx-auto pt-3">
+                <a class="btn btn-outline-primary" href="/admin/blog">Back to home</a>
+            </div>
+        </div>
 </body>
+
 </html>
