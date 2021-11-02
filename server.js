@@ -15,6 +15,7 @@ const brabuprintsClient = require("./routes/client");
 const brabuprintsGallery = require("./routes/gallery");
 const brabuprintsCarousel = require("./routes/carousel");
 const brabuprintsProjectCarousel = require("./routes/projectcarousel");
+const brabuprintsTeam = require("./routes/teams");
 const mysqlConnection = require("./database");
 
 const app = express();
@@ -34,6 +35,7 @@ app.use("/admin/client" , brabuprintsClient)
 app.use("/admin/gallery" , brabuprintsGallery)
 app.use("/admin/carousel" , brabuprintsCarousel)
 app.use("/admin/projectcarousel" , brabuprintsProjectCarousel)
+app.use("/admin/team" , brabuprintsTeam)
 
 app.listen(8080, () => {
 	console.log("SERVER IS RUNNING ON PORT 8080")
