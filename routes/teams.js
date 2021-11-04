@@ -25,7 +25,7 @@ router.get('/', function (req, res, next) {
 router.get("/create", (req, res) => {
     res.render("./admin/teamCreate")
 })
-router.post("/create", upload.single("image"), (req, res) => {
+router.post("/create", upload.single("team_image"), (req, res) => {
     mysqlConnection.query("INSERT INTO teams (team_name, team_job, team_image) values(?,?,?)", [req.body.team_name, req.body.team_job, req.file.path], (err, rows, response) => {
         if (!err) {
             res.render("./admin/teamconform")

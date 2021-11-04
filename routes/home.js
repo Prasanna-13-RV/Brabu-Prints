@@ -10,7 +10,7 @@ if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const mysqlConnection = require("../database")
 
 router.get("/", async (req, res) => {
-	await mysqlConnection.query("SELECT * FROM clients ; Select * FROM carousels", async (err, rows, fields) => {
+	await mysqlConnection.query("SELECT * FROM carousels", async (err, rows, fields) => {
 		if (!err) {
 			res.render("index", { data: rows })
 		}

@@ -33,8 +33,6 @@ const paralaxH13 = document.querySelector(".paralaxH13");
 
 
 leafreadMore1.addEventListener("click" , () => {
-	// parallax1.style.background = `url(../img/EP1A3570.jpg)`;
-	// parallax1.style.backgroundAttachment = "fixed";
 	paralaxH11.style.marginTop = "6%";
 	paralaxH12.style.marginTop = "0%";
 	paralaxH13.style.marginTop = "0%";
@@ -59,8 +57,6 @@ leafreadMore1.addEventListener("click" , () => {
 	leafreadMore3.style.display = "block";
 })
 leafreadMore2.addEventListener("click" , () => {
-	// parallax1.style.background = `url(../img/EP1A3570.jpg)`;
-	// parallax1.style.backgroundAttachment = "fixed";
 	paralaxH11.style.marginTop = "0%";
 	paralaxH12.style.marginTop = "6%";
 	paralaxH13.style.marginTop = "0%";
@@ -85,8 +81,6 @@ leafreadMore2.addEventListener("click" , () => {
 	leafreadMore3.style.display = "block";
 })
 leafreadMore3.addEventListener("click" , () => {
-	// parallax1.style.background = `url(../img/EP1A3570.jpg)`
-	// parallax1.style.backgroundAttachment = "fixed";
 	paralaxH11.style.marginTop = "0%";
 	paralaxH12.style.marginTop = "0%";
 	paralaxH13.style.marginTop = "6%";

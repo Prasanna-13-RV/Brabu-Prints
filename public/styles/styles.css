@@ -23,7 +23,7 @@ body {
   flex-direction: row;
 }
 .spillDiv {
-  position: relative;
+  position: absolute;
   width: 35%;
   height: 100%;
 }
@@ -44,20 +44,7 @@ body {
   z-index: 2;
 }
 
-.swiper {
-  background: url(http://localhost:8080/img/spill.png) cover/center;
-  width: 65%;
-  height: 90%;
-  margin-right: 1%;
-  top: 4%;
-  box-shadow: rgba(0, 0, 0, 0.4) -10px 10px, rgba(0, 0, 0, 0.3) -10px 10px,
-    rgba(0, 0, 0, 0.2) -15px 15px, rgba(0, 0, 0, 0.1) -20px 20px,
-    rgba(0, 0, 0, 0.05) -25px 25px;
-  border-radius: 10px;
-}
-.imagecarousel {
-  height: fit-content;
-}
+
 
 .aboutUsSection {
   position: relative;
@@ -68,8 +55,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  left: -100%;
+  /* left: 100%; */
 }
+
 .aboutUsSection h1 {
   /* color: rgba(219, 29, 29, 0.897); */
   font-size: 45px;
@@ -161,7 +149,7 @@ body {
 }
 
 .heading1 {
-  height: 13vh;
+  height: 15vh;
   width: 100%;
   font-size: 40px;
   display: flex;
@@ -265,6 +253,13 @@ body {
   cursor: pointer;
   text-decoration: none;
   color: white;
+  transition: all 0.1s ease-in-out;
+}
+.leafreadMore1:hover,
+.leafreadMore2:hover,
+.leafreadMore3:hover {
+  background-color: white;
+  color: #f7a707;
 }
 
 .paralaxH1 {
@@ -355,7 +350,7 @@ body {
   position: relative;
   transition: all 0.5s ease-in-out;
   overflow-x: hidden;
-  transform: translateY(-100px);
+  /* transform: translateY(-100px); */
 }
 
 .pageSwipe {
@@ -597,6 +592,7 @@ body {
 }
 .contactUsH1 {
   text-align: center;
+  margin: 2%;
 }
 .contactDetail {
   position: relative;
@@ -662,7 +658,7 @@ body {
   margin: 0% 3%;
 }
 .projectsMainDivFlex2 {
-  margin-bottom: 6%;
+  margin-bottom: 2%;
 }
 
 .projectsSubDiv {
@@ -772,78 +768,10 @@ body {
   text-align: center;
 }
 
-.ourTeamPhotoDiv {
-  position: relative;
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 2s ease-in-out;
-}
-.our-team-div {
-  position: relative;
-  background-color: #db1d1d;
-  padding: 1%;
-}
-.ourTeamDivPhoto {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 20rem;
-  align-items: center;
-  overflow: hidden;
-  /* transition: all 2s ease-in-out; */
-  color: black;
-  margin: 1%;
-  box-shadow: 0px 0px 10px black;
-}
-.separateDiv {
-  margin: 3%;
-  position: relative;
-  background-color: #db1d1d;
-  box-shadow: 0px 0px 10px white;
-  padding: 3%;
-  color: white;
-  transition: all 1s ease-in-out;
-}
-
-.ourTeamDivPhotoimg {
-  object-fit: cover;
-  width: 12rem;
-  border-radius: 50%;
-  height: 12rem;
-}
-.ourTeamPhotoContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.ourTeamPhotoContent h1 {
-  font-size: 25px;
-}
-.ourTeamPhotoContent h2 {
-  font-size: 20px;
-}
-
-.ourTeamPhoto {
-  position: relative;
-  width: 17rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5% 0%;
-  transition: all 0.3s ease-in-out;
-}
-
 .shortSectionH1 {
   text-align: center;
   font-size: 40px;
+  margin: 2%;
 }
 
 .imagesShortSection {
@@ -862,293 +790,33 @@ body {
   height: 5rem;
 }
 
-.postersSection {
-  position: relative;
-  height: 200vh;
-  width: 100%;
-  padding: 0% 2%;
-  object-fit: cover;
-}
-
-.posterImage {
-  position: absolute;
-  cursor: pointer;
-  width: 20%;
-}
-
-.posterImage::after {
-  position: absolute;
-  content: "loading";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: white;
-  left: 0;
-}
-
-.posterImage:nth-child(1) {
-  top: 0%;
-  right: 70%;
-}
-.posterImage:nth-child(2) {
-  top: -0.5%;
-  right: 50%;
-}
-.posterImage:nth-child(3) {
-  top: 0%;
-  right: 30%;
-}
-.posterImage:nth-child(4) {
-  top: 17%;
-  right: 70%;
-}
-.posterImage:nth-child(5) {
-  top: 14%;
-  right: 49.5%;
-}
-.posterImage:nth-child(6) {
-  top: 14%;
-  right: 29%;
-}
-.posterImage:nth-child(7) {
-  top: 29%;
-  right: 9%;
-}
-.posterImage:nth-child(8) {
-  top: 0%;
-  right: 9%;
-}
-.posterImage:nth-child(9) {
-  top: 34%;
-  right: 70%;
-}
-.posterImage:nth-child(10) {
-  top: 66%;
-  right: 70%;
-}
-.posterImage:nth-child(11) {
-  top: 76%;
-  right: 8.5%;
-}
-.posterImage:nth-child(12) {
-  top: 42.5%;
-  right: 29.2%;
-}
-.posterImage:nth-child(13) {
-  top: 74%;
-  right: 49.5%;
-}
-.posterImage:nth-child(14) {
-  top: 45%;
-  right: 49.5%;
-}
-.posterImage:nth-child(15) {
-  top: 83%;
-  right: 70.4%;
-}
-.posterImage:nth-child(16) {
-  top: 72.5%;
-  right: 29%;
-}
-.posterImage:nth-child(17) {
-  top: 59%;
-  right: 9%;
-}
-.posterImage:nth-child(18) {
-  top: 99%;
-  right: 70%;
-}
-
-.posterImage:hover .posterImage::after {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0%;
-  left: 0;
-  background-color: #1100ff;
-}
-
-.gallerySection {
-  height: 140vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.galleryDiv {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 20px 70px 0px 60px;
-  overflow: hidden;
-}
-
-.gallery h1 {
-  text-align: center;
-  font-size: 45px;
-  margin: 15% 0% 0% 0%;
-  transform: translateY(-50px);
-}
-.gallery span {
-  border-bottom: 3px solid black;
-}
-
-.galleryBox {
-  background-color: rgb(87, 85, 85);
-  width: 100%;
-  margin: 20px;
-  background: url("https://wayup.my/wp-content/uploads/2020/12/digitaltransformation.jpg")
-    center/cover;
-  height: 180px;
-  overflow: hidden;
-  transform-origin: bottom;
-}
-
-.galleryaTag1 {
-  display: none;
-}
-
-.galleryBox1 {
-  background: url(../img/EP1A3512.jpg) center/cover;
-}
-.galleryBox2 {
-  background: url(../img/EP1A3514.jpg) center/cover;
-}
-.galleryBox3 {
-  background: url(../img/EP1A3515.jpg) center/cover;
-}
-.galleryBox4 {
-  background: url(../img/EP1A3517.jpg) center/cover;
-}
-.galleryBox5 {
-  background: url(../img/EP1A3521.jpg) center/cover;
-}
-.galleryBox6 {
-  background: url(../img/EP1A3522.jpg) center/cover;
-}
-.galleryBox7 {
-  background: url(../img/EP1A3565.jpg) center/cover;
-}
-.galleryBox8 {
-  background: url(../img/EP1A3570.jpg) center/cover;
-}
-.galleryBox9 {
-  background: url(../img/EP1A3596.jpg) center/cover;
-}
-.galleryBox10 {
-  background: url(../img/EP1A3603.jpg) center/cover;
-}
-.galleryBox11 {
-  background: url(../img/EP1A3689.jpg) center/cover;
-}
-.galleryBox12 {
-  background: url(../img/EP1A3695.jpg) center/cover;
-}
-.galleryBox13 {
-  background: url(../img/EP1A3698.jpg) center/cover;
-}
-.galleryBox14 {
-  background: url(../img/EP1A3703.jpg) center/cover;
-}
-.galleryBox15 {
-  background: url(../img/EP1A3711.jpg) center/cover;
-}
-.galleryBox16 {
-  background: url(../img/EP1A3715.jpg) center/cover;
-}
-
-.galleryaTag {
-  position: relative;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  background-color: rgb(29, 87, 161);
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 12%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 4% 0%;
-  cursor: pointer;
-}
-
-.gallery {
-  overflow: hidden;
-}
-
-.showMore1 {
-  display: none;
-}
-
-.info {
-  transform: translateY(-50px);
-  transform: translateX(-100%);
-  overflow: hidden;
-}
-
-.atag {
-  color: black;
-}
-
-.sectionBlogger {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.bloggerMainDiv {
+.our-team-main-div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
-.bloggerImage {
-  background-color: rgb(247, 167, 7);
-  border-radius: 1rem;
-  margin: 5%;
-  object-fit: cover;
-}
-.bloggerImage img {
-  width: 100%;
-  height: 12em;
-  object-fit: cover;
-}
-/* .bloggerImage img {
-	width: 90%;
-	height: 50%;
-	background-color: rgb(247, 167, 7);
-	border-radius: 1rem;
-	margin: 5%;
-	object-fit: cover;
-} */
-
-.bloggerDiv {
-  position: relative;
-  height: 30rem;
-  border-radius: 1rem;
-  width: 30%;
-  margin: 1%;
-  background-color: rgba(219, 29, 29, 0.897);
-}
-
-.bloggerContent {
+.our-team-all-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  padding: 2%;
+  background-color: #da2c27;
   color: white;
-  margin: 5%;
-  position: relative;
-}
-.bloggerContent h1 {
-  text-align: center;
-}
-.bloggerContent p {
+  border-radius: 20px;
   overflow: hidden;
-  width: 100%;
-
-  word-wrap: break-word;
+  transition: all 0.8s ease-in-out;
 }
 
-
+.team-image-img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  /* border: 2px solid #1100ff; */
+}
 
 @media (max-width: 400px) {
   .spillDiv {
@@ -1262,9 +930,5 @@ body {
   }
   .contactInput {
     width: 100%;
-  }
-
-  .ourTeamPhotoDiv {
-    flex-direction: column;
   }
 }
