@@ -37,6 +37,6 @@ app.use("/admin/carousel" , brabuprintsCarousel)
 app.use("/admin/projectcarousel" , brabuprintsProjectCarousel)
 app.use("/admin/team" , brabuprintsTeam)
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
 	console.log("SERVER IS RUNNING ON PORT 8080")
 })
