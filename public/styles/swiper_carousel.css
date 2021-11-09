@@ -32,12 +32,11 @@
   user-select: none;
 }
 
-.image-img
-{
-    width: 100%;
-    height: 30rem;
-    padding: 3rem;
-    object-fit: cover;
+.image-img {
+  width: 100%;
+  height: 30rem;
+  padding: 3rem;
+  object-fit: cover;
 }
 
 .next {
@@ -106,5 +105,16 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .slideshow-container {
+    width: 90%;
+    left: 5%;
+  }
+  .image-img {
+    padding: 0rem;
+    height: 13rem;
   }
 }

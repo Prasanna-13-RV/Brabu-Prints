@@ -44,8 +44,6 @@ body {
   z-index: 2;
 }
 
-
-
 .aboutUsSection {
   position: relative;
   height: 50vh;
@@ -214,7 +212,7 @@ body {
   background-color: #da2c27;
   border-radius: 0% 50% 0% 50%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
-  z-index: 1;
+  z-index: 4;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
@@ -249,6 +247,7 @@ body {
   font-size: 1.3rem;
   display: block;
   margin: 5% 27%;
+  padding: 3%;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -593,6 +592,7 @@ body {
 .contactUsH1 {
   text-align: center;
   margin: 2%;
+  font-size: 40px;
 }
 .contactDetail {
   position: relative;
@@ -785,9 +785,17 @@ body {
   align-items: center;
 }
 
+.imagesShortSection-div
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .imageImgSection {
   position: relative;
   height: 5rem;
+  margin: 1%;
 }
 
 .our-team-main-div {
@@ -824,6 +832,7 @@ body {
   }
   .sliderFrontPage {
     flex-direction: column;
+    height: fit-content;
   }
   .swiper {
     width: 75%;
@@ -843,13 +852,19 @@ body {
     display: none;
   }
   .mediaQueryPageSwipe {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .h2mediaQuery {
     text-align: center;
   }
   .pageSwipemediaQuery {
     background-color: #f7a707;
+    width: 97%;
+    padding: 4%;
+    margin-top: 5%;
   }
   .pageSwipecontentmediaQuery p {
     font-size: 1.3em;
@@ -862,20 +877,25 @@ body {
   }
   .leaf {
     margin: 5%;
+    border-radius: 10px;
+    width: 90%;
+    height: fit-content;
+    font-size: 20px;
+    padding: 2%;
   }
   .spanright {
     position: relative;
     width: 90%;
-    left: 10%;
+    left: 0%;
   }
   .spanright1 {
     position: relative;
     width: 90%;
-    left: 10%;
+    left: 0%;
   }
   .qualityUl {
     position: relative;
-    left: 10%;
+    left: 0%;
   }
   .leafreadMore1,
   .leafreadMore2,
@@ -897,6 +917,10 @@ body {
   .heading1 {
     text-align: center;
     margin: 10% 0%;
+  }
+  .infoBtn
+  {
+    width: 70%;
   }
   .detailsH1Box {
     font-size: 1rem;
@@ -930,5 +954,13 @@ body {
   }
   .contactInput {
     width: 100%;
+  }
+  .imagesShortSection
+  {
+    padding: 5%;
+  }
+  .our-team-all-div
+  {
+    padding: 7%;
   }
 }

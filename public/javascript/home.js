@@ -1,20 +1,3 @@
-const sliderFrontPage = document.querySelector(".sliderFrontPage");
-const layers = document.querySelectorAll(".layer1");
-
-const parallax = (args, e) => {
-	args.forEach((arg) => {
-		let speed = arg.getAttribute("data-speed");
-		const x = (e.pageX * speed) / 100;
-		const y = (e.pageY * speed) / 100;
-		arg.style.transform = `translateX(${x}px) translateY(${y}px)`;
-	});
-};
-sliderFrontPage.addEventListener("mousemove", (e) => {
-	parallax(layers, e);
-	const x = (e.pageX * 1) / 100;
-	const y = (e.pageY * 1) / 100;
-});
-
 const parallax1 = document.querySelector(".parallax1");
 const leafreadMore1 = document.querySelector(".leafreadMore1");
 const leafreadMore2 = document.querySelector(".leafreadMore2");
@@ -29,8 +12,34 @@ const leaf3 = document.querySelector(".leaf3");
 const paralaxH11 = document.querySelector(".paralaxH11");
 const paralaxH12 = document.querySelector(".paralaxH12");
 const paralaxH13 = document.querySelector(".paralaxH13");
+const buttonreset = document.querySelector(".buttonreset");
 
 
+
+
+// buttonreset.addEventListener("click", () => {
+// 	paralaxH11.style.marginTop = "0%";
+// 	paralaxH12.style.marginTop = "0%";
+// 	paralaxH13.style.marginTop = "0%";
+// 	paralaxH11.style.paddingLeft = "6%";
+// 	paralaxH12.style.paddingLeft = "6%";
+// 	paralaxH13.style.paddingLeft = "6%";
+// 	paralaxH11.style.textAlign = "center";
+// 	paralaxH12.style.textAlign = "center";
+// 	paralaxH13.style.textAlign = "center";
+// 	leafSpan1.style.opacity = "0";
+// 	leafSpan2.style.opacity = "0";
+// 	leafSpan3.style.opacity = "0";
+// 	leaf1.style.height = "50%";
+// 	leaf2.style.height = "50%";
+// 	leaf3.style.height = "50%";
+// 	leaf1.style.borderRadius = "0% 50% 0% 50%";
+// 	leaf2.style.borderRadius = "0% 50% 0% 50%";
+// 	leaf3.style.borderRadius = "0% 50% 0% 50%";
+// 	leafreadMore1.style.display = "block";
+// 	leafreadMore2.style.display = "block";
+// 	leafreadMore3.style.display = "block";
+// })
 
 leafreadMore1.addEventListener("click" , () => {
 	paralaxH11.style.marginTop = "6%";
