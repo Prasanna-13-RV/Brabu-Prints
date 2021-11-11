@@ -13,23 +13,22 @@
 </head>
 
 <body>
-    
+    <%- include('./partials/header.ejs') %>
 
-
-    <section>
-        <h1 class="heading1">Bl<span>ogg</span>er</h1>
-        <div class="blogsMainDiv">
-            <% blogs.forEach(element=> { %>
-                <img class="bloggerImageimg" src="<%= element.imageBlog.url %>" alt="">
-                <h2>
-                    <%= element.name %>
-                </h2>
-                <p class="javaScriptPTag">
-                    <%= element.paragraph %>
-                </p>
-                <% }) %>
-        </div>
-    </section>
+        <section>
+            <h1 class="heading1">Bl<span>ogg</span>er</h1>
+            <div class="blogsMainDiv">
+                <% blogs.forEach(element=> { %>
+                    <img class="bloggerImageimg" src="<%= element.imageBlog.url %>" alt="">
+                    <h2>
+                        <%= element.name %>
+                    </h2>
+                    <p class="javaScriptPTag">
+                        <%= element.paragraph %>
+                    </p>
+                    <% }) %>
+            </div>
+        </section>
 
 
 

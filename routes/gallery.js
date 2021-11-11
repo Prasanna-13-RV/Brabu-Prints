@@ -12,7 +12,6 @@ const mysqlConnection = require("../database");
 router.get('/', function (req, res, next) {
 	mysqlConnection.query("SELECT * FROM gallerys", (err, rows, fields) => {
 		if (!err) {
-            console.log(rows);
 			res.render("./admin/ourgallery", { data: rows })
 		}
 		else {

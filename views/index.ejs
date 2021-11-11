@@ -36,12 +36,11 @@
 			<div class="slideshow-container">
 
 				<!-- Full-width images with number and caption text -->
-				<% for(var i=0; i < data.length; i++) { %>
+				<% carouselArray.forEach(carouselFor=> { %>
 					<div class="mySlides fade">
-						<img class="image-img" src="<%= data[i].carousel_image %> " style="width:100%">
+						<img class="image-img" src="<%= carouselFor.carousel_image %> " style="width:100%">
 					</div>
-					<% } %>
-
+					<% }); %>
 						<!-- Next and previous buttons -->
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 						<a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -480,9 +479,9 @@
 			<h1 class="shortSectionH1">Our Clients</h1>
 			<div class="imagesShortSection">
 				<div class="imagesShortSection-div">
-					<% for(var i=0; i < data.length; i++) { %>
-						<img class="imageImgSection" src="<%= data[i].client_logo %> " alt="">
-						<% } %>
+					<% clientArray.forEach(clientFor=> { %>
+						<img class="imageImgSection" src="<%= clientFor.client_logo %> " alt="">
+						<% }); %>
 
 				</div>
 				<!-- <div>
@@ -528,23 +527,23 @@
 			</div>
 			<div class="our-team-div">
 				<div class="our-team-main-div">
-					<% for(var i=0; i < data.length; i++) { %>
+					<% teamArray.forEach(teamFor=> { %>
 						<div class="our-team-all-div">
 							<div class="team-image">
-								<img class="team-image-img" src="<%= data[i].team_image %>" alt="">
+								<img class="team-image-img" src="<%= teamFor.team_image %>" alt="">
 							</div>
 							<div class="team-name">
 								<h1>
-									<%= data[i].team_name %>
+									<%= teamFor.team_name %>
 								</h1>
 							</div>
 							<div class="team-job">
 								<h3>
-									<%= data[i].team_job %>
+									<%= teamFor.team_job %>
 								</h3>
 							</div>
 						</div>
-						<% } %>
+						<% }); %>
 				</div>
 			</div>
 		</section>
