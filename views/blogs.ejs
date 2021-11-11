@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/nav.css" />
     <link rel="stylesheet" href="styles/blogs.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
     <title>Blog</title>
@@ -16,22 +18,36 @@
     <%- include('./partials/header.ejs') %>
 
         <section>
-            <h1 class="heading1">Bl<span>ogg</span>er</h1>
-            <div class="blogsMainDiv">
-                <% blogs.forEach(element=> { %>
-                    <img class="bloggerImageimg" src="<%= element.imageBlog.url %>" alt="">
-                    <h2>
-                        <%= element.name %>
-                    </h2>
-                    <p class="javaScriptPTag">
-                        <%= element.paragraph %>
-                    </p>
+            <h1>Bl<span>ogg</span>er</h1>
+            <div class="div-blog">
+                <% blogArray.forEach(blogFor=> { %>
+                    <div class="blogsMainDiv">
+                        <img class="bloggerImageimg" src="<%= blogFor.image %>" alt="">
+                        <h2>
+                            <%= blogFor.blog_title %>
+                        </h2>
+                        <p class="javaScriptPTag">
+                            <%= blogFor.blog_content %>
+                        </p>
+                    </div>
                     <% }) %>
             </div>
         </section>
 
 
-
+        <footer>
+            <div class="footerclass">
+                <h1>Bra<span>bupri</span>nts</h1>
+                <h3>You Can Reach Us At</h3>
+                <p class="footerptag">Address</p>
+                <p><i>1/555, Mappilaiurani main road, Tutitcorin - 628002</i></p>
+                <div class="iconsSocial">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
 
 </body>
 

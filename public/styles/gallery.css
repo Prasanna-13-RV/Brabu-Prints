@@ -1,66 +1,48 @@
-body {
-  background-color: #fff;
+.site-navbar ul li a
+{
+    font-size: 2.3rem;
 }
-h1 {
-  text-align: center;
-}
-h1 span {
-  border-bottom: 2px solid black;
-}
-.carouselSection {
-  width: 50%;
-  height: 83vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+nav
+{
+    height: 10rem;
 }
 
-.carousel-item {
-  width: 50%;
+a.site-logo
+{
+    width: 17rem;
+}
+.carousel
+{
+    width: 50%;
+    height: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.classCarouselposter {
-  width: 100%;
-  height: 30rem;
+.containerCarouselH1
+{
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    padding: 1%;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
+.containerCarouselH1 span
+{
+    border-bottom: 3px solid black;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+.classCarouselposter , .classCarouselgallery
+{
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 45rem !important;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
+footer
+{
+    margin-top: 5%;
 }

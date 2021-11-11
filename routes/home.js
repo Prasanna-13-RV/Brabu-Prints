@@ -68,16 +68,55 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/gallery", (req, res) => {
-  mysqlConnection.query("SELECT * FROM gallerys", (err, rows, fields) => {
-    if (!err) {
-      res.render("gallery", { data: rows });
-    } else {
+  mysqlConnection.query("SELECT * FROM clients", (err, rows, fields) => {
+    if (err) {
       console.log(err);
+    } else {
+      var clientArray = [];
+      for (let i = 0; i <= rows.length - 1; i++) {
+        var clientImage = {
+          client_poster: rows[i].client_poster,
+        };
+        clientArray.push(clientImage);
+      }
+      mysqlConnection.query("SELECT * FROM gallerys", (err, rows, fields) => {
+        if (err) {
+          console.log(err);
+        } else {
+          var galleryArray = [];
+          for (let i = 0; i <= rows.length - 1; i++) {
+            var galleryImage = {
+              gallery_image: rows[i].gallery_image,
+            };
+            galleryArray.push(galleryImage);
+          }
+          res.render("gallery", {
+            clientArray,
+            galleryArray,
+            data: rows,
+          });
+        }
+      });
     }
   });
 });
-router.get("/blog", (req, res) => {
-  res.render("blogs");
-});
 
+router.get("/blog", (req, res) => {
+  mysqlConnection.query("SELECT * FROM blogs", (err, rows, fields) => {
+    if (err) {
+      console.log(err);
+    } else {
+      var blogArray = [];
+      for (let i = 0; i <= rows.length - 1; i++) {
+        var blogImage = {
+          blog_title: rows[i].blog_title,
+          blog_content: rows[i].blog_content,
+          image: rows[i].image,
+        };
+        blogArray.push(blogImage);
+      }
+      res.render("blogs", { blogArray });
+    }
+  });
+});
 module.exports = router;
