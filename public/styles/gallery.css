@@ -1,48 +1,53 @@
-.site-navbar ul li a
-{
-    font-size: 2.3rem;
+.site-navbar ul li a {
+  font-size: 2.3rem;
 }
-nav
-{
-    height: 10rem;
+nav {
+  height: 10rem;
 }
 
-a.site-logo
-{
-    width: 17rem;
+a.site-logo {
+  width: 17rem;
 }
-.carousel
-{
-    width: 50%;
-    height: fit-content;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+.carousel {
+  width: 50%;
+  height: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.containerCarouselH1
-{
-    font-size: 3rem;
-    text-align: center;
-    width: 100%;
-    padding: 1%;
+.containerCarouselH1 {
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  padding: 1%;
 }
 
-.containerCarouselH1 span
-{
-    border-bottom: 3px solid black;
+.containerCarouselH1 span {
+  border-bottom: 3px solid black;
 }
 
-.classCarouselposter , .classCarouselgallery
-{
-    width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 45rem !important;
+.classCarouselposter,
+.classCarouselgallery {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 45rem !important;
 }
 
-footer
-{
-    margin-top: 5%;
+footer {
+  margin-top: 5%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 5rem;
+  height: 5rem;
 }

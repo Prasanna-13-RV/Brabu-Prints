@@ -27,13 +27,7 @@ body {
   width: 35%;
   height: 100%;
 }
-.laptop {
-  position: relative;
-  width: 94%;
-  height: 90%;
-  bottom: 7%;
-  z-index: 1;
-}
+
 
 .layer1 {
   position: absolute;
@@ -97,54 +91,7 @@ body {
   color: rgb(0, 0, 0);
 }
 
-.aboutVideodiv video {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-.aboutVideodiv::after {
-  position: absolute;
-  width: 82%;
-  height: 100%;
-  content: "";
-  left: 9%;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #0000007a;
-}
 
-.imagediv1 {
-  position: relative;
-  background: url(../img/EP1A3512.jpg) center/cover;
-  background-repeat: none;
-  width: 50%;
-  height: 100%;
-}
-.imagediv2 {
-  background: url(../img/EP1A3514.jpg) center/cover;
-  background-repeat: none;
-  width: 50%;
-  height: 100%;
-}
-.imagediv3 {
-  background: url(../img/EP1A3515.jpg) center/cover;
-  background-repeat: none;
-  width: 50%;
-  height: 100%;
-}
-.imagediv4 {
-  background: url(../img/EP1A3517.jpg) center/cover;
-  background-repeat: none;
-  width: 50%;
-  height: 100%;
-}
-
-.parallax11 {
-  display: block;
-}
 
 .heading1 {
   height: 15vh;
@@ -194,84 +141,8 @@ body {
     center/cover;
 }
 
-.parallax1 {
-  background: url(../img/EP1A3570.jpg) center/cover;
-  width: 100%;
-  height: 40rem;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
+/* f7a707 */
 
-.leaf {
-  position: relative;
-  width: 23em;
-  height: 50%;
-  background-color: #da2c27;
-  border-radius: 0% 50% 0% 50%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
-  z-index: 4;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out;
-}
-
-.leafSpan1,
-.leafSpan2,
-.leafSpan3,
-.leafUl {
-  opacity: 0;
-}
-
-.leafContent {
-  position: relative;
-  z-index: 3;
-  color: white;
-  padding: 10%;
-  transition: all 1s ease-in-out;
-}
-
-.leafContent1 {
-  padding: 10%;
-  font-size: 1.3rem;
-}
-.leafContent3 {
-  padding: 4% 6% 0% 8%;
-}
-
-.leafreadMore1,
-.leafreadMore2,
-.leafreadMore3 {
-  background-color: #f7a707;
-  font-size: 1.3rem;
-  display: block;
-  margin: 5% 27%;
-  padding: 3%;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-  transition: all 0.1s ease-in-out;
-}
-.leafreadMore1:hover,
-.leafreadMore2:hover,
-.leafreadMore3:hover {
-  background-color: white;
-  color: #f7a707;
-}
-
-.paralaxH1 {
-  position: relative;
-  text-align: left;
-  padding-left: 10%;
-  z-index: 4;
-  color: white;
-  font-size: 35px;
-}
-.leafContent h1 {
-  text-align: left;
-}
 
 .frame {
   position: relative;
@@ -326,16 +197,7 @@ body {
   margin-right: auto;
 }
 
-.videoAbsoluteSection {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .mediaQueryPageSwipe {
   display: none;
 }
@@ -389,10 +251,7 @@ body {
   background: #ff0000f3;
 }
 
-.sectiononediv {
-  display: flex;
-  flex-direction: row;
-}
+
 .image {
   width: 95%;
   height: 185px;
@@ -475,96 +334,10 @@ body {
   color: black;
 }
 
-.image1 {
-  background: url(../img/EP1A3512.jpg) center/contain;
-  background-repeat: no-repeat;
-}
-.image2 {
-  background: url(../img/EP1A3514.jpg) center/contain;
-  background-repeat: no-repeat;
-}
-.image3 {
-  background: url(../img/EP1A3515.jpg) center/contain;
-  background-repeat: no-repeat;
-}
-.image4 {
-  background: url(../img/EP1A3517.jpg) center/contain;
-  background-repeat: no-repeat;
-}
 
-.projectsSection {
-  width: 100%;
-  height: 100vh;
-}
-.projectsSection h1 {
-  font-size: 40px;
-  margin: 5%;
-  text-align: center;
-}
 
-.projectBox {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 100%;
-  height: 75vh;
-  padding: 0% 5%;
-  /* overflow: hidden; */
-}
 
-.projectPart3 {
-  width: 100%;
-  height: 100%;
-}
 
-.rightProjectPart1 {
-  background: url(https://cdn.hotbot.com/wp-content/uploads/2020/08/Online-Banking-With-a-VPN-Header-1.png)
-    center/cover;
-  background-repeat: no-repeat;
-}
-.rightProjectPart2 {
-  background: url(https://www.racingjunk.com/news/wp-content/uploads/2019/09/CI_Showroom-min-1-678x381.jpg)
-    center/cover;
-  background-repeat: no-repeat;
-}
-.rightProjectPart3 {
-  background: url(https://i.guim.co.uk/img/media/c6af49070512c0a410854a21ccc278910fb23d8b/0_179_5386_3234/master/5386.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=17fc129fc7019a9d6e6646a1a33d3937)
-    center/cover;
-  background-repeat: no-repeat;
-}
-.rightProjectPart4 {
-  background: url(https://i.ytimg.com/vi/qT8FzQhMrL4/maxresdefault.jpg)
-    center/cover;
-  background-repeat: no-repeat;
-}
-.rightProjectPart5 {
-  background: url(https://www.nationalgeographic.com/moments-of-joy/assets/images/social2.jpg)
-    center/cover;
-  background-repeat: no-repeat;
-}
-.rightProjectPart6 {
-  background: url(https://sparkevents.ch/wp-content/uploads/2018/12/SPARK-EVENTS-LOGO-FINAL2.png)
-    center/cover;
-  background-repeat: no-repeat;
-}
-.rightProjectPart7 {
-  background: url(https://static.euronews.com/articles/stories/04/26/73/54/1200x675_cmsv2_e69d8c2b-fbbb-5209-a38c-55515df49960-4267354.jpg)
-    center/cover;
-  background-repeat: no-repeat;
-}
-.rightProjectPart8 {
-  background: url(https://sakhilebuthelezi.com/wp-content/uploads/2015/05/zazoo-logo-mockup.jpg)
-    center/cover;
-  background-repeat: no-repeat;
-}
-
-.info {
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-}
 /* #e4510d */
 .infoBtn {
   position: relative;
@@ -785,11 +558,11 @@ body {
   align-items: center;
 }
 
-.imagesShortSection-div
-{
+.imagesShortSection-div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .imageImgSection {
@@ -823,6 +596,7 @@ body {
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
+  margin-bottom: 10%;
   /* border: 2px solid #1100ff; */
 }
 
@@ -918,8 +692,7 @@ body {
     text-align: center;
     margin: 10% 0%;
   }
-  .infoBtn
-  {
+  .infoBtn {
     width: 70%;
   }
   .detailsH1Box {
@@ -955,12 +728,10 @@ body {
   .contactInput {
     width: 100%;
   }
-  .imagesShortSection
-  {
+  .imagesShortSection {
     padding: 5%;
   }
-  .our-team-all-div
-  {
+  .our-team-all-div {
     padding: 7%;
   }
 }
