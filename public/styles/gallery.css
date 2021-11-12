@@ -92,6 +92,31 @@ footer {
   {
     height: fit-content !important;
   }
+  h1
+  {
+    font-size: 4rem;
+  }
+  .site-navbar ul li a
+  {
+    font-size: 2.5rem;
+  }
+  a.site-logo
+  {
+    width: 16rem;
+  }
+  nav {
+    height: 10rem;
+  } 
+  
+  .carousel
+  {
+    width: 95%;
+  }
+  footer
+  {
+    height: 30rem;
+    font-size: 2rem;
+  }
 }
 
 .nav-toggler

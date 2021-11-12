@@ -157,8 +157,13 @@
   {
     height: fit-content;
     opacity: 1;
+    font-size: 1.5rem;
     padding: 8%;
     text-align: center;
+  }
+  .leaf h1
+  {
+    font-size: 2.5rem;
   }
   .leaf
   {

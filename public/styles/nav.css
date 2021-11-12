@@ -185,9 +185,23 @@ a.site-logo {
   /* navbar css for mobile end */
 }
 
-
 /* mobile breakpoint start */
 @media screen and (max-width: 400px) {
+  nav {
+    height: 6rem;
+  }
+  a.site-logo {
+    width: 10rem;
+  }
+  .nav-toggler span,
+  .nav-toggler span:before,
+  .nav-toggler span:after {
+    width: 40px;
+    height: 4px;
+  }
+  .nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+  }
   .container {
     max-width: 720px;
   }
@@ -221,6 +235,7 @@ a.site-logo {
   }
   .site-navbar ul li a {
     padding: 25px;
+    font-size: 1.5rem;
   }
   .site-navbar ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -229,11 +244,18 @@ a.site-logo {
     max-height: 100vh;
     overflow: visible;
     z-index: 20;
-    padding-top: 10%;
+    padding-top: 1%;
   }
   .intro-area h2 {
     font-size: 36px;
     margin-bottom: 15px;
+  }
+  .nav-toggler span:before {
+    transform: translateY(-10px);
+  }
+  .nav-toggler span:after
+  {
+    transform: translateY(6px);
   }
   /* navbar css for mobile end */
 }

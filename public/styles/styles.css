@@ -701,6 +701,7 @@ body {
   }
   .h2mediaQuery {
     text-align: center;
+    font-size: 2rem;
   }
   .pageSwipemediaQuery {
     background-color: #f7a707;
@@ -712,6 +713,10 @@ body {
     font-size: 1.3em;
     padding: 5%;
     text-align: justify;
+  }
+  .imageImgSection
+  {
+    height: 3rem;
   }
   .spanright {
     position: relative;
@@ -736,9 +741,11 @@ body {
   .heading1 {
     text-align: center;
     margin: 10% 0%;
+    font-size: 38px;
   }
   .infoBtn {
     width: 70%;
+    font-size: 1.5rem;
   }
   .detailsH1Box {
     font-size: 1rem;
@@ -753,12 +760,28 @@ body {
   .projectsSubDivDetails {
     overflow: scroll;
   }
+  .projectsSubDivDetails h1 {
+    font-size: 2.3rem;
+  }
+  .projectsSubDivDetails h3
+  {
+    font-size: 1.8rem;
+  }
+  .projectsSubDivDetails p
+  {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .projectsSubDiv:hover {
+    height: 35rem;
+  }
   .contactDetail {
     flex-direction: column;
   }
   .map {
     width: 90%;
     margin: 5%;
+    height: 15rem;
   }
   .contactInput {
     width: 100%;
@@ -768,5 +791,22 @@ body {
   }
   .our-team-all-div {
     padding: 7%;
+  }
+  .ourTeamParagraph
+  {
+    font-size: 25px;
+  }
+  .team-image-img
+  {
+    width: 14rem;
+    height: 14rem;
+  }
+  .team-name h1
+  {
+    font-size: 2rem;
+  }
+  .team-job h3
+  {
+    font-size: 1.3rem;
   }
 }
