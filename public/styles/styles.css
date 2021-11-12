@@ -28,7 +28,6 @@ body {
   height: 100%;
 }
 
-
 .layer1 {
   position: absolute;
   top: 5%;
@@ -88,7 +87,6 @@ body {
 
 /* f7a707 */
 
-
 .frame {
   position: relative;
   text-align: center;
@@ -142,7 +140,6 @@ body {
   margin-right: auto;
 }
 
-
 .mediaQueryPageSwipe {
   display: none;
 }
@@ -195,7 +192,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff0000f3;
 }
-
 
 .image {
   width: 95%;
@@ -278,10 +274,6 @@ body {
   top: 5%;
   color: black;
 }
-
-
-
-
 
 /* #e4510d */
 .infoBtn {
@@ -512,7 +504,7 @@ body {
 
 .imageImgSection {
   position: relative;
-  height: 5rem;
+  height: 3rem;
   margin: 1%;
 }
 
@@ -543,6 +535,140 @@ body {
   border-radius: 50%;
   margin-bottom: 10%;
   /* border: 2px solid #1100ff; */
+}
+
+@media (max-width: 800px) {
+  .spillDiv {
+    display: none;
+  }
+  .sliderFrontPage {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .swiper {
+    width: 75%;
+    height: 60%;
+    margin-right: auto;
+  }
+  .sectionClass {
+    flex-direction: column;
+  }
+  .divpage {
+    width: 90%;
+  }
+  .twoSection {
+    display: none;
+  }
+  .mediaQueryPageSwipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .h2mediaQuery {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .pageSwipemediaQuery {
+    background-color: #f7a707;
+    width: 97%;
+    padding: 4%;
+    margin-top: 5%;
+  }
+  .pageSwipecontentmediaQuery p {
+    font-size: 2.3em;
+    padding: 5%;
+    text-align: justify;
+  }
+  .spanright {
+    position: relative;
+    width: 90%;
+    left: 0%;
+  }
+  .spanright1 {
+    position: relative;
+    width: 90%;
+    left: 0%;
+  }
+  .qualityUl {
+    position: relative;
+    left: 0%;
+  }
+  .about-us-section {
+    display: none;
+  }
+  .ourOtherServices {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heading1 {
+    text-align: center;
+    margin: 0%;
+    font-size: 55px;
+  }
+  .infoBtn {
+    width: 40%;
+    font-size: 2rem;
+  }
+  .detailsH1Box {
+    font-size: 1.5rem;
+  }
+  .projectsMainDivFlex1,
+  .projectsMainDivFlex2 {
+    flex-direction: column;
+  }
+  .projectsSubDiv {
+    width: 85%;
+    height: 18rem;
+  }
+  .projectsSubDiv:hover {
+    height: 45rem;
+  }
+  .projectsSubDivDetails {
+    overflow: scroll;
+  }
+  .projectsSubDivDetails h1 {
+    font-size: 3.3rem;
+  }
+  .projectsSubDivDetails h3 {
+    font-size: 2.8rem;
+  }
+  .projectsSubDivDetails p {
+    font-size: 2.3rem;
+  }
+  .contactDetail {
+    flex-direction: column;
+  }
+  .map {
+    width: 90%;
+    margin: 5%;
+    height: 25rem;
+  }
+  .contactInput {
+    width: 100%;
+  }
+  .imagesShortSection {
+    padding: 5%;
+  }
+  .our-team-all-div {
+    padding: 7%;
+  }
+  .imageImgSection {
+    height: 4rem;
+  }
+  .ourTeamParagraph {
+    font-size: 35px;
+  }
+  .team-name h1 {
+    font-size: 3rem;
+  }
+  .team-job {
+    font-size: 2rem;
+    margin: 1%;
+  }
+  .team-image-img {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
 @media (max-width: 400px) {
@@ -587,18 +713,6 @@ body {
     padding: 5%;
     text-align: justify;
   }
-  .parallax1 {
-    height: fit-content;
-    flex-direction: column;
-  }
-  .leaf {
-    margin: 5%;
-    border-radius: 10px;
-    width: 90%;
-    height: fit-content;
-    font-size: 20px;
-    padding: 2%;
-  }
   .spanright {
     position: relative;
     width: 90%;
@@ -613,22 +727,7 @@ body {
     position: relative;
     left: 0%;
   }
-  .leafreadMore1,
-  .leafreadMore2,
-  .leafreadMore3 {
-    display: none;
-  }
-  .leafSpan1,
-  .leafSpan2,
-  .leafSpan3,
-  .leafUl {
-    opacity: 1;
-  }
-  .leafContent3 p {
-    margin-bottom: auto;
-  }
-  .about-us-section
-  {
+  .about-us-section {
     display: none;
   }
   .ourOtherServices {
@@ -648,16 +747,6 @@ body {
   .projectsMainDivFlex2 {
     flex-direction: column;
   }
-  /* .projectsSubDiv::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #2e2e2eb9;
-    z-index: 1;
-  } */
   .projectsSubDiv {
     width: 85%;
   }

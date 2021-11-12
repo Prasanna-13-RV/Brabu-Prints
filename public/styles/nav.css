@@ -65,6 +65,8 @@ a.site-logo {
   cursor: pointer;
   height: 39px;
   display: none;
+  z-index: 1000;
+  margin-right: 5%;
 }
 .nav-toggler span,
 .nav-toggler span:before,
@@ -113,8 +115,25 @@ a.site-logo {
 }
 /* intro-area css end */
 
-/* mobile breakpoint start */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
+  .nav-toggler span,
+  .nav-toggler span:before,
+  .nav-toggler span:after {
+    width: 60px;
+    height: 7px;
+  }
+  .nav-toggler span:before {
+    transform: translateY(-15px);
+  }
+  .nav-toggler span:after {
+    transform: translateY(9px);
+  }
+  a.site-logo {
+    width: 16rem;
+  }
+  nav {
+    height: 10rem;
+  }
   .container {
     max-width: 720px;
   }
@@ -128,9 +147,65 @@ a.site-logo {
   .site-navbar ul {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 60px);
+    /* height: calc(100vh - 60px); */
+    height: 100vh;
     left: 0;
-    top: 60px;
+    /* top: 60px; */
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #444;
+    background-color: rgba(0, 0, 0, 0.75);
+    max-height: 0;
+    overflow: hidden;
+    z-index: 20;
+    transition: 0.3s;
+  }
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .site-navbar ul li a {
+    padding: 25px;
+    font-size: 3.5rem;
+  }
+  .site-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+    z-index: 20;
+    padding-top: 10%;
+  }
+  .intro-area h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  /* navbar css for mobile end */
+}
+
+
+/* mobile breakpoint start */
+@media screen and (max-width: 400px) {
+  .container {
+    max-width: 720px;
+  }
+  /* navbar css for mobile start */
+  .nav-toggler {
+    display: block;
+  }
+  .site-navbar {
+    min-height: 60px;
+  }
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    /* height: calc(100vh - 60px); */
+    height: 100vh;
+    left: 0;
+    /* top: 60px; */
+    top: 0;
     flex-direction: column;
     align-items: center;
     border-top: 1px solid #444;
@@ -154,6 +229,7 @@ a.site-logo {
     max-height: 100vh;
     overflow: visible;
     z-index: 20;
+    padding-top: 10%;
   }
   .intro-area h2 {
     font-size: 36px;

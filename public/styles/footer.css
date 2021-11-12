@@ -43,3 +43,21 @@ footer {
 .showMore1.displayjs {
 	display: block;
 }
+
+@media (max-width: 800px) {
+	footer
+	{
+		font-size: 1.5rem;
+		height: 18rem;
+	}
+}
+@media (max-width: 400px) {
+	.iconsSocial a
+	{
+		font-size: 2rem;
+	}
+	footer
+	{
+		padding: 5% 0%;
+	}
+}

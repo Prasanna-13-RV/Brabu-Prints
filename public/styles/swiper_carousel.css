@@ -108,6 +108,14 @@
   }
 }
 
+
+@media (max-width: 800px) {
+  .slideshow-container
+  {
+    width: 100%;
+    left: 0;
+  }
+}
 @media (max-width: 400px) {
   .slideshow-container {
     width: 90%;
