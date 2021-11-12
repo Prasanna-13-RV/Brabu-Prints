@@ -49,6 +49,7 @@
   text-decoration: none;
   border: none;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .leaf-content {
@@ -61,23 +62,24 @@
   color: white;
 }
 
+
 .heading.leaf-content-one {
   height: 45%;
   width: 90%;
   opacity: 1;
-  overflow: visible;
+  overflow: scroll;
 }
 .heading.leaf-content-two{
   height: 80%;
   width: 90%;
   opacity: 1;
-  overflow: visible;
+  overflow: scroll;
 }
 .heading.leaf-content-three {
   height: 90%;
   width: 90%;
   opacity: 1;
-  overflow: visible;
+  overflow: scroll;
 }
 
 .height.leaf-one,

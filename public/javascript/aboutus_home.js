@@ -14,7 +14,7 @@ const aboutUsOneContent = document.querySelector(".about-us-one-content");
 const aboutUsTwoContent = document.querySelector(".about-us-two-content");
 const aboutUsThreeContent = document.querySelector(".about-us-three-content");
 
-const aboutUsAnimi = (aboutUsDiv , image , h1 , content) => {
+const aboutUsAnimi = (aboutUsDiv, image, h1, content) => {
   aboutUsDiv.addEventListener("mouseenter", () => {
     image.classList.toggle("aboutUs-Image");
     h1.classList.toggle("aboutUs-H1");
@@ -22,6 +22,11 @@ const aboutUsAnimi = (aboutUsDiv , image , h1 , content) => {
   });
 };
 
-aboutUsAnimi(aboutUsOne , aboutUsOneImage , aboutUsOneH1 , aboutUsOneContent);
-aboutUsAnimi(aboutUsTwo , aboutUsTwoImage , aboutUsTwoH1 , aboutUsTwoContent);
-aboutUsAnimi(aboutUsThree , aboutUsThreeImage , aboutUsThreeH1 , aboutUsThreeContent);
+aboutUsAnimi(aboutUsOne, aboutUsOneImage, aboutUsOneH1, aboutUsOneContent);
+aboutUsAnimi(aboutUsTwo, aboutUsTwoImage, aboutUsTwoH1, aboutUsTwoContent);
+aboutUsAnimi(
+  aboutUsThree,
+  aboutUsThreeImage,
+  aboutUsThreeH1,
+  aboutUsThreeContent
+);

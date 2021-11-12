@@ -15,7 +15,7 @@
 
 .about-us-topic h1 {
   font-size: 3em;
-  margin-bottom: 2%;
+  margin: 2%;
 }
 .about-us-topic h2 {
   font-size: 2em;
@@ -51,8 +51,20 @@
   background-color: rgb(247, 167, 7);
 }
 
+.about-us-one-image
+{
+  background: url(../img/EP1A3515.jpg) center/cover no-repeat;
+}
+.about-us-two-image
+{
+  background: url(../img/EP1A3689.jpg) center/cover no-repeat;
+}
+.about-us-three-image
+{
+  background: url(../img/EP1A4194.jpg) center/cover no-repeat;
+}
+
 .their-about-us {
-  background: url(../public/img/EP1A3515.jpg) center/cover no-repeat;
   width: 75%;
   height: 65%;
   top: 10%;
