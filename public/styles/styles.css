@@ -14,6 +14,16 @@ body {
   /* background: linear-gradient(45deg, #f0850d, #db1d1d); */
 }
 
+.topButton
+{
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  padding: 2%;
+  z-index: 100;
+  display: none;
+}
+
 .sliderFrontPage {
   height: 85vh;
   position: relative;
