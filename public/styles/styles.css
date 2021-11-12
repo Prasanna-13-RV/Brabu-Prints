@@ -38,61 +38,6 @@ body {
   z-index: 2;
 }
 
-.aboutUsSection {
-  position: relative;
-  height: 50vh;
-  width: 100%;
-  display: flex;
-  color: black;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* left: 100%; */
-}
-
-.aboutUsSection h1 {
-  /* color: rgba(219, 29, 29, 0.897); */
-  font-size: 45px;
-  z-index: 10;
-}
-.aboutUscontent::before {
-  display: none;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 50px;
-  bottom: 115%;
-  left: 0;
-  background: linear-gradient(to top, transparent, rgba(219, 29, 29, 0.897));
-  z-index: 100;
-}
-
-.aboutUscontent {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.aboutUscontent h3 {
-  text-align: center;
-  font-size: 35px;
-  color: black;
-  margin-bottom: 1%;
-  margin-top: 1%;
-}
-.aboutUscontent p {
-  font-size: 1.3rem;
-  color: black;
-  text-align: justify;
-}
-
-.aboutImage {
-  position: relative;
-  color: rgb(0, 0, 0);
-}
-
-
-
 .heading1 {
   height: 15vh;
   width: 100%;
@@ -616,9 +561,6 @@ body {
   .sectionClass {
     flex-direction: column;
   }
-  .aboutUsSection {
-    height: fit-content;
-  }
   .divpage {
     width: 90%;
   }
@@ -684,6 +626,10 @@ body {
   }
   .leafContent3 p {
     margin-bottom: auto;
+  }
+  .about-us-section
+  {
+    display: none;
   }
   .ourOtherServices {
     grid-template-columns: repeat(2, 1fr);
