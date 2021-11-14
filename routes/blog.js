@@ -8,10 +8,13 @@ const { storage, cloudinary } = require("../cloudinary");
 const upload = multer({ storage });
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const mysqlConnection = require("../database");
+const {isloggedin} = require("../middleware");
 
-router.get('/', function (req, res, next) {
+
+router.route('/').get(isloggedin, function (req, res, next) {
     mysqlConnection.query("SELECT * FROM blogs", (err, rows, fields) => {
         if (!err) {
+            console.log(req.session.loginuser);
             res.render("./admin/ourblog", { data: rows })
         }
         else {
@@ -22,7 +25,7 @@ router.get('/', function (req, res, next) {
 
 
 // create blog
-router.get("/create", (req, res) => {
+router.get("/create",isloggedin, (req, res) => {
     res.render("./admin/blogCreate")
 })
 router.post("/create", upload.single("image"), (req, res) => {
@@ -37,7 +40,7 @@ router.post("/create", upload.single("image"), (req, res) => {
 
 
 // view blog
-router.get("/:id", (req, res) => {
+router.get("/:id",isloggedin, (req, res) => {
     mysqlConnection.query("SELECT * FROM blogs WHERE id = ?", [req.params.id], (err, row, fields) => {
         if (!err) {
             res.render("./admin/blogview", { data: row })
@@ -49,7 +52,7 @@ router.get("/:id", (req, res) => {
 });
 
 // update blog
-router.get("/update/:id", (req, res) => {
+router.get("/update/:id",isloggedin, (req, res) => {
     mysqlConnection.query("SELECT * FROM blogs WHERE id=?" , [req.params.id], (err, rows) => {
         if (!err) {
             res.render("./admin/blogupdate", { data: rows })
@@ -60,7 +63,7 @@ router.get("/update/:id", (req, res) => {
     })
 })
 
-router.post("/:id", (req, res) => {
+router.post("/:id",isloggedin, (req, res) => {
     mysqlConnection.query("UPDATE blogs SET blog_title=? , blog_content=? WHERE id=?", [req.body.blog_title, req.body.blog_content, req.params.id], (err, rows) => {
         if (!err) {
             mysqlConnection.query("SELECT * FROM blogs WHERE id = ?", [req.params.id], (err, rows) => {
@@ -80,7 +83,7 @@ router.post("/:id", (req, res) => {
 
 
 // delete blog
-router.get("/delete/:id", async (req, res) => {
+router.get("/delete/:id",isloggedin, async (req, res) => {
     mysqlConnection.query("DELETE FROM blogs WHERE id = ?", [req.params.id], async (err, rows) => {
         if (!err) {
             const url = req.query.cloudinaryName.split("BrabuPrintsMYSQL/")[1].slice(0, -4);

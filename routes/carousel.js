@@ -8,8 +8,10 @@ const { storage, cloudinary } = require("../cloudinary");
 const upload = multer({ storage });
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const mysqlConnection = require("../database");
+const {isloggedin} = require("../middleware");
 
-router.get('/', function (req, res, next) {
+
+router.get('/',isloggedin, function (req, res, next) {
 	mysqlConnection.query("SELECT * FROM carousels", (err, rows, fields) => {
 		if (!err) {
 			res.render("./admin/ourcarousel", { data: rows })
@@ -21,10 +23,10 @@ router.get('/', function (req, res, next) {
 });
 
 // create carousel
-router.get("/create", (req, res) => {
+router.get("/create",isloggedin, (req, res) => {
     res.render("./admin/carouselCreate")
 })
-router.post("/create", upload.single("carousel_image"), (req, res) => {
+router.post("/create",isloggedin, upload.single("carousel_image"), (req, res) => {
     mysqlConnection.query("INSERT INTO carousels (carousel_image) values(?)", [req.file.path], (err, rows, response) => {
         if (!err) {
             res.render("./admin/carouselconform")
@@ -35,7 +37,7 @@ router.post("/create", upload.single("carousel_image"), (req, res) => {
 });
 
 // delete carousel
-router.get("/delete/:id", async (req, res) => {
+router.get("/delete/:id",isloggedin, async (req, res) => {
     mysqlConnection.query("DELETE FROM carousels WHERE id = ?", [req.params.id], async (err, rows) => {
         if (!err) {
             const url = req.query.cloudinaryName.split("BrabuPrintsMYSQL/")[1].slice(0,-4);

@@ -4,6 +4,7 @@ const path = require("path");
 const router = express.Router({ mergeParams: true });
 const methodOverride = require("method-override");
 const session = require("express-session");
+// const flash = require("express-flash");
 const multer = require("multer");
 const { storage, cloudinary } = require("../cloudinary");
 const upload = multer({ storage });
@@ -22,29 +23,35 @@ router.get("/register", function (req, res, next) {
 });
 
 router.post("/register", async (req, res) => {
-	const { email, username, password } = req.body;
+	const { email, username, password, confirmPassword } = req.body;
 	if (!email || !password) {
 		res.status(400).json(`Missing ${!email ? "email" : "password"}!`);
 	}
-
-	const hash = await bcrypt.hash(password, 10);
-	await mysqlConnection.query(
-		"INSERT INTO login (email, username, hash) values(?,?,?)",
-		[email, username, hash],
-		(err, rows, response) => {
-			if (!err) {
-				res.redirect("/login");
-			} else {
-				console.log(err);
+	if (password == confirmPassword) {
+		const hash = await bcrypt.hash(password, 10);
+		await mysqlConnection.query(
+			"INSERT INTO login (email, username, hash) values(?,?,?)",
+			[email, username, hash],
+			(err, rows, response) => {
+				if (!err) {
+					res.redirect("/login");
+				} else {
+					console.log(err);
+				}
 			}
-		}
-	);
+		);
+	}
+	else {
+		res.status(400).json("Passwords do not match!");
+
+		res.redirect("/login");
+	}
 });
 
 router.get("/login", function (req, res, next) {
 	mysqlConnection.query("SELECT * FROM login", (err, rows, fields) => {
 		if (!err) {
-			res.render("./auth/login", { data: rows });
+			res.render("./auth/login", { data: rows , error: req.flash("error")});
 		} else {
 			console.log(err);
 		}
@@ -56,6 +63,7 @@ router.post("/login", async (req, res) => {
 	try {
 		const { email, password } = req.body;
 		if (!email || !password) {
+			req.flash("error", "Missing email or password!");
 			res.status(400).json(`Missing ${!email ? "email" : "password"}!`);
 		}
 		mysqlConnection.query(
@@ -65,18 +73,13 @@ router.post("/login", async (req, res) => {
 					const user = rows[0];
 					const isMatch = await bcrypt.compare(password, rows[0].hash);
 					if (!isMatch) {
-						res.redirect("/login", { message: "Incorrect password" });
+						req.flash("error", "Incorrect password!");
+						res.redirect("/login");
 						res.status(400).json("Incorrect password");
-					}
-					if (req.session) {
-						req.session.destroy((err) => {
-							if (err) {
-								console.log(err);
-							} else {
-								res.clearCookie('connect.sid')
-								res.redirect("/admin/blog");
-							}
-						});
+					} else {
+						const loginuser = 'Yes';
+						req.session.loginuser = loginuser;
+						res.redirect("/admin/blog");
 					}
 				} else {
 					console.log(err);
@@ -84,6 +87,7 @@ router.post("/login", async (req, res) => {
 			}
 		);
 	} catch (e) {
+		req.flash("error", "Incorrect email or password!");
 		console.log(e);
 		res.status(400).json("Something broke!");
 	}

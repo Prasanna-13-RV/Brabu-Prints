@@ -9,8 +9,10 @@ const upload = multer({ storage });
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 const fs = require('fs');
 const mysqlConnection = require("../database");
+const {isloggedin} = require("../middleware");
 
-router.get('/', function (req, res, next) {
+
+router.get('/',isloggedin, function (req, res, next) {
 	mysqlConnection.query("SELECT * FROM clients", (err, rows, fields) => {
 		if (!err) {
 			res.render("./admin/ourclient", { data: rows })
@@ -23,10 +25,10 @@ router.get('/', function (req, res, next) {
 
 
 // create client
-router.get("/create", (req, res) => {
+router.get("/create",isloggedin, (req, res) => {
 	res.render("./admin/clientCreate")
 })
-router.post("/create", upload.fields([
+router.post("/create",isloggedin, upload.fields([
 	{ name: "client_logo" },
 	{ name: "client_poster" },
 ]), (req, res) => {
@@ -41,7 +43,7 @@ router.post("/create", upload.fields([
 
 
 // view client
-router.get("/:id", (req, res) => {
+router.get("/:id",isloggedin, (req, res) => {
 	mysqlConnection.query("SELECT * FROM clients WHERE id = ?", [req.params.id], (err, row, fields) => {
 		if (!err) {
 			res.render("./admin/clientview", { data: row })
@@ -104,7 +106,7 @@ router.get("/:id", (req, res) => {
 
 
 // delete client
-router.get("/delete/:id", async (req, res) => {
+router.get("/delete/:id",isloggedin, async (req, res) => {
 	mysqlConnection.query("DELETE FROM clients WHERE id = ?", [req.params.id], async (err, rows) => {
 		if (!err) {
 			console.log(req.query);
