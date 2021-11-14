@@ -80,11 +80,12 @@ router.get("/:id", (req, res) => {
 
 
 // delete team
+
 router.get("/delete/:id", async (req, res) => {
     mysqlConnection.query("DELETE FROM teams WHERE id = ?", [req.params.id], async (err, rows) => {
         if (!err) {
-            const url = req.query.cloudinaryName.split("BrabuPrintsMYSQL/")[1].slice(0, -4);
-            await cloudinary.uploader.destroy("BrabuPrintsMYSQL/" + url);
+            const url = req.query.cloudinaryName.split("BrabuPrintsMYSQL/")[1].slice(0,-4);
+            await cloudinary.uploader.destroy("BrabuPrintsMYSQL/"+url);
             res.redirect("/admin/team")
         }
         else {
