@@ -39,6 +39,20 @@ app.use(flash())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
+// const verifypassword = (req, res, next) => {
+//   const { password } = req.query;
+//   if (password === process.env.MYSECRET) {
+//     next();
+//   }
+//   else {
+//     res.redirect("/");
+//   }
+// }
+
+app.use(methodOverride("_method"));
+
+
 app.use("/", brabuprints);
 app.use("/admin", brabuprintsLogin);
 app.use("/admin/blog", brabuprintsBlog);
