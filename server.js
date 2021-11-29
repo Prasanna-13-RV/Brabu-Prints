@@ -29,9 +29,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
-  secret : process.env.SESSION_SECRET,
-  resave : false,
-  saveUninitialized : false
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
 }))
 app.use(flash())
 
@@ -40,7 +40,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use("/", brabuprints);
-app.use("/", brabuprintsLogin);
+app.use("/admin", brabuprintsLogin);
 app.use("/admin/blog", brabuprintsBlog);
 app.use("/admin/client", brabuprintsClient);
 app.use("/admin/gallery", brabuprintsGallery);
