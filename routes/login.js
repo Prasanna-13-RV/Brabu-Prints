@@ -67,11 +67,10 @@ router.post("/login", async (req, res) => {
 			res.redirect("/admin/login");
 		}
 		mysqlConnection.query(
-			`SELECT * FROM login where username = ?`,[username],
+			`SELECT * FROM login where username = ?`, [username],
 			async (err, rows, fields) => {
 				if (!err) {
 					const user = rows[0];
-					console.log(user);
 					const isMatch = await bcrypt.compare(password, rows[0].hash);
 					if (isMatch) {
 						const loginuser = 'Yes';
