@@ -13,7 +13,7 @@
 }
 
 .image-blog-img {
-  width: 85%;
+  width: 40%;
   margin: 5%;
 }
 
@@ -50,6 +50,10 @@
   .div-blog p {
     text-align: justify;
     font-size: 2rem;
+  }
+  .image-blog-img
+  {
+    width: 85%;
   }
 }
 @media (max-width: 400px) {
