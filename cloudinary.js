@@ -13,7 +13,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
 	cloudinary,
 	params: {
-		folder: 'BrabuPrintsMYSQL',
+		folder: process.env.CLOUDINARY_FOLDER_NAME,
 		allowedFormats: ['jpeg', 'png', 'jpg']
 	}
 });
