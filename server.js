@@ -62,6 +62,10 @@ app.use("/admin/carousel", brabuprintsCarousel);
 app.use("/admin/projectcarousel", brabuprintsProjectCarousel);
 app.use("/admin/team", brabuprintsTeam);
 
+app.get('*', (req, res) => {
+	res.render('404');
+});
+
 app.listen(process.env.PORT, () => {
   console.log("SERVER IS RUNNING ON PORT 8080");
 });
