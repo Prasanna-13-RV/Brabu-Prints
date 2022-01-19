@@ -111,7 +111,7 @@
   }
   .leaf h1
   {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .leaf-div
   {
@@ -122,7 +122,7 @@
   {
     height: fit-content;
     opacity: 1;
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-align: justify;
   }
   li
@@ -157,13 +157,13 @@
   {
     height: fit-content;
     opacity: 1;
-    font-size: 1.5rem;
-    padding: 8%;
+    font-size: 1.3rem;
+    padding: 4%;
     text-align: center;
   }
   .leaf h1
   {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .leaf
   {

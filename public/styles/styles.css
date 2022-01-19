@@ -14,8 +14,7 @@ body {
   /* background: linear-gradient(45deg, #f0850d, #db1d1d); */
 }
 
-.topButton
-{
+.topButton {
   position: fixed;
   bottom: 0%;
   right: 0%;
@@ -428,8 +427,7 @@ body {
     center/cover no-repeat;
 }
 .projectsMainDivFlex2 .projectsSubDiv:nth-child(1) {
-  background: url("../img/EP1A3522.jpg")
-    center/cover no-repeat;
+  background: url("../img/EP1A3522.jpg") center/cover no-repeat;
 }
 .projectsMainDivFlex2 .projectsSubDiv:nth-child(2) {
   background: url(https://sparkevents.ch/wp-content/uploads/2018/12/SPARK-EVENTS-LOGO-FINAL2.png)
@@ -541,6 +539,59 @@ body {
   /* border: 2px solid #1100ff; */
 }
 
+.mission-vision {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mission-vision-main-div {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mission-vision-span {
+  position: absolute;
+  background-color: #da2c27;
+  width: 100%;
+  height: 150vh;
+  transform: rotate(-55deg) translateY(52%);
+}
+
+.common-on-both {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0% 5%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.common-on-both h1 {
+  margin: 1%;
+}
+
+.vision {
+  color: white;
+}
+
+
+
 @media (max-width: 800px) {
   .spillDiv {
     display: none;
@@ -571,7 +622,7 @@ body {
   }
   .h2mediaQuery {
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
   .pageSwipemediaQuery {
     background-color: #f7a707;
@@ -673,6 +724,27 @@ body {
     width: 20rem;
     height: 20rem;
   }
+  .mission-vision {
+    height: fit-content;
+  }
+  .mission-vision-span {
+    display: none;
+  }
+  .mission-vision-main-div {
+    flex-direction: column;
+  }
+  .common-on-both {
+    width: 90%;
+    margin: 5% 0%;
+    padding: 0% 6%;
+    text-align: left;
+    box-shadow: 0px 0px 5px #101010;
+    border-radius: 10px;
+    font-size: 1.3rem;
+  }
+  .vision {
+    color: black;
+  }
 }
 
 @media (max-width: 400px) {
@@ -705,7 +777,7 @@ body {
   }
   .h2mediaQuery {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .pageSwipemediaQuery {
     background-color: #f7a707;
@@ -718,8 +790,7 @@ body {
     padding: 5%;
     text-align: justify;
   }
-  .imageImgSection
-  {
+  .imageImgSection {
     height: 3rem;
   }
   .spanright {
@@ -744,7 +815,8 @@ body {
   }
   .heading1 {
     text-align: center;
-    margin: 10% 0%;
+    margin: 5% 0%;
+    height: fit-content;
     font-size: 30px;
   }
   .infoBtn {
@@ -767,12 +839,10 @@ body {
   .projectsSubDivDetails h1 {
     font-size: 2.3rem;
   }
-  .projectsSubDivDetails h3
-  {
+  .projectsSubDivDetails h3 {
     font-size: 1.8rem;
   }
-  .projectsSubDivDetails p
-  {
+  .projectsSubDivDetails p {
     font-size: 1.3rem;
     text-align: center;
   }
@@ -796,21 +866,38 @@ body {
   .our-team-all-div {
     padding: 7%;
   }
-  .ourTeamParagraph
-  {
-    font-size: 25px;
+  .ourTeamParagraph {
+    font-size: 20px;
   }
-  .team-image-img
-  {
+  .team-image-img {
     width: 14rem;
     height: 14rem;
   }
-  .team-name h1
-  {
+  .team-name h1 {
     font-size: 2rem;
   }
-  .team-job h3
-  {
+  .team-job h3 {
     font-size: 1.3rem;
+  }
+  .mission-vision {
+    height: fit-content;
+  }
+  .mission-vision-span {
+    display: none;
+  }
+  .mission-vision-main-div {
+    flex-direction: column;
+  }
+  .common-on-both {
+    width: 90%;
+    margin: 5% 0%;
+    padding: 0% 6%;
+    text-align: left;
+    box-shadow: 0px 0px 5px #101010;
+    border-radius: 10px;
+    font-size: 1.3rem;
+  }
+  .vision {
+    color: black;
   }
 }
