@@ -13,6 +13,7 @@
 	<!-- <link rel="stylesheet" href="./styles/styles.css"> -->
 	<link rel="stylesheet" href="./styles/nav.css">
 	<link rel="stylesheet" href="./styles/footer.css">
+	<link rel="stylesheet" href="./styles/chatbot.css" />
 	<link rel="stylesheet" href="./styles/gallery.css">
 	<title>Gallery</title>
 </head>
@@ -20,82 +21,89 @@
 
 <body>
 	<%- include('./partials/header.ejs') %>
-		<div class="containerCarousel1">
-			<div class="containerCarouselH1">
-				<h1>G<span>alle</span>ry</h1>
-			</div>
-			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-inner">
-					<% galleryArray.forEach((galleryFor, i)=> { %>
-						<div class="carousel-item <%= i===0 ? " active" : "" %>">
-							<img class="classCarouselgallery" src="<%= galleryFor.gallery_image %>" alt="">
-						</div>
-						<% }) %>
+		<%- include('./partials/chatbot.ejs') %>
+			<div class="containerCarousel1">
+				<div class="containerCarouselH1">
+					<h1>G<span>alle</span>ry</h1>
 				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-					data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-					data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
-		</div>
-
-
-		<div class="containerCarousel2">
-			<div class="containerCarouselH1">
-				<h1>Ou<span>r Post</span>ers</h1>
-			</div>
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner">
-					<% clientArray.forEach((clientFor , i)=> { %>
-						<div class="item <%= i===0 ? " active" : "" %>">
-							<img class="classCarouselposter" src="<%= clientFor.client_poster %>" alt="">
-						</div>
-						<% }) %>
-				</div>
-
-				<!-- Left and right controls -->
-				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#myCarousel" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right"></span>
-					<span class="sr-only">Next</span>
-				</a>
-			</div>
-		</div>
-
-
-		<footer>
-			<div class="footerclass">
-				<h1>Bra<span>bupri</span>nts</h1>
-				<h3>You Can Reach Us At</h3>
-				<p class="footerptag">Address</p>
-				<p><i>1/555, Mappilaiurani main road, Tutitcorin - 628002</i></p>
-				<div class="iconsSocial">
-					<a href=""><i class="fab fa-facebook"></i></a>
-					<a href=""><i class="fab fa-twitter"></i></a>
-					<a href=""><i class="fab fa-instagram"></i></a>
+				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<% galleryArray.forEach((galleryFor, i)=> { %>
+							<div class="carousel-item <%= i===0 ? " active" : "" %>">
+								<img class="classCarouselgallery" src="<%= galleryFor.gallery_image %>" alt="">
+							</div>
+							<% }) %>
+							<div class="carousel-item">
+								<video class="classCarouselgallery" controls autoplay>
+									<source src="../img/videos/full-video.mp4">
+								</video>
+							</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
 				</div>
 			</div>
-		</footer>
 
-		<!-- 1st carousel -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-			crossorigin="anonymous"></script>
-		<!-- 2nd carousel -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<script src="./javascript/gallery.js"></script>
-		<script src="./javascript/nav.js"></script>
+
+			<div class="containerCarousel2">
+				<div class="containerCarouselH1">
+					<h1>Ou<span>r Post</span>ers</h1>
+				</div>
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<% clientArray.forEach((clientFor , i)=> { %>
+							<div class="item <%= i===0 ? " active" : "" %>">
+								<img class="classCarouselposter" src="<%= clientFor.client_poster %>" alt="">
+							</div>
+							<% }) %>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+
+
+			<footer>
+				<div class="footerclass">
+					<h1>Bra<span>bupri</span>nts</h1>
+					<h3>You Can Reach Us At</h3>
+					<p class="footerptag">Address</p>
+					<p><i>1/555, Mappilaiurani main road, Tutitcorin - 628002</i></p>
+					<div class="iconsSocial">
+						<a href=""><i class="fab fa-facebook"></i></a>
+						<a href=""><i class="fab fa-twitter"></i></a>
+						<a href=""><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+			</footer>
+
+			<!-- 1st carousel -->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+				integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+				crossorigin="anonymous"></script>
+			<!-- 2nd carousel -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+			<script src="./javascript/gallery.js"></script>
+			<script src="./javascript/nav.js"></script>
+			<script src="./javascript/chatbot.js"></script>
 </body>
 
 </html>

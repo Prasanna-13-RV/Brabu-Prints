@@ -7,9 +7,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    mybutton.style.bottom = "12%";
   } else {
-    mybutton.style.display = "none";
+    mybutton.style.bottom = "-15%";
   }
 }
 

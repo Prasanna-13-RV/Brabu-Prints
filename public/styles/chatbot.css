@@ -6,7 +6,7 @@
 	width: 6rem;
 	height: 4rem;
 	right: 0rem;
-	background: url(../../img/chatbot/chatbot.png) center/cover no-repeat;
+	background: url(../../img/chatbot/chatbot.png) center/contain no-repeat;
 	animation: bot-img-animate 0.5s ease-in-out infinite alternate;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
@@ -23,7 +23,7 @@
 }
 
 .bot-img img {
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .chat {
@@ -35,10 +35,12 @@
 	bottom: 0;
 	/* background: rgb(23 152 202); */
 	background: linear-gradient(to bottom, #efe81e, white);
+	background: linear-gradient(to bottom, #ff0000f3, white);
 	border: 3px solid black;
 	right: 0;
 	z-index: 15;
 	margin-right: 3rem;
+	/* color: white; */
 	box-shadow: 2px 2px 47px rgb(0 0 0 / 50%);
 	margin-bottom: 3rem;
 	transition: all 0.3s ease-in-out;
@@ -83,10 +85,13 @@
 
 .chat-nav > span {
 	position: relative;
-	width: 3.3rem;
+	width: 2.2rem;
 	margin-right: 0.5rem;
 	height: 2.1rem;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .chat-nav > span img {
