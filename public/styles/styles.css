@@ -50,7 +50,7 @@ body {
 .heading1 {
   height: 15vh;
   width: 100%;
-  font-size: 40px;
+  font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -413,43 +413,35 @@ body {
 
 .projectsMainDivFlex1 .projectsSubDiv:nth-child(1) {
   background: url(https://cdn.hotbot.com/wp-content/uploads/2020/08/Online-Banking-With-a-VPN-Header-1.png)
-    center/cover;
-  background-repeat: none;
+    center/cover no-repeat;
 }
 .projectsMainDivFlex1 .projectsSubDiv:nth-child(2) {
   background: url(https://www.racingjunk.com/news/wp-content/uploads/2019/09/CI_Showroom-min-1-678x381.jpg)
-    center/cover;
-  background-repeat: none;
+    center/cover no-repeat;
 }
 .projectsMainDivFlex1 .projectsSubDiv:nth-child(3) {
   background: url(https://i.guim.co.uk/img/media/c6af49070512c0a410854a21ccc278910fb23d8b/0_179_5386_3234/master/5386.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=17fc129fc7019a9d6e6646a1a33d3937)
-    center/cover;
-  background-repeat: none;
+    center/cover no-repeat;
 }
 .projectsMainDivFlex1 .projectsSubDiv:nth-child(4) {
   background: url(https://i.ytimg.com/vi/qT8FzQhMrL4/maxresdefault.jpg)
-    center/cover;
-  background-repeat: none;
+    center/cover no-repeat;
 }
 .projectsMainDivFlex2 .projectsSubDiv:nth-child(1) {
-  background: url(https://www.nationalgeographic.com/moments-of-joy/assets/images/social2.jpg)
-    center/cover;
-  background-repeat: none;
+  background: url("../img/EP1A3522.jpg")
+    center/cover no-repeat;
 }
 .projectsMainDivFlex2 .projectsSubDiv:nth-child(2) {
   background: url(https://sparkevents.ch/wp-content/uploads/2018/12/SPARK-EVENTS-LOGO-FINAL2.png)
-    center/cover;
-  background-repeat: none;
+    center/cover no-repeat;
 }
 .projectsMainDivFlex2 .projectsSubDiv:nth-child(3) {
   background: url(https://i.ytimg.com/vi/McsNzYtIynE/maxresdefault.jpg)
-    center/cover;
-  background-repeat: none;
+    center/cover no-repeat;
 }
 .projectsMainDivFlex2 .projectsSubDiv:nth-child(4) {
   background: url(https://sakhilebuthelezi.com/wp-content/uploads/2015/05/zazoo-logo-mockup.jpg)
-    center/cover;
-  background-repeat: none;
+    center/cover no-repeat;
 }
 
 .projectsSubDiv:hover {
@@ -613,7 +605,7 @@ body {
   .heading1 {
     text-align: center;
     margin: 0%;
-    font-size: 55px;
+    font-size: 30px;
   }
   .infoBtn {
     width: 40%;
@@ -751,7 +743,7 @@ body {
   .heading1 {
     text-align: center;
     margin: 10% 0%;
-    font-size: 38px;
+    font-size: 30px;
   }
   .infoBtn {
     width: 70%;
