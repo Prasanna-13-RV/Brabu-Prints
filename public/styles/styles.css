@@ -592,7 +592,7 @@ body {
 
 
 
-@media (max-width: 800px) {
+@media (max-width: 930px) {
   .spillDiv {
     display: none;
   }
@@ -631,8 +631,8 @@ body {
     margin-top: 5%;
   }
   .pageSwipecontentmediaQuery p {
-    font-size: 2.3em;
-    padding: 5%;
+    font-size: 1.2em;
+    padding: 3%;
     text-align: justify;
   }
   .spanright {
@@ -676,19 +676,19 @@ body {
     height: 18rem;
   }
   .projectsSubDiv:hover {
-    height: 45rem;
+    height: 25rem;
   }
   .projectsSubDivDetails {
     overflow: scroll;
   }
   .projectsSubDivDetails h1 {
-    font-size: 3.3rem;
+    font-size: 2.3rem;
   }
   .projectsSubDivDetails h3 {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
   }
   .projectsSubDivDetails p {
-    font-size: 2.3rem;
+    font-size: 1.3rem;
   }
   .contactDetail {
     flex-direction: column;
@@ -706,23 +706,25 @@ body {
   }
   .our-team-all-div {
     padding: 7%;
+    height: 30rem;
+    width: 40%;
   }
   .imageImgSection {
     height: 4rem;
   }
   .ourTeamParagraph {
-    font-size: 35px;
+    font-size: 22px;
   }
   .team-name h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .team-job {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1%;
   }
   .team-image-img {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
   }
   .mission-vision {
     height: fit-content;

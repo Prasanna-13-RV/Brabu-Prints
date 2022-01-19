@@ -123,7 +123,7 @@ a.site-logo {
   .nav-toggler span:before,
   .nav-toggler span:after {
     width: 60px;
-    height: 7px;
+    height: 5px;
   }
   .nav-toggler span:before {
     transform: translateY(-15px);
@@ -132,10 +132,10 @@ a.site-logo {
     transform: translateY(9px);
   }
   a.site-logo {
-    width: 16rem;
+    width: 10rem;
   }
   nav {
-    height: 10rem;
+    height: 5rem;
   }
   .container {
     max-width: 720px;
@@ -169,8 +169,8 @@ a.site-logo {
     text-align: center;
   }
   .site-navbar ul li a {
-    padding: 25px;
-    font-size: 3.5rem;
+    padding: 18px;
+    font-size: 1.8rem;
   }
   .site-navbar ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);

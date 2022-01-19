@@ -52,7 +52,7 @@ footer {
   height: 5rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 930px) {
   footer
   {
     height: 30rem;

@@ -100,7 +100,7 @@
   width: 15%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 930px) {
   .parallax
   {
     height: fit-content;

@@ -8,6 +8,10 @@
   width: 66%;
   top: 0.5rem;
   left: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Hide the images by default */
@@ -108,10 +112,14 @@
   }
 }
 
-
-@media (max-width: 800px) {
+.prev
+{
+  left: 0;
+}
+@media (max-width: 930px) {
   .slideshow-container
   {
+    display: block;
     width: 100%;
     left: 0;
   }

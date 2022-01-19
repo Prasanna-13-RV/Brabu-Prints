@@ -41,7 +41,7 @@
   border-radius: 20px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 930px) {
   .blog-title h1 {
     font-size: 2.2rem;
   }
