@@ -18,6 +18,7 @@ const brabuprintsCarousel = require("./routes/carousel");
 const brabuprintsProjectCarousel = require("./routes/projectcarousel");
 const brabuprintsTeam = require("./routes/teams");
 const brabuprintsLogin = require("./routes/login");
+const brabuprintsService = require("./routes/service");
 const mysqlConnection = require("./database");
 
 const app = express();
@@ -61,6 +62,7 @@ app.use("/admin/gallery", brabuprintsGallery);
 app.use("/admin/carousel", brabuprintsCarousel);
 app.use("/admin/projectcarousel", brabuprintsProjectCarousel);
 app.use("/admin/team", brabuprintsTeam);
+app.use("/admin/service", brabuprintsService);
 
 app.get('*', (req, res) => {
 	res.render('404');

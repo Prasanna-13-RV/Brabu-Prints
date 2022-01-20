@@ -51,6 +51,7 @@
 			<section class="sliderFrontPage" id="home">
 				<div class="spillDiv">
 					<img draggable="false" class="spillImage3 layer1" src="img/favicon.png" alt="">
+					<img draggable="false" class="spillImage4 layer2" src="img/logo2.png" alt="">
 				</div>
 
 				<div class="slideshow-container">
@@ -80,9 +81,9 @@
 							<img class="image-img" src="<%= carouselFor.carousel_image %> " style="width:100%">
 						</div>
 						<% }); %> -->
-							<!-- Next and previous buttons -->
-							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<!-- Next and previous buttons -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
 				</div>
 				<br>
 			</section>
@@ -352,36 +353,18 @@
 			<section id="services">
 				<h1 class="heading1">OUR OTHER SERVICES</h1>
 				<div class="ourOtherServices">
-					<div class="boxServices boxServices1 frame">
-						<div class="details">
-							<h1 class="detailsH1Box">All Size Posters</h1>
+					<% serviceArray.forEach(serviceFor=> { %>
+						<div class="boxServices frame">
+							<div class="boxServices-div">
+								<img class="boxServices1" src="<%= serviceFor.image %>" alt="">
+							</div>
+							<div class="details">
+								<h1 class="detailsH1Box">
+									<%= serviceFor.service_title %>
+								</h1>
+							</div>
 						</div>
-					</div>
-					<div class="boxServices boxServices2 frame">
-						<div class="details">
-							<h1 class="detailsH1Box">Book Printing</h1>
-						</div>
-					</div>
-					<div class="boxServices boxServices3 frame">
-						<div class="details">
-							<h1 class="detailsH1Box">Sticker & label Prints</h1>
-						</div>
-					</div>
-					<div class="boxServices boxServices4 frame">
-						<div class="details">
-							<h1 class="detailsH1Box">Danglers</h1>
-						</div>
-					</div>
-					<div class="boxServices boxServices5 frame">
-						<div class="details">
-							<h1 class="detailsH1Box">Invitation Cards</h1>
-						</div>
-					</div>
-					<div class="boxServices boxServices6 frame">
-						<div class="details">
-							<h1 class="detailsH1Box">All Type of Calenders</h1>
-						</div>
-					</div>
+						<% }) %>
 				</div>
 			</section>
 
@@ -523,7 +506,8 @@
 							style="border: 0" allowfullscreen="" loading="lazy"></iframe>
 					</div>
 					<div class="contactInput">
-						<a class="infoBtn call" href="tel:8754844505">Call Us</a>
+						<a class="infoBtn call" href="tel:9994385655">Mobile Number 1</a>
+						<a class="infoBtn call" href="tel:8754844505">Mobile Number 2</a>
 						<!-- <a class="infoBtn call" href="tel:8754844506">Call Us</a> -->
 						<a class="infoBtn contact" href="mailto:brabuprint@gmail.com">Mail Us</a>
 					</div>
@@ -543,28 +527,31 @@
 
 			<section class="ourTeamSection">
 				<div class="ourTeam">
-					<h1 class="heading1">Our Team Of Consultants</h1>
+					<h1 class="heading1">Weekly Achievements</h1>
 					<p class="ourTeamParagraph">
-						We're only as strong and as knowledgeable as our team. So here are the
-						men and women which help customers meet goals and grow companies
+						With your entire focus on your goal, you will reach levels of achievement that you never thought possible.
 					</p>
 				</div>
 				<div class="our-team-div">
 					<div class="our-team-main-div">
 						<% teamArray.forEach(teamFor=> { %>
 							<div class="our-team-all-div">
-								<div class="team-image">
-									<img class="team-image-img" src="<%= teamFor.team_image %>" alt="">
+								<div class="team-main-left">
+									<div class="team-image">
+										<img class="team-image-img" src="<%= teamFor.team_image %>" alt="">
+									</div>
 								</div>
-								<div class="team-name">
-									<h1>
-										<%= teamFor.team_name %>
-									</h1>
-								</div>
-								<div class="team-job">
-									<h3>
-										<%= teamFor.team_job %>
-									</h3>
+								<div class="team-main-right">
+									<div class="team-name">
+										<h1>
+											<%= teamFor.team_name %>
+										</h1>
+									</div>
+									<div class="team-job">
+										<p>
+											<%= teamFor.team_job %>
+										</p>
+									</div>
 								</div>
 							</div>
 							<% }); %>

@@ -28,6 +28,7 @@
   left: 50%;
   text-align: left;
   transform: translateX(-50%);
+  text-align: justify;
 }
 
 .aboutUsMainDiv {
@@ -45,13 +46,13 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 2% 0%;
+  margin: 1% 0%;
   background-color: rgb(247, 167, 7);
   padding: 2%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .aboutUsFirstDiv1 {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 .aboutUsFirstImage {
   width: 40%;
@@ -76,4 +77,5 @@
   width: 60%;
   font-size: 1.2rem;
   color: #1e1e1e;
+  text-align: justify;
 }
