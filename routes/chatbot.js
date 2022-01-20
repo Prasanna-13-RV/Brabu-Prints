@@ -14,19 +14,18 @@ const { isloggedin } = require("../middleware");
 
 router
     .route('/admin/chatbot')
-    .get(flash, isloggedin, async (req, res) => {
-        await db.query('SELECT * FROM chatbot', (err, response) => {
+    .get(async (req, res) => {
+        await mysqlConnection.query('SELECT * FROM chatbot', (err, response) => {
             var arr = [];
             if (err) {
                 console.log(err);
             } else {
-                // res.render('admin/chatbot/chatbot', { chatbot: response });
-                res.render('../javascript/chatbot/chatbot1', { chatbot: response });
+                res.render('./admin/ourchatbot', { data: response });
             }
         });
     })
     .delete(async (req, res) => {
-        await db.query('DELETE FROM chatbot', (err, response) => {
+        await mysqlConnection.query('DELETE FROM chatbot', (err, response) => {
             if (err) {
                 req.flash('error', 'Error occurred while deleting');
                 console.log(err);
@@ -39,7 +38,7 @@ router
     });
 
 router.route('/chatbotdelete').post(async (req, res) => {
-    await db.query(
+    await mysqlConnection.query(
         'DELETE FROM chatbot WHERE name = ? AND gmail = ?',
         [req.body.stuname, req.body.gmail],
         (err, response) => {
@@ -47,6 +46,28 @@ router.route('/chatbotdelete').post(async (req, res) => {
                 req.flash('error', 'Error occurred while deleting');
                 console.log(err);
                 res.redirect('/admin/chatbot');
+            } else {
+            }
+        }
+    );
+});
+
+
+router.get('/chatbot/:name/:email/:number', async (req, res) => {
+    const date = new Date();
+    await mysqlConnection.query(
+        'INSERT INTO chatbot SET ?',
+        {
+            name: req.params.name,
+            number: req.params.number,
+            gmail: req.params.email,
+            date:
+                date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear()
+        },
+        (err, response) => {
+            if (err) {
+                console.log(err);
+                return;
             } else {
             }
         }
