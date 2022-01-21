@@ -36,10 +36,10 @@ router
 		});
 	});
 
-router.route('/chatbotdelete').post(async (req, res) => {
+router.route('/admin/chatbotdelete/:id').get(async (req, res) => {
 	await mysqlConnection.query(
-		'DELETE FROM chatbot WHERE name = ? AND gmail = ?',
-		[req.body.stuname, req.body.gmail],
+		'DELETE FROM chatbot WHERE id = ?',
+		[req.params.id],
 		(err, response) => {
 			if (err) {
 				req.flash('error', 'Error occurred while deleting');
