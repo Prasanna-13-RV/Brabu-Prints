@@ -168,17 +168,16 @@ const phoneFormSubmit = async () => {
 		'Our mission is to assist your business in attaining its full potential and ensuring long-term sustainability for all stakeholders. We strive for 100 percent client satisfaction. At Brabu	Prints we have taken the consultation concept a stride forward at by giving a comprehensive management organisation with expertise that impacts your business.';
 
 	const medicalContent =
-		'We\'re Dedicated to Providing Growth Services Our goal is to deliver the perfect company growth services at the right time so that businesses can leverage on the momentum and thrive for a long time.  Every suggestion we make has a direct positive impact. You will become a significant corporate associate for us.';
+		"We're Dedicated to Providing Growth Services Our goal is to deliver the perfect company growth services at the right time so that businesses can leverage on the momentum and thrive for a long time.  Every suggestion we make has a direct positive impact. You will become a significant corporate associate for us.";
 
 	chatBody.innerHTML += `<div class="each-chat bot">
-		<img src="../img/chatbot/chatbot1.png">
-		<p>Thank you, our admin will contact you as soon as possible.</p>
-		</div>`
-		// <span class="chat-span">Choose stream</span>
-		// <div class="stream" onclick="coursesDisplay('${neetContent}','/coursesNEET')">About</div>
-		// <div class="stream" onclick="coursesDisplay('${IITContent}','/coursesJEE')">IIT / NEET foundation</div>
-		// <div class="stream" onclick="coursesDisplay('${medicalContent}','/coursesIIT&Medical')">IIT</div>
-		;
+	<img src="../img/chatbot/chatbot1.png">
+	<p>Thank you, our admin will contact you as soon as possible.</p>
+	</div>`;
+	// <span class="chat-span">Choose stream</span>
+	// <div class="stream" onclick="coursesDisplay('${neetContent}','/coursesNEET')">About</div>
+	// <div class="stream" onclick="coursesDisplay('${IITContent}','/coursesJEE')">IIT / NEET foundation</div>
+	// <div class="stream" onclick="coursesDisplay('${medicalContent}','/coursesIIT&Medical')">IIT</div>
 	document.querySelector('.name-form input').value =
 		chatBody.getAttribute('data-name');
 	document.querySelector('.email-form input').value =
@@ -186,6 +185,7 @@ const phoneFormSubmit = async () => {
 	document.querySelector('.phone-form input').value =
 		chatBody.getAttribute('data-phone');
 	chatBody.scrollTop = chatBody.scrollHeight;
+	redirectPage();
 	return false;
 };
 
@@ -227,6 +227,7 @@ const coursesDisplay = (content, redirect) => {
 };
 
 const redirectPage = async () => {
+	console.log('hii');
 	await fetch(
 		`/chatbot/${chatBody.getAttribute('data-name')}/${chatBody.getAttribute(
 			'data-email'
