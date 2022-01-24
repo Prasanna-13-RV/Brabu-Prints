@@ -36,6 +36,13 @@ a.site-logo {
   height: 45rem !important;
 }
 
+.navbarGallery
+{
+  color: #da2c27 !important;
+  background: #fff;
+  border-radius: 0% 50% 0% 50%;
+}
+
 footer {
   margin-top: 5%;
 }

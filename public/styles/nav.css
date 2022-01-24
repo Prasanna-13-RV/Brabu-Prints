@@ -56,6 +56,7 @@ a.site-logo {
 .site-navbar ul li a:hover {
   background-color: rgb(247, 167, 7);
   border-radius: 0% 50% 0% 50%;
+  color: #fff !important;
 }
 /* navbar regular css end */
 

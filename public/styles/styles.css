@@ -679,7 +679,12 @@ body {
 {
   font-size: 1.2rem;
 }
-
+.navbarhome
+{
+  color: #da2c27 !important;
+  background: #fff;
+  border-radius: 0% 50% 0% 50%;
+}
 
 @media (max-width: 930px) {
   .spillDiv {

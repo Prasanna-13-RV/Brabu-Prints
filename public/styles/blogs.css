@@ -15,6 +15,12 @@
   margin-top: 20px;
 }
 
+.navbarBlog
+{
+  color: #da2c27 !important;
+  background: #fff;
+  border-radius: 0% 50% 0% 50%;
+}
 
 .blog-title {
   font-size: 2.2rem;
