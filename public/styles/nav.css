@@ -27,6 +27,11 @@ nav {
   z-index: 2;
 }
 
+section
+{
+  z-index: 1;
+}
+
 .container1
 {
   display: flex;
@@ -40,7 +45,7 @@ nav {
   width: 85%;
   height: 5rem;
   background: #da2c27;
-  z-index: 1;
+  z-index: -1;
   /* top: 0; */
   display: flex;
   justify-content: center;
