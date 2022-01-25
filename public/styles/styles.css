@@ -28,6 +28,7 @@ body {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
+  z-index: 1;
 }
 
 .spillDiv {
