@@ -79,7 +79,7 @@ router
 		await mysqlConnection.query(
 			'UPDATE blogs SET image = ?, blog_title = ?,  blog_content = ? WHERE id = ?',
 			[
-				req.file.path,
+				req.file ? req.file.path : req.body.oldImageURL,
 				req.body.blog_title,
 				req.body.blog_content,
 				req.params.id
@@ -93,27 +93,29 @@ router
 				}
 			}
 		);
+		console.log(oldImageName);
 		req.flash('success', 'Images successfully updated');
 		res.redirect('/admin/blog');
 	});
 
-router.post('/:id', isloggedin, upload.single('image'), async (req, res) => {
-	const url = req.query.cloudinaryName
-		.split('BrabuPrintsMYSQL/')[1]
-		.slice(0, -4);
-	await cloudinary.uploader.destroy('BrabuPrintsMYSQL/' + url);
-	mysqlConnection.query(
-		'UPDATE blogs SET blog_title=? , blog_content=? , image=? WHERE id=?',
-		[req.body.blog_title, req.body.blog_content, req.file.path, req.params.id],
-		(err, rows) => {
-			if (!err) {
-				res.render('./admin/blogview', { data: rows });
-			} else {
-				console.log(err);
-			}
-		}
-	);
-});
+// router.post('/:id', isloggedin, upload.single('image'), async (req, res) => {
+// 	const url = req.query.cloudinaryName
+// 		.split('BrabuPrintsMYSQL/')[1]
+// 		.slice(0, -4);
+// 	await cloudinary.uploader.destroy('BrabuPrintsMYSQL/' + url);
+// 	mysqlConnection.query(
+// 		'UPDATE blogs SET blog_title=? , blog_content=? , image=? WHERE id=?',
+// 		[req.body.blog_title, req.body.blog_content, req.file.path, req.params.id],
+// 		(err, rows) => {
+// 			if (!err) {
+// 				res.render('./admin/blogview', { data: rows });
+// 			} else {
+// 				console.log(err);
+// 			}
+// 		}
+// 	);
+// });
+
 
 // delete blog
 router.get('/delete/:id', isloggedin, async (req, res) => {

@@ -20,7 +20,8 @@
     <%- include('../partials/admin-header.ejs') %>
         <div class="container pt-3">
             <% for(var i=0; i < data.length; i++) { %>
-                <form method="post" action="/admin/service/<%= data[i].id %>">
+                <form method="post" action="/admin/service/update/<%= data[i].id %>">
+                    <input style="opacity: 0;position: absolute;" type="checkbox" readonly checked value="<%= data[i].image %>" name="oldImageURL">
                     <div class="mb-3">
                         <label class="form-label" for="service_title">
                             <h3>Service Title</h3>
