@@ -77,7 +77,7 @@ router
 		console.log(req.body);
 		await cloudinary.uploader.destroy(`BrabuPrintsMYSQL/${oldImageName}`);
 		await mysqlConnection.query(
-			'UPDATE blogs SET image = ?, title = ?,  description = ? WHERE id = ?',
+			'UPDATE blogs SET image = ?, blog_title = ?,  blog_content = ? WHERE id = ?',
 			[
 				req.file.path,
 				req.body.blog_title,
@@ -88,13 +88,13 @@ router
 				if (err) {
 					req.flash('error', 'Error occurred while Updating');
 					console.log(err);
-					res.redirect('/admin/sliderrevolution');
+					res.redirect('/admin/blog');
 					return;
 				}
 			}
 		);
 		req.flash('success', 'Images successfully updated');
-		res.redirect('/admin/sliderrevolution');
+		res.redirect('/admin/blog');
 	});
 
 router.post('/:id', isloggedin, upload.single('image'), async (req, res) => {
