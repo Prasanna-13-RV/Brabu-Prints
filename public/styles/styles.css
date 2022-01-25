@@ -397,6 +397,10 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectsMainSectionH1 {
@@ -404,21 +408,27 @@ body {
   font-size: 40px;
 }
 
-.projectsMainDivFlex1,
+/* .projectsMainDivFlex1,
 .projectsMainDivFlex2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0% 3%;
+} */
+.projectsMainDivFlex1
+{
+  width: 94%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
 }
-.projectsMainDivFlex2 {
-  margin-bottom: 2%;
-}
+
 
 .projectsSubDiv {
   position: relative;
-  width: 25%;
+  width: 100%;
   height: 15rem;
   background-color: #1100ff;
   overflow: hidden;

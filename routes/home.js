@@ -65,12 +65,29 @@ router.get("/", async (req, res) => {
                         serviceArray.push(serviceImage);
                       }
                     }
-                    res.render("index", {
-                      clientArray,
-                      carouselArray,
-                      teamArray,
-                      serviceArray,
-                    });
+                    await mysqlConnection.query("SELECT * FROM carousel", async (err, rows, fields) => {
+                      if (err) {
+                        console.log(err);
+                      } else {
+                        var carouselArray = [];
+                        for (let i = 0; i <= rows.length - 1; i++) {
+                          var carouselImage = {
+                            title: rows[i].title,
+                            sub_title: rows[i].sub_title,
+                            description: rows[i].description,
+                            image: rows[i].image,
+                          };
+                          carouselArray.push(carouselImage);
+                        }
+                      }
+                      res.render("index", {
+                        clientArray,
+                        carouselArray,
+                        teamArray,
+                        serviceArray,
+                        carouselArray,
+                      });
+                    })
                   })
                 }
               }

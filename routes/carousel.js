@@ -36,6 +36,26 @@ router.post("/create", isloggedin, upload.single("image"), (req, res) => {
     })
 });
 
+
+// view carousel
+router.get("/:id", isloggedin, (req, res) => {
+    mysqlConnection.query("SELECT * FROM carousel WHERE id = ?", [req.params.id], (err, row, fields) => {
+        if (!err) {
+            res.render("./admin/carouselview", { data: row })
+        }
+        else {
+            console.log(err)
+        }
+    })
+});
+
+
+
+
+
+
+
+
 // update carousel
 router.get("/update/:id", isloggedin, (req, res) => {
     mysqlConnection.query("SELECT * FROM carousel WHERE id=?", [req.params.id], (err, rows) => {
