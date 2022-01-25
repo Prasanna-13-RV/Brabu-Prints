@@ -1,8 +1,27 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff000063;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000f3;
+}
+
 /* NAVBAR */
 
 nav {
   background-color: #da2c27;
-  height: 6rem;
+  height: 5rem;
   width: 100%;
 }
 
@@ -48,7 +67,7 @@ a.site-logo {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
@@ -257,8 +276,7 @@ a.site-logo {
   .nav-toggler span:before {
     transform: translateY(-10px);
   }
-  .nav-toggler span:after
-  {
+  .nav-toggler span:after {
     transform: translateY(6px);
   }
   /* navbar css for mobile end */

@@ -41,7 +41,6 @@ router.post("/create", isloggedin, upload.fields([
 	})
 });
 
-
 // view client
 router.get("/:id", isloggedin, (req, res) => {
 	mysqlConnection.query("SELECT * FROM clients WHERE id = ?", [req.params.id], (err, row, fields) => {

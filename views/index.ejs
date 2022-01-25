@@ -76,11 +76,6 @@
 							<source src="../img/videos/forth-video.mp4" type="video/mp4">
 						</video>
 					</div>
-					<!-- <% carouselArray.forEach(carouselFor=> { %>
-						<div class="mySlides fade">
-							<img class="image-img" src="<%= carouselFor.carousel_image %> " style="width:100%">
-						</div>
-						<% }); %> -->
 					<!-- Next and previous buttons -->
 					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 					<a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -243,8 +238,8 @@
 
 
 			<section class="mission-vision">
-				<span class="mission-vision-span"></span>
 				<div class="mission-vision-main-div">
+					<span class="mission-vision-span"></span>
 					<div class="common-on-both mission">
 						<h1>Mission</h1>
 						<p> Our mission is to assist your business in attaining its full potential and ensuring
@@ -371,66 +366,67 @@
 			<section class="projectsMainSection" id="projects">
 				<h1 class="heading1">Projects That We're Proud Of</h1>
 				<div class="projectsMainDivFlex1">
-					<div class="projectsSubDiv">
-						<div class="projectsSubDivDetails">
-							<h1>Online Banking</h1>
-							<h3>Strategy Development</h3>
-							<p>
-								Need a solid foundation for your business growth plans? Brabu
-								Prints will help you manage sales and meet your current needs By
-								offering the best professional services and quality products in
-								the market. Don't hesitate and get in touch with us.
-								<i>Need a solid foundation for your business growth plans? Brabu
-									Prints will help you manage sales and meet your current
-									requirements.</i>
-							</p>
+					<% carouselArray.forEach(carouselFor=> { %>
+						<div class="projectsSubDiv" style="background: url('<%= carouselFor.image %>')
+					center/cover no-repeat;">
+							<div class="projectsSubDivDetails">
+								<h1>
+									<%= carouselFor.title %>
+								</h1>
+								<h3>
+									<%= carouselFor.sub_title %>
+								</h3>
+								<p>
+									<%= carouselFor.description %>
+								</p>
+							</div>
 						</div>
-					</div>
-					<div class="projectsSubDiv onetwo">
-						<div class="projectsSubDivDetails">
-							<h1>Classic Industry</h1>
-							<h3>Strategy Development</h3>
-							<p>
-								Need a solid foundation for your business growth plans? Brabu
-								Prints will help you manage sales and meet your current needs By
-								offering the best professional services and quality products in
-								the market. Don't hesitate and get in touch with us.
-								<i>Need a solid foundation for your business growth plans? Brabu
-									Prints will help you manage sales and meet your current
-									requirements.</i>
-							</p>
-						</div>
-					</div>
-					<div class="projectsSubDiv">
-						<div class="projectsSubDivDetails">
-							<h1>BoomBap Audio</h1>
-							<h3>Strategy Development</h3>
-							<p>
-								Need a solid foundation for your business growth plans? Brabu
-								Prints will help you manage sales and meet your current needs By
-								offering the best professional services and quality products in
-								the market. Don't hesitate and get in touch with us.
-								<i>Need a solid foundation for your business growth plans? Brabu
-									Prints will help you manage sales and meet your current
-									requirements.</i>
-							</p>
-						</div>
-					</div>
-					<div class="projectsSubDiv">
-						<div class="projectsSubDivDetails">
-							<h1>Van Moose</h1>
-							<h3>Strategy Development</h3>
-							<p>
-								Need a solid foundation for your business growth plans? Brabu
-								Prints will help you manage sales and meet your current needs By
-								offering the best professional services and quality products in
-								the market. Don't hesitate and get in touch with us.
-								<i>Need a solid foundation for your business growth plans? Brabu
-									Prints will help you manage sales and meet your current
-									requirements.</i>
-							</p>
-						</div>
-					</div>
+						<% }); %>
+							<div class="projectsSubDiv onetwo">
+								<div class="projectsSubDivDetails">
+									<h1>Classic Industry</h1>
+									<h3>Strategy Development</h3>
+									<p>
+										Need a solid foundation for your business growth plans? Brabu
+										Prints will help you manage sales and meet your current needs By
+										offering the best professional services and quality products in
+										the market. Don't hesitate and get in touch with us.
+										<i>Need a solid foundation for your business growth plans? Brabu
+											Prints will help you manage sales and meet your current
+											requirements.</i>
+									</p>
+								</div>
+							</div>
+							<div class="projectsSubDiv">
+								<div class="projectsSubDivDetails">
+									<h1>BoomBap Audio</h1>
+									<h3>Strategy Development</h3>
+									<p>
+										Need a solid foundation for your business growth plans? Brabu
+										Prints will help you manage sales and meet your current needs By
+										offering the best professional services and quality products in
+										the market. Don't hesitate and get in touch with us.
+										<i>Need a solid foundation for your business growth plans? Brabu
+											Prints will help you manage sales and meet your current
+											requirements.</i>
+									</p>
+								</div>
+							</div>
+							<div class="projectsSubDiv">
+								<div class="projectsSubDivDetails">
+									<h1>Van Moose</h1>
+									<h3>Strategy Development</h3>
+									<p>
+										Need a solid foundation for your business growth plans? Brabu
+										Prints will help you manage sales and meet your current needs By
+										offering the best professional services and quality products in
+										the market. Don't hesitate and get in touch with us.
+										<i>Need a solid foundation for your business growth plans? Brabu
+											Prints will help you manage sales and meet your current
+											requirements.</i>
+									</p>
+								</div>
+							</div>
 				</div>
 				<div class="projectsMainDivFlex2">
 					<div class="projectsSubDiv">
@@ -529,7 +525,8 @@
 				<div class="ourTeam">
 					<h1 class="heading1">Weekly Achievements</h1>
 					<p class="ourTeamParagraph">
-						With your entire focus on your goal, you will reach levels of achievement that you never thought possible.
+						With your entire focus on your goal, you will reach levels of achievement that you never thought
+						possible.
 					</p>
 				</div>
 				<div class="our-team-div">
