@@ -59,6 +59,16 @@ footer {
   height: 5rem;
   color: black;
 }
+.nav-color-span
+{
+  height: 8rem;
+}
+
+.nav-color-span::before , .nav-color-span::after
+{
+  width: 25%;
+  height: 20rem;
+}
 
 @media (max-width: 930px) {
   footer

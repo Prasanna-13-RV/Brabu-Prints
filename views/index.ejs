@@ -174,7 +174,7 @@
 					</div>
 					<div class="aboutUsFirstDiv">
 						<div class="aboutUsFirstContent">
-							<h1>Brochures/Bi-Folds Tri-Folds</h1>
+							<h1>Lorem ipsum dolor</h1>
 							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ad maiores recusandae
 								error, a illo quisquam asperiores odio aliquam sunt ipsum doloremque corrupti molestiae
 								quam minus voluptatem eius. Tempore, culpa. Dignissimos consequuntur, dolore eius eos
@@ -191,7 +191,7 @@
 							<img src="../img/EP1A3515.jpg" alt="">
 						</div>
 						<div class="aboutUsFirstContent">
-							<h1>Packaging Box Prints</h1>
+							<h1>Lorem ipsum dolor</h1>
 							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ad maiores recusandae
 								error, a illo quisquam asperiores odio aliquam sunt ipsum doloremque corrupti molestiae
 								quam minus voluptatem eius. Tempore, culpa. Dignissimos consequuntur, dolore eius eos
@@ -409,11 +409,10 @@
 
 			<section class="projectsMainSection" id="projects">
 				<h1 class="heading1">Projects That We're Proud Of</h1>
-
-				<div class="projectsMainDivFlex1">
-					<!-- <% carouselArray.reverse().forEach(carouselFor=> { %>
+				<!-- <div class="projectsMainDivFlex1">
+					<% carouselArray.forEach(carouselFor=> { %>
 						<div class="projectsSubDiv" style="background: url('<%= carouselFor.image %>')
-					center/cover no-repeat;">
+				center/cover no-repeat;">
 							<div class="projectsSubDivDetails">
 								<h1>
 									<%= carouselFor.title %>
@@ -426,7 +425,9 @@
 								</p>
 							</div>
 						</div>
-						<% }); %> -->
+						<% }); %>
+				</div> -->
+				<div class="projectsMainDivFlex1">
 					<div class="projectsSubDiv" style="background: url('../img/Cl/noticefr2.jpg')
 					center/contain no-repeat;">
 						<div class="projectsSubDivDetails">
@@ -646,19 +647,7 @@
 			</section>
 
 
-			<footer>
-				<div class="footerclass">
-					<h1>Bra<span>bupri</span>nt</h1>
-					<h3>You Can Reach Us At</h3>
-					<p class="footerptag">Address</p>
-					<p><i>1/555, Mappilaiurani main road, Tutitcorin - 628002</i></p>
-					<div class="iconsSocial">
-						<a href=""><i class="fab fa-facebook"></i></a>
-						<a href=""><i class="fab fa-twitter"></i></a>
-						<a href="https://www.instagram.com/brabuprint/?hl=en"><i class="fab fa-instagram"></i></a>
-					</div>
-				</div>
-			</footer>
+			<%- include('./partials/footer.ejs') %>
 
 			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 			<script src="./javascript/aboutus_home.js"></script>
