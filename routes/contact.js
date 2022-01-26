@@ -12,11 +12,11 @@ const { isloggedin } = require('../middleware');
 const nodemailer = require('nodemailer');
 
 
-router.get('/', (req, res) => {
+router.get('/contact', (req, res) => {
     res.render('./contact');
 });
 
-router.post('/send', (req, res) => {
+router.post('/contact', (req, res) => {
     const output = `
         <p>You have a new contact request</p>
         <h3>Contact Details</h3>
@@ -34,8 +34,8 @@ router.post('/send', (req, res) => {
         // secure: false,
         service: 'gmail',
         auth: {
-            user: 'brabuprint@gmail.com',
-            pass: 'superprint'
+            user: 'geniuscriminaloffical@gmail.com',
+            pass: 'Latha13087280$#'
         },
         // tls: {
         //     rejectUnauthorized: false
@@ -43,9 +43,9 @@ router.post('/send', (req, res) => {
     });
 
     let mailOptions = {
-        from: '"Nodemailer Contact" <prasannavelmurugan0200@gmail.com>',
+        from: '"Brabuprint" <geniuscriminaloffical@gmail.com>',
         to: 'prasannavelmuruganrv.0200@gmail.com',
-        subject: 'Node Contact Request',
+        subject: 'Customer Contact Request',
         text: 'Hello world?',
         html: output
     };
@@ -54,12 +54,9 @@ router.post('/send', (req, res) => {
         if (error) {
             return console.log(error);
         }
-        console.log('Message sent: %s', info.messageId);
-        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-        res.redirect('/contact', { msg: 'Email has been sent' });
+        res.render('./contact', { msg: 'Email has been sent' });
     });
 });
-
 
 
 module.exports = router;
