@@ -12,11 +12,11 @@ const { isloggedin } = require('../middleware');
 const nodemailer = require('nodemailer');
 
 
-router.get('/', (req, res) => {
+router.get('/contact', (req, res) => {
     res.render('./contact');
 });
 
-router.post('/send', (req, res) => {
+router.post('/contact', (req, res) => {
     const output = `
         <p>You have a new contact request</p>
         <h3>Contact Details</h3>
@@ -45,7 +45,7 @@ router.post('/send', (req, res) => {
     let mailOptions = {
         from: '"Brabuprint" <geniuscriminaloffical@gmail.com>',
         to: 'prasannavelmuruganrv.0200@gmail.com',
-        subject: 'Node Contact Request',
+        subject: 'Customer Contact Request',
         text: 'Hello world?',
         html: output
     };

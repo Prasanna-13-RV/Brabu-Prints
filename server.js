@@ -57,7 +57,7 @@ app.use(methodOverride("_method"));
 
 
 app.use("/", brabuprints);
-app.use("/contact", brabuprintsContact);
+app.use("/", brabuprintsContact);
 app.use("/admin", brabuprintsLogin);
 app.use("/admin/blog", brabuprintsBlog);
 app.use("/admin/client", brabuprintsClient);
