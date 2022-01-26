@@ -54,6 +54,36 @@ router.get('/:id', isloggedin, (req, res) => {
 });
 
 // update service
+// router.get("/update/:id", isloggedin, (req, res) => {
+//     mysqlConnection.query("SELECT * FROM services WHERE id=?", [req.params.id], (err, rows) => {
+//         if (!err) {
+//             res.render("./admin/serviceupdate", { data: rows })
+//         }
+//         else {
+//             console.log(err)
+//         }
+//     })
+// })
+
+// router.post("/:id", isloggedin, (req, res) => {
+//     mysqlConnection.query("UPDATE services SET service_title=?  WHERE id=?", [req.body.service_title, req.params.id], (err, rows) => {
+//         if (!err) {
+//             mysqlConnection.query("SELECT * FROM services WHERE id = ?", [req.params.id], (err, rows) => {
+//                 if (!err) {
+//                     res.render("./admin/serviceview", { data: rows })
+//                 } else {
+//                     console.log(err)
+//                 }
+//             })
+//         }
+//         else {
+//             console.log(err)
+//         }
+//     })
+// })
+
+
+// update service
 router
 	.route('/update/:id')
 	.get(isloggedin, (req, res) => {
@@ -62,7 +92,7 @@ router
 			[req.params.id],
 			(err, rows) => {
 				if (!err) {
-					console.log(rows);
+                    console.log(rows)
 					res.render('./admin/serviceupdate', { data: rows });
 				} else {
 					console.log(err);
@@ -70,34 +100,63 @@ router
 			}
 		);
 	})
+
 	.post(isloggedin, upload.single('image'), async (req, res) => {
+        console.log(req.body);
 		const oldImageName = req.body.oldImageURL
 			.split('BrabuPrintsMYSQL/')[1]
 			.slice(0, -4);
 		console.log(req.body);
 		await cloudinary.uploader.destroy(`BrabuPrintsMYSQL/${oldImageName}`);
-		mysqlConnection.query(
-			'UPDATE services SET service_title=?, image=?  WHERE id=?',
-			[req.body.service_title, req.body.oldImageURL, req.params.id],
-			(err, rows) => {
-				if (!err) {
-					mysqlConnection.query(
-						'SELECT * FROM services WHERE id = ?',
-						[req.params.id],
-						(err, rows) => {
-							if (!err) {
-								res.render('./admin/serviceview', { data: rows });
-							} else {
-								console.log(err);
-							}
-						}
-					);
-				} else {
+		await mysqlConnection.query(
+			'UPDATE services SET image = ?, service_title = ? WHERE id = ?',
+			[
+				req.file ? req.file.path : req.body.oldImageURL,
+				req.body.service_title,
+				req.params.id
+			],
+			(err, response) => {
+				if (err) {
+					req.flash('error', 'Error occurred while Updating');
 					console.log(err);
+					res.redirect('/admin/service');
+					return;
 				}
 			}
 		);
+		console.log(oldImageName);
+		req.flash('success', 'Images successfully updated');
+		res.redirect('/admin/service');
 	});
+
+// router.post('/:id', isloggedin, upload.single('image'), async (req, res) => {
+// 	const url = req.query.cloudinaryName
+// 		.split('BrabuPrintsMYSQL/')[1]
+// 		.slice(0, -4);
+// 	await cloudinary.uploader.destroy('BrabuPrintsMYSQL/' + url);
+// 	mysqlConnection.query(
+// 		'UPDATE services SET service_title=? , image=? WHERE id=?',
+// 		[req.body.service_title, req.file.path, req.params.id],
+// 		(err, rows) => {
+// 			if (!err) {
+// 				res.render('./admin/serviceview', { data: rows });
+// 			} else {
+// 				console.log(err);
+// 			}
+// 		}
+// 	);
+// });
+
+
+
+
+
+
+
+
+
+
+
 
 // delete service
 router.get('/delete/:id', isloggedin, async (req, res) => {

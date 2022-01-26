@@ -11,37 +11,32 @@
     <title>Weekly Achievements Update | ADMIN</title>
 </head>
 <style>
-    .adminNavTeam
-    {
+    .adminNavTeam {
         color: #da2c27 !important;
         background: #fff !important;
     }
 </style>
+
 <body>
     <%- include('../partials/admin-header.ejs') %>
         <div class="container pt-3">
             <% for(var i=0; i < data.length; i++) { %>
-                <form method="post" action="/admin/team/<%= data[i].id %>">
+                <form method="post" action="/admin/weekreport/<%= data[i].id %>">
                     <div class="mb-3">
-                        <label class="form-label" for="team_name">
-                            <h3>Title</h3>
+                        <label class="form-label" for="weekly_report_para">
+                            <h3>Paragraph</h3>
                         </label>
-                        <input class="form-control form-control-sm" type="text" class="team_name" name="team_name"
-                            id="team_name" value="<%= data[i].team_name %>" autofocus>
+                        <input class="form-control form-control-sm" type="text" class="weekly_report_para"
+                            name="weekly_report_para" id="weekly_report_para" value="<%= data[i].weekly_report_para %>"
+                            autofocus>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="team_job">
-                            <h3>Description</h3>
-                        </label>
-                        <textarea class="form-control form-control-sm" type="text" class="team_job" name="team_job"
-                            id="team_job" value="<%= data[i].team_job %>"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label" for="team_image">
+                        <label class="form-label" for="weekly_report_image">
                             <h3>Picture</h3>
                         </label>
-                        <input class="form-control form-control-sm" type="file" class="team_image" name="team_image"
-                            id="team_image">
+                        <input class="form-control form-control-sm" type="file" class="weekly_report_image"
+                            name="weekly_report_image" id="weekly_report_image"
+                            value="<%= data[i].weekly_report_image %>">
                     </div>
                     <input class="form-control form-control-sm" class="btn"
                         style="background-color: rgb(247, 167, 7); color: white;" type="submit">

@@ -38,7 +38,7 @@ router.get("/", async (req, res) => {
               }
             }
             await mysqlConnection.query(
-              "SELECT * FROM teams",
+              "SELECT * FROM weekreport",
               async (err, rows, fields) => {
                 teamArray = [];
                 if (err) {
@@ -46,9 +46,8 @@ router.get("/", async (req, res) => {
                 } else {
                   for (let i = 0; i <= rows.length - 1; i++) {
                     var teamImage = {
-                      team_name: rows[i].team_name,
-                      team_image: rows[i].team_image,
-                      team_job: rows[i].team_job,
+                      weekly_report_para: rows[i].weekly_report_para,
+                      weekly_report_image: rows[i].weekly_report_image,
                     };
                     teamArray.push(teamImage);
                   }

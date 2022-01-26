@@ -10,35 +10,32 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Create Weekly Achievements | ADMIN</title>
 </head>
+
 <style>
-    .adminNavTeam
-    {
+    .adminNavTeam {
         color: #da2c27 !important;
         background: #fff !important;
     }
 </style>
+
 <body>
     <%- include('../partials/admin-header.ejs') %>
 
         <div class="container pt-5">
-            <form method="post" action="/admin/team/create" enctype="multipart/form-data">
+            <form method="post" action="/admin/weekreport/create" enctype="multipart/form-data">
                 <div class="mb-3">
-                    <label class="form-label" for="team_name">
-                        <h3>Title</h3>
+                    <label class="form-label" for="weekly_report_para">
+                        <h3>Weekly report</h3>
                     </label>
-                    <input type="text" class="form-control form-control-sm" name="team_name" id="team_name" required autofocus>
+                    <input type="text" class="form-control form-control-sm" name="weekly_report_para"
+                        id="weekly_report_para" required autofocus>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="team_job">
-                        <h3>Description</h3>
-                    </label>
-                    <textarea type="text" class="form-control form-control-sm" name="team_job" id="team_job" required></textarea>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="team_image">
+                    <label class="form-label" for="weekly_report_image">
                         <h3>Picture</h3>
                     </label>
-                    <input type="file" class="form-control form-control-sm" name="team_image" id="team_image" required>
+                    <input type="file" class="form-control form-control-sm" name="weekly_report_image"
+                        id="weekly_report_image" required>
                 </div>
                 <input class="btn" style="background-color: rgb(247, 167, 7); color: white;" type="submit">
             </form>

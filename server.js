@@ -16,10 +16,11 @@ const brabuprintsClient = require("./routes/client");
 const brabuprintsGallery = require("./routes/gallery");
 const brabuprintsCarousel = require("./routes/carousel");
 const brabuprintsProjectCarousel = require("./routes/projectcarousel");
-const brabuprintsTeam = require("./routes/teams");
+const brabuprintsWeekreport = require("./routes/teams");
 const brabuprintsLogin = require("./routes/login");
 const brabuprintsService = require("./routes/service");
 const brabuprintsChatbot = require("./routes/chatbot");
+const brabuprintsContact = require("./routes/contact");
 const mysqlConnection = require("./database");
 
 const app = express();
@@ -56,13 +57,14 @@ app.use(methodOverride("_method"));
 
 
 app.use("/", brabuprints);
+app.use("/contact", brabuprintsContact);
 app.use("/admin", brabuprintsLogin);
 app.use("/admin/blog", brabuprintsBlog);
 app.use("/admin/client", brabuprintsClient);
 app.use("/admin/gallery", brabuprintsGallery);
 app.use("/admin/carousel", brabuprintsCarousel);
 app.use("/admin/projectcarousel", brabuprintsProjectCarousel);
-app.use("/admin/team", brabuprintsTeam);
+app.use("/admin/weekreport", brabuprintsWeekreport);
 app.use("/admin/service", brabuprintsService);
 app.use("/", brabuprintsChatbot);
 

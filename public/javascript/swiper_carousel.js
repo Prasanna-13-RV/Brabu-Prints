@@ -26,3 +26,36 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     // dots[slideIndex - 1].className += " active";
 }
+
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+        },
+    },
+});

@@ -12,25 +12,22 @@
     <title>Weekly Achievements View | ADMIN</title>
 </head>
 <style>
-    .adminNavTeam
-    {
+    .adminNavTeam {
         color: #da2c27 !important;
         background: #fff !important;
     }
 </style>
+
 <body>
     <%- include('../partials/admin-header.ejs') %>
         <div class="container pt-3">
             <% for(var i=0; i < data.length; i++) { %>
                 <h1 class="d-flex justify-content-center">
-                    <%= data[i].team_name %>
+                    <%= data[i].weekly_report_para %>
                 </h1>
-                <img class="img-fluid rounded float-start" src="<%= data[i].team_image %>" alt="">
-                <p>
-                    <%= data[i].team_job %>
-                </p>
+                <img class="img-fluid rounded float-start" src="<%= data[i].weekly_report_image %>" alt="">
                 <% } %>
-                    <a class="btn" style="background-color: rgb(247, 167, 7); color: white;" href="/admin/team">Back to
+                    <a class="btn" style="background-color: rgb(247, 167, 7); color: white;" href="/admin/weekreport">Back to
                         Weekly Achievements</a>
         </div>
 
