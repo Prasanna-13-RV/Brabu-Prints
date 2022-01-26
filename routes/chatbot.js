@@ -54,7 +54,6 @@ router.route('/admin/chatbotdelete/:id').get(async (req, res) => {
 
 router.get('/chatbot/:name/:email/:number', async (req, res) => {
 	const date = new Date();
-	console.log(req.params);
 	await mysqlConnection.query(
 		'INSERT INTO chatbot SET ?',
 		{

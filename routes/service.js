@@ -102,11 +102,9 @@ router
 	})
 
 	.post(isloggedin, upload.single('image'), async (req, res) => {
-        console.log(req.body);
 		const oldImageName = req.body.oldImageURL
 			.split('BrabuPrintsMYSQL/')[1]
 			.slice(0, -4);
-		console.log(req.body);
 		await cloudinary.uploader.destroy(`BrabuPrintsMYSQL/${oldImageName}`);
 		await mysqlConnection.query(
 			'UPDATE services SET image = ?, service_title = ? WHERE id = ?',
@@ -124,7 +122,6 @@ router
 				}
 			}
 		);
-		console.log(oldImageName);
 		req.flash('success', 'Images successfully updated');
 		res.redirect('/admin/service');
 	});

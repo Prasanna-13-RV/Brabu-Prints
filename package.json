@@ -1,41 +1,42 @@
 {
-  "name": "brabuprintsmysql",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Prasanna-13-RV/Brabu-Prints.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Prasanna-13-RV/Brabu-Prints/issues"
-  },
-  "homepage": "https://github.com/Prasanna-13-RV/Brabu-Prints#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "cloudinary": "^1.27.1",
-    "dotenv": "^10.0.0",
-    "ejs": "^3.1.6",
-    "ejs-mate": "^3.0.0",
-    "express": "^4.17.1",
-    "express-flash": "0.0.2",
-    "express-handlebars": "^5.3.4",
-    "express-session": "^1.17.2",
-    "flash": "^1.1.0",
-    "fs": "0.0.1-security",
-    "method-override": "^3.0.0",
-    "multer": "^1.4.3",
-    "multer-storage-cloudinary": "^4.0.0",
-    "mysql": "^2.18.1",
-    "nodemailer": "^6.7.2",
-    "nodemon": "^2.0.14",
-    "path": "^0.12.7"
-  }
+	"name": "brabuprintsmysql",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon server.js",
+		"git": "git add . && git commit -m \"message\" && git push origin main"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Prasanna-13-RV/Brabu-Prints.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Prasanna-13-RV/Brabu-Prints/issues"
+	},
+	"homepage": "https://github.com/Prasanna-13-RV/Brabu-Prints#readme",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.19.0",
+		"cloudinary": "^1.27.1",
+		"dotenv": "^10.0.0",
+		"ejs": "^3.1.6",
+		"ejs-mate": "^3.0.0",
+		"express": "^4.17.1",
+		"express-flash": "0.0.2",
+		"express-handlebars": "^5.3.4",
+		"express-session": "^1.17.2",
+		"flash": "^1.1.0",
+		"fs": "0.0.1-security",
+		"method-override": "^3.0.0",
+		"multer": "^1.4.3",
+		"multer-storage-cloudinary": "^4.0.0",
+		"mysql": "^2.18.1",
+		"nodemailer": "^6.7.2",
+		"nodemon": "^2.0.14",
+		"path": "^0.12.7"
+	}
 }

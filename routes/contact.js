@@ -28,7 +28,6 @@ router.post('/send', (req, res) => {
         <h3>Message</h3>
         <p>${req.body.message}</p>
     `;
-    console.log(req.body)
     let transporter = nodemailer.createTransport({
         // host: 'www.brabuprint.com',
         // port: 587,
