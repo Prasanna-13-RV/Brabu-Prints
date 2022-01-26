@@ -48,7 +48,6 @@ router.get("/", async (req, res) => {
                     var teamImage = {
                       weekly_report_para: rows[i].weekly_report_para,
                       weekly_report_image: rows[i].weekly_report_image,
-                      team_job: rows[i].team_job,
                     };
                     teamArray.push(teamImage);
                   }
