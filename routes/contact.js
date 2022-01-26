@@ -35,8 +35,8 @@ router.post('/send', (req, res) => {
         // secure: false,
         service: 'gmail',
         auth: {
-            user: 'brabuprint@gmail.com',
-            pass: 'superprint'
+            user: 'prasannavelmurugan0200@gmail.com',
+            pass: 'pRASANNA$#0200'
         },
         // tls: {
         //     rejectUnauthorized: false
@@ -55,9 +55,7 @@ router.post('/send', (req, res) => {
         if (error) {
             return console.log(error);
         }
-        console.log('Message sent: %s', info.messageId);
-        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-        res.redirect('/contact', { msg: 'Email has been sent' });
+        res.render('./contact', { msg: 'Email has been sent' });
     });
 });
 
