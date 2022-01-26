@@ -34,8 +34,8 @@ router.post('/send', (req, res) => {
         // secure: false,
         service: 'gmail',
         auth: {
-            user: 'prasannavelmurugan0200@gmail.com',
-            pass: 'pRASANNA$#0200'
+            user: 'geniuscriminaloffical@gmail.com',
+            pass: 'Latha13087280$#'
         },
         // tls: {
         //     rejectUnauthorized: false
@@ -43,7 +43,7 @@ router.post('/send', (req, res) => {
     });
 
     let mailOptions = {
-        from: '"Nodemailer Contact" <prasannavelmurugan0200@gmail.com>',
+        from: '"Brabuprint" <geniuscriminaloffical@gmail.com>',
         to: 'prasannavelmuruganrv.0200@gmail.com',
         subject: 'Node Contact Request',
         text: 'Hello world?',
@@ -57,7 +57,6 @@ router.post('/send', (req, res) => {
         res.render('./contact', { msg: 'Email has been sent' });
     });
 });
-
 
 
 module.exports = router;
