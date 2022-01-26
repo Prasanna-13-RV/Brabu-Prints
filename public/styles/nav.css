@@ -63,6 +63,7 @@ section
   top: 0;
   left: 0;
   transform: rotate(45deg) translateY(30px) translateX(-30px);
+  border-radius: 110% 65% 0% 70%;
 }
 .nav-color-span::before
 {
@@ -74,6 +75,7 @@ section
   z-index: -1;
   top: 0;
   right: 0;
+  border-radius: 65% 110% 70% 0%;
   transform: rotate(-45deg) translateY(30px) translateX(30px);
 }
 
