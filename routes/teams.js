@@ -72,7 +72,6 @@ router
         const oldImageName = req.body.oldImageURL
             .split('BrabuPrintsMYSQL/')[1]
             .slice(0, -4);
-        console.log(req.body);
         await cloudinary.uploader.destroy(`BrabuPrintsMYSQL/${oldImageName}`);
         await mysqlConnection.query(
             'UPDATE weekreport SET weekly_report_image = ?, weekly_report_para = ? WHERE id = ?',

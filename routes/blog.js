@@ -74,7 +74,6 @@ router
 		const oldImageName = req.body.oldImageURL
 			.split('BrabuPrintsMYSQL/')[1]
 			.slice(0, -4);
-		console.log(req.body);
 		await cloudinary.uploader.destroy(`BrabuPrintsMYSQL/${oldImageName}`);
 		await mysqlConnection.query(
 			'UPDATE blogs SET image = ?, blog_title = ?,  blog_content = ? WHERE id = ?',
@@ -93,7 +92,6 @@ router
 				}
 			}
 		);
-		console.log(oldImageName);
 		req.flash('success', 'Images successfully updated');
 		res.redirect('/admin/blog');
 	});
