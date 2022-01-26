@@ -20,6 +20,7 @@ const brabuprintsWeekreport = require("./routes/teams");
 const brabuprintsLogin = require("./routes/login");
 const brabuprintsService = require("./routes/service");
 const brabuprintsChatbot = require("./routes/chatbot");
+const brabuprintsContact = require("./routes/contact");
 const mysqlConnection = require("./database");
 
 const app = express();
@@ -56,6 +57,7 @@ app.use(methodOverride("_method"));
 
 
 app.use("/", brabuprints);
+app.use("/contact", brabuprintsContact);
 app.use("/admin", brabuprintsLogin);
 app.use("/admin/blog", brabuprintsBlog);
 app.use("/admin/client", brabuprintsClient);
