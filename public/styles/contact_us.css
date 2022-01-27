@@ -140,3 +140,23 @@
   background: #fff;
   border-radius: 0% 50% 0% 50%;
 }
+@media (max-width:700px) {
+  .full-length-contact {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  .right-contact-us {
+    width: 90%;
+    justify-content: center;
+  }
+  .left-contact-us {
+    width: 90%;
+  }
+  .image-left-contact-us {
+    justify-content: center;
+
+   }
+  .container {
+    height: auto;
+  }
+}
