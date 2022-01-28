@@ -148,14 +148,14 @@
   padding: 2% 0%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1030px) {
   .sec-2 {
     flex-direction: column;
     justify-content: center;
   }
   .news-box
   {
-    width: 20rem;
+    width: 25rem;
   }
   .sec-2 .div-2
   {
@@ -165,5 +165,11 @@
   {
     width: 100%;
     padding: 5% 0%;
+  }
+}
+@media (max-width:550px) {
+  .news-box
+  {
+    width: 20rem;
   }
 }
