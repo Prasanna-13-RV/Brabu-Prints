@@ -432,9 +432,13 @@ body {
   position: relative;
   width: 100%;
   height: 15rem;
-  background-color: #db1d1d;
-  overflow: hidden;
+  /* background-color: #db1d1d; */
+  /* overflow: hidden; */
   transition: all 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectsSubDivDetails {
@@ -455,41 +459,10 @@ body {
 .projectsSubDivDetails h1,
 .projectsSubDivDetails h3 {
   text-align: center;
-  padding-bottom: 2%;
+  /* padding-bottom: 2%; */
   z-index: 3;
 }
 
-/* .projectsMainDivFlex1 .projectsSubDiv:nth-child(1) {
-  background: url(https://cdn.hotbot.com/wp-content/uploads/2020/08/Online-Banking-With-a-VPN-Header-1.png)
-    center/cover no-repeat;
-} */
-.projectsMainDivFlex1 .projectsSubDiv:nth-child(2) {
-  background: url(https://www.racingjunk.com/news/wp-content/uploads/2019/09/CI_Showroom-min-1-678x381.jpg)
-    center/cover no-repeat;
-}
-.projectsMainDivFlex1 .projectsSubDiv:nth-child(3) {
-  background: url(https://i.guim.co.uk/img/media/c6af49070512c0a410854a21ccc278910fb23d8b/0_179_5386_3234/master/5386.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=17fc129fc7019a9d6e6646a1a33d3937)
-    center/cover no-repeat;
-}
-.projectsMainDivFlex1 .projectsSubDiv:nth-child(4) {
-  background: url(https://i.ytimg.com/vi/qT8FzQhMrL4/maxresdefault.jpg)
-    center/cover no-repeat;
-}
-.projectsMainDivFlex2 .projectsSubDiv:nth-child(1) {
-  background: url("../img/EP1A3522.jpg") center/cover no-repeat;
-}
-.projectsMainDivFlex2 .projectsSubDiv:nth-child(2) {
-  background: url(https://sparkevents.ch/wp-content/uploads/2018/12/SPARK-EVENTS-LOGO-FINAL2.png)
-    center/cover no-repeat;
-}
-.projectsMainDivFlex2 .projectsSubDiv:nth-child(3) {
-  background: url(https://i.ytimg.com/vi/McsNzYtIynE/maxresdefault.jpg)
-    center/cover no-repeat;
-}
-.projectsMainDivFlex2 .projectsSubDiv:nth-child(4) {
-  background: url(https://sakhilebuthelezi.com/wp-content/uploads/2015/05/zazoo-logo-mockup.jpg)
-    center/cover no-repeat;
-}
 
 .projectsSubDiv:hover {
   width: 100%;
@@ -505,6 +478,7 @@ body {
   top: 0;
   left: 0;
   background-color: #2e2e2eb9;
+  border-radius: 10px;
   z-index: 1;
 }
 
@@ -623,7 +597,7 @@ body {
   background-color: #da2c27;
   width: 100%;
   height: 150vh;
-  transform: rotate(-55deg) translateY(50%);
+  transform: rotate(-70deg) translateY(50%);
   z-index: 1;
   border-top: 20px solid #ffffff;
 }
@@ -644,6 +618,11 @@ body {
 }
 .common-on-both h1 {
   margin: 1%;
+}
+
+.common-on-both p
+{
+  text-align: justify;
 }
 
 .vision {
@@ -898,9 +877,6 @@ body {
   .projectsMainDivFlex1,
   .projectsMainDivFlex2 {
     flex-direction: column;
-  }
-  .projectsSubDiv {
-    
   }
   .projectsSubDivDetails {
     overflow: scroll;

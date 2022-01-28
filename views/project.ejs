@@ -19,17 +19,21 @@
 <style>
     .project-image-div
     {
-        position: relative;
+        position: absolute;
         width: 100%;
         height: 100%;
         object-fit: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .project-image-div img
     {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        z-index: -1;
+        object-fit: contain;
+        /* z-index: -1; */
     }
     .navbarProjects {
 		color: #da2c27 !important;
