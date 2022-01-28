@@ -53,48 +53,51 @@ router.get('/:id', isloggedin, (req, res) => {
 	);
 });
 
-// update carousel
-router.get('/update/:id', isloggedin, (req, res) => {
-	mysqlConnection.query(
-		'SELECT * FROM carousel WHERE id=?',
-		[req.params.id],
-		(err, rows) => {
-			if (!err) {
-				res.render('./admin/carouselupdate', { data: rows });
-			} else {
-				console.log(err);
+// update project
+router
+	.route('/update/:id')
+	.get(isloggedin, (req, res) => {
+		mysqlConnection.query(
+			'SELECT * FROM carousel WHERE id=?',
+			[req.params.id],
+			(err, rows) => {
+				if (!err) {
+					res.render('./admin/carouselupdate', { data: rows });
+				} else {
+					console.log(err);
+				}
 			}
-		}
-	);
-}).post(isloggedin, upload.single('image'), (req, res) => {
-	mysqlConnection.query(
-		'UPDATE carousel SET title=? , sub_title=? , description=? , image=? WHERE id=?',
-		[
-			req.body.title,
-			req.body.sub_title,
-			req.body.description,
-			req.file.path,
-			req.params.id
-		],
-		(err, rows) => {
-			if (!err) {
-				mysqlConnection.query(
-					'SELECT * FROM carousel WHERE id = ?',
-					[req.params.id],
-					(err, rows) => {
-						if (!err) {
-							res.render('./admin/carouselview', { data: rows });
-						} else {
-							console.log(err);
-						}
-					}
-				);
-			} else {
-				console.log(err);
+		);
+	})
+
+	.post(isloggedin, upload.single('image'), async (req, res) => {
+		const oldImageName = req.body.oldImageURL
+			.split('BrabuPrintsMYSQL/')[1]
+			.slice(0, -4);
+		await cloudinary.uploader.destroy(`BrabuPrintsMYSQL/${oldImageName}`);
+		await mysqlConnection.query(
+			'UPDATE carousel SET image = ?, title = ?, sub_title=?,  description = ? WHERE id = ?',
+			[
+				req.file ? req.file.path : req.body.oldImageURL,
+				req.body.title,
+				req.body.sub_title,
+				req.body.description,
+				req.params.id
+			],
+			(err, response) => {
+				if (err) {
+					req.flash('error', 'Error occurred while Updating');
+					console.log(err);
+					res.redirect('/admin/carousel')
+					return;
+				}
 			}
-		}
-	);
-});
+		);
+		req.flash('success', 'Images successfully updated');
+		res.redirect('/admin/carousel');
+	});
+
+
 
 // update client
 // router.get("/update/:id", (req, res) => {
