@@ -150,6 +150,23 @@ router.get("/blog", (req, res) => {
     }
   });
 });
+router.get("/service", async(req, res) => {
+  await mysqlConnection.query("SELECT * FROM services", async (err, rows, fields) => {
+    if (err) {
+      console.log(err);
+    } else {
+      var serviceArray = [];
+      for (let i = 0; i <= rows.length - 1; i++) {
+        var serviceImage = {
+          service_title: rows[i].service_title,
+          image: rows[i].image,
+        };
+        serviceArray.push(serviceImage);
+      }
+      res.render("service", { serviceArray });
+    }
+  });
+});
 
 
 module.exports = router;
