@@ -625,7 +625,7 @@ body {
   height: 150vh;
   transform: rotate(-55deg) translateY(50%);
   z-index: 1;
-  border-top: 20px;
+  border-top: 20px solid #ffffff;
 }
 
 .common-on-both {
