@@ -5,49 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
-	<link rel="stylesheet" href="../styles/nav.css">
-	<link rel="stylesheet" href="../styles/footer.css">
-	<link rel="stylesheet" href="../styles/styles.css">
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/brabuprint/image/upload/v1643198606/BrabuPrint/default/favicon_axvgc1.png"
+        type="image/png">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/styles.css">
     <title>Brabu Prints</title>
 </head>
 
 <style>
-    *
-    {
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    .site-page
-    {
+
+    .site-page {
         /* height: 100vh; */
         width: 100%;
     }
-    .site-page h1
-    {
+
+    .site-page h1 {
         text-align: center;
         font-size: 50px;
         font-family: 'Roboto', sans-serif;
         margin-top: 50px;
     }
-    .site-page h2
-    {
+
+    .site-page h2 {
         text-align: center;
         font-size: 30px;
         font-family: 'Roboto', sans-serif;
         margin-top: 30px;
         color: #db1d1d;
     }
-    .site-page p
-    {
+
+    .site-page p {
         text-align: center;
         font-size: 20px;
         font-family: 'Roboto', sans-serif;
         margin-top: 30px;
     }
-    .site-page a
-    {
+
+    .site-page a {
         text-align: center;
         text-decoration: none;
         color: #fff;
@@ -59,8 +60,8 @@
         box-shadow: 0px 0px 10px #000000;
         transition: all .2s ease-in-out;
     }
-    .site-page a:hover
-    {
+
+    .site-page a:hover {
         background: rgb(0, 0, 0);
         color: #ffffff;
     }
@@ -68,12 +69,16 @@
 
 <body>
     <%- include('./partials/header.ejs') %>
-    <section class="site-page">
-        <h1>Brabu Prints</h1>
-        <h2>This site can't be reached</h2>
-        <p>Sorry for the inconvenience...</p>
-        <p><a href="/">Click here</a></p>
-    </section>
+        <section class="site-page">
+            <h1>Brabu Prints</h1>
+            <h2>This site can't be reached</h2>
+            <p>Sorry for the inconvenience...</p>
+            <p><a href="/">Click here</a></p>
+        </section>
+
+
+        <%- include('./partials/footer.ejs') %>
+
 </body>
 
 </html>

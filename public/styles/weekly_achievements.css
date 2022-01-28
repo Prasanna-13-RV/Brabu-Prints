@@ -31,7 +31,7 @@
   /* border: 1px solid black; */
   border-radius: 20px;
   padding: 2rem;
-  height: 30rem;
+  height: 26rem;
   width: 30rem;
   box-shadow: 5px 5px 60px #da2c27;
   border: 5px solid #f7a707;
@@ -139,6 +139,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next , .swiper-button-next, .swiper-rtl .swiper-button-prev
+{
+  color: #f7a707;
+  /* background: #da2c27; */
+  padding: 2% 0%;
 }
 
 @media (max-width: 600px) {

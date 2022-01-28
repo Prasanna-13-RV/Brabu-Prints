@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
 			rel="shortcut icon"
-			href="../../../img/favicon.png"
+			href="https://res.cloudinary.com/brabuprint/image/upload/f_auto,q_10/v1643198606/BrabuPrint/default/favicon_axvgc1.png"
 			type="image/png"
 		/>
 		<link
@@ -23,6 +23,7 @@
 			background: #fff !important;
 		}
 	</style>
+
 	<body>
 		<%- include('../partials/admin-header.ejs') %>
 		<div class="container pt-3">
@@ -68,7 +69,7 @@
 					name="oldImageURL"
 					readonly
 					checked
-					value="<%= data[i].image.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].image.split('upload/')[1] %>"
+					value="<%= data[i].image %>"
 					style="opacity: 0"
 				/>
 			</form>
