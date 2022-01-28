@@ -50,43 +50,6 @@
 			</div>
 </section>
 
-<footer>
-	<div class="footerclass">
-		<h1>Bra<span>bupri</span>nts</h1>
-		<h3>You Can Reach Us At</h3>
-		<p class="footerptag">Address</p>
-		<p><i>1/555, Mappilaiurani main road, Tutitcorin - 628002</i></p>
-		<div class="iconsSocial">
-			<a href=""><i class="fab fa-facebook"></i></a>
-			<a href=""><i class="fab fa-twitter"></i></a>
-			<a href=""><i class="fab fa-instagram"></i></a>
-		</div>
-	</div>
-</footer>
-
-<section>
-	<div class="blog-title">
-		<h1>BLOG</h1>
-	</div>
-	<div class="container pt-2">
-		<% if (blogArray.length==0) { %>
-			<h2 class="sorryh2">Sorry there is no blogs.</h2>
-			<% } else { %>
-				<% blogArray.reverse().forEach(blogFor=> { %>
-					<div class="div-blog">
-						<h1 class="d-flex justify-content-center">
-							<%= blogFor.blog_title %>
-						</h1>
-						<img class="img-fluid rounded image-blog-img" src="<%= blogFor.image %>" alt="">
-						<p>
-							<%= blogFor.blog_content %>
-						</p>
-					</div>
-					<% }) %>
-						<% } %>
-	</div>
-</section>
-
 
 <%- include('./partials/footer.ejs') %>
 
