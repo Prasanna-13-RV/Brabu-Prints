@@ -94,7 +94,7 @@
 				<input
 					type="checkbox"
 					name="oldImageURL"
-					value="<%= data[i].image %>"
+					value="<%= data[i].image.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].image.split('upload/')[1] %>"
 					readonly
 					checked
 					style="opacity: 0"

@@ -82,7 +82,7 @@
 					name="oldImageURL"
 					checked
 					readonly
-					value="<%= data[i].image %>"
+					value="<%= data[i].image.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].image.split('upload/')[1] %>"
 					style="opacity: 0"
 				/>
 			</form>
