@@ -24,73 +24,56 @@ router.get("/", async (req, res) => {
           clientArray.push(clientImage);
         }
         await mysqlConnection.query(
-          "SELECT * FROM carousels",
+          "SELECT * FROM weekreport",
           async (err, rows, fields) => {
-            carouselArray = [];
+            teamArray = [];
             if (err) {
               console.log(err);
             } else {
               for (let i = 0; i <= rows.length - 1; i++) {
-                var carouselImage = {
-                  carousel_image: rows[i].carousel_image,
+                var teamImage = {
+                  weekly_report_para: rows[i].weekly_report_para,
+                  weekly_report_image: rows[i].weekly_report_image,
                 };
-                carouselArray.push(carouselImage);
+                teamArray.push(teamImage);
               }
-            }
-            await mysqlConnection.query(
-              "SELECT * FROM weekreport",
-              async (err, rows, fields) => {
-                teamArray = [];
+              await mysqlConnection.query("SELECT * FROM services", async (err, rows, fields) => {
                 if (err) {
                   console.log(err);
                 } else {
+                  var serviceArray = [];
                   for (let i = 0; i <= rows.length - 1; i++) {
-                    var teamImage = {
-                      weekly_report_para: rows[i].weekly_report_para,
-                      weekly_report_image: rows[i].weekly_report_image,
+                    var serviceImage = {
+                      service_title: rows[i].service_title,
+                      image: rows[i].image,
                     };
-                    teamArray.push(teamImage);
+                    serviceArray.push(serviceImage);
                   }
-                  await mysqlConnection.query("SELECT * FROM services", async (err, rows, fields) => {
-                    if (err) {
-                      console.log(err);
-                    } else {
-                      var serviceArray = [];
-                      for (let i = 0; i <= rows.length - 1; i++) {
-                        var serviceImage = {
-                          service_title: rows[i].service_title,
-                          image: rows[i].image,
-                        };
-                        serviceArray.push(serviceImage);
-                      }
-                    }
-                    await mysqlConnection.query("SELECT * FROM carousel", async (err, rows, fields) => {
-                      if (err) {
-                        console.log(err);
-                      } else {
-                        var carouselArray = [];
-                        for (let i = 0; i <= rows.length - 1; i++) {
-                          var carouselImage = {
-                            title: rows[i].title,
-                            sub_title: rows[i].sub_title,
-                            description: rows[i].description,
-                            image: rows[i].image,
-                          };
-                          carouselArray.push(carouselImage);
-                        }
-                      }
-                      res.render("index", {
-                        clientArray,
-                        carouselArray,
-                        teamArray,
-                        serviceArray,
-                        carouselArray,
-                      });
-                    })
-                  })
                 }
-              }
-            );
+                await mysqlConnection.query("SELECT * FROM carousel", async (err, rows, fields) => {
+                  if (err) {
+                    console.log(err);
+                  } else {
+                    var carouselArray = [];
+                    for (let i = 0; i <= rows.length - 1; i++) {
+                      var carouselImage = {
+                        title: rows[i].title,
+                        sub_title: rows[i].sub_title,
+                        description: rows[i].description,
+                        image: rows[i].image,
+                      };
+                      carouselArray.push(carouselImage);
+                    }
+                  }
+                  res.render("index", {
+                    clientArray,
+                    teamArray,
+                    serviceArray,
+                    carouselArray,
+                  });
+                })
+              })
+            }
           }
         );
       }
@@ -149,6 +132,44 @@ router.get("/blog", (req, res) => {
       res.render("blogs", { blogArray });
     }
   });
+});
+router.get("/service", async (req, res) => {
+  await mysqlConnection.query("SELECT * FROM services", async (err, rows, fields) => {
+    if (err) {
+      console.log(err);
+    } else {
+      var serviceArray = [];
+      for (let i = 0; i <= rows.length - 1; i++) {
+        var serviceImage = {
+          service_title: rows[i].service_title,
+          image: rows[i].image,
+        };
+        serviceArray.push(serviceImage);
+      }
+      res.render("service", { serviceArray });
+    }
+  });
+});
+router.get("/projects", async (req, res) => {
+  await mysqlConnection.query(
+    "SELECT * FROM carousel",
+    async (err, rows, fields) => {
+      carouselArray = [];
+      if (err) {
+        console.log(err);
+      } else {
+        for (let i = 0; i <= rows.length - 1; i++) {
+          var carouselImage = {
+            title: rows[i].title,
+            sub_title: rows[i].sub_title,
+            description: rows[i].description,
+            image: rows[i].image,
+          };
+          carouselArray.push(carouselImage);
+        }
+        res.render("project", { carouselArray });
+      }
+    });
 });
 
 

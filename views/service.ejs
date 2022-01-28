@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/brabuprint/image/upload/v1643198606/BrabuPrint/default/favicon_axvgc1.png"
+        type="image/png">
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/chatbot.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Services</title>
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+        <%- include('./partials/chatbot.ejs') %>
+
+
+            <section id="services">
+                <h1 class="heading1">OUR OTHER SERVICES</h1>
+                <div class="ourOtherServices">
+                    <% serviceArray.forEach(serviceFor=> { %>
+                        <div class="boxServices frame">
+                            <div class="boxServices-div">
+                                <img class="boxServices1"
+                                    src="<%= serviceFor.image.split('upload/')[0]+'upload/f_auto,q_10/'+serviceFor.image.split('upload/')[1] %>"
+                                    alt="">
+                            </div>
+                            <div class="details">
+                                <h1 class="detailsH1Box">
+                                    <%= serviceFor.service_title %>
+                                </h1>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </section>
+
+
+            <%- include('./partials/footer.ejs') %>
+
+                <script src="./javascript/chatbot.js"></script>
+                <script src="./javascript/nav.js"></script>
+</body>
+
+</html>

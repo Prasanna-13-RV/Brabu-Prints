@@ -41,8 +41,7 @@
 							<h3>Description</h3>
 						</label>
 						<textarea type="text" class="form-control form-control-sm" name="description" id="description"
-							style="height: 250px">
-<%= data[i].description %></textarea>
+							style="height: 250px"><%= data[i].description %></textarea>
 					</div>
 					<div class="mb-3">
 						<label class="form-label" for="image">
@@ -51,8 +50,9 @@
 						<input class="form-control form-control-sm" type="file" class="image" name="image" id="image" />
 					</div>
 					<input class="btn" style="background-color: rgb(247, 167, 7); color: white" type="submit" />
-					<input type="checkbox" name="oldImageURL" value="<%= data[i].image %>" readonly checked
-						style="opacity: 0" />
+					<input type="checkbox" name="oldImageURL"
+						value="<%= data[i].image.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].image.split('upload/')[1] %>"
+						readonly checked style="opacity: 0" />
 				</form>
 				<% } %>
 		</div>

@@ -402,6 +402,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5%;
 }
 
 .projectsMainSectionH1 {
@@ -446,7 +447,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: centerfv;
+  align-items: center;
   z-index: 2;
   opacity: 0;
 }
@@ -455,6 +456,7 @@ body {
 .projectsSubDivDetails h3 {
   text-align: center;
   padding-bottom: 2%;
+  z-index: 3;
 }
 
 /* .projectsMainDivFlex1 .projectsSubDiv:nth-child(1) {

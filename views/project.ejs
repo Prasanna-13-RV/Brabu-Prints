@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/brabuprint/image/upload/f_auto,f_10/v1643198606/BrabuPrint/default/favicon_axvgc1.png"
+        type="image/png">
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/chatbot.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Projects</title>
+</head>
+
+<style>
+    .project-image-div
+    {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .project-image-div img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+</style>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+        <%- include('./partials/chatbot.ejs') %>
+
+
+            <section class="projectsMainSection" id="projects">
+                <h1 class="heading1">Projects That We're Proud Of</h1>
+                <div class="projectsMainDivFlex1">
+                    <% carouselArray.forEach(carouselFor=> { %>
+                        <div class="projectsSubDiv">
+                            <div class="project-image-div">
+                                <img src="<%= carouselFor.image.split('upload/')[0]+'upload/f_auto,q_10/'+carouselFor.image.split('upload/')[1] %>"
+                                    alt="">
+                            </div>
+                            <div class="projectsSubDivDetails">
+                                <h1>
+                                    <%= carouselFor.title %>
+                                </h1>
+                                <h3>
+                                    <%= carouselFor.sub_title %>
+                                </h3>
+                                <p>
+                                    <%= carouselFor.description %>
+                                </p>
+                            </div>
+                        </div>
+                        <% }); %>
+                </div>
+            </section>
+
+
+
+            <%- include('./partials/footer.ejs') %>
+
+
+
+                <script src="./javascript/chatbot.js"></script>
+                <script src="./javascript/nav.js"></script>
+</body>
+
+</html>
