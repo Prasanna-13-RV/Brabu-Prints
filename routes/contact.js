@@ -11,13 +11,12 @@ const mysqlConnection = require('../database');
 const { isloggedin } = require('../middleware');
 const nodemailer = require('nodemailer');
 
-
 router.get('/contact', (req, res) => {
-    res.render('./contact');
+	res.render('./contact');
 });
 
 router.post('/contact', (req, res) => {
-    const output = `
+	const output = `
         <p>You have a new contact request</p>
         <h3>Contact Details</h3>
         <ul>  
@@ -28,35 +27,34 @@ router.post('/contact', (req, res) => {
         <h3>Message</h3>
         <p>${req.body.message}</p>
     `;
-    let transporter = nodemailer.createTransport({
-        // host: 'www.brabuprint.com',
-        // port: 587,
-        // secure: false,
-        service: 'gmail',
-        auth: {
-            user: 'geniuscriminaloffical@gmail.com',
-            pass: 'Latha13087280$#'
-        },
-        // tls: {
-        //     rejectUnauthorized: false
-        // }
-    });
+	let transporter = nodemailer.createTransport({
+		// host: 'www.brabuprint.com',
+		// port: 587,
+		// secure: false,
+		service: 'gmail',
+		auth: {
+			user: 'geniuscriminaloffical@gmail.com',
+			pass: 'Latha13087280$#'
+		}
+		// tls: {
+		//     rejectUnauthorized: false
+		// }
+	});
 
-    let mailOptions = {
-        from: '"Brabuprint" <geniuscriminaloffical@gmail.com>',
-        to: 'prasannavelmuruganrv.0200@gmail.com',
-        subject: 'Customer Contact Request',
-        text: 'Hello world?',
-        html: output
-    };
+	let mailOptions = {
+		from: '"Brabuprint" <geniuscriminaloffical@gmail.com>',
+		to: 'prasannavelmuruganrv.0200@gmail.com',
+		subject: 'Customer Contact Request',
+		text: 'Hello world?',
+		html: output
+	};
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.log(error);
-        }
-        res.render('./contact', { msg: 'Email has been sent' });
-    });
+	transporter.sendMail(mailOptions, (error, info) => {
+		if (error) {
+			return console.log(error);
+		}
+		res.render('./contact', { msg: 'Email has been sent' });
+	});
 });
-
 
 module.exports = router;
