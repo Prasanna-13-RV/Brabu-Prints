@@ -64,17 +64,19 @@
 					<img draggable="false" class="spillImage3 layer1"
 						src="https://res.cloudinary.com/brabuprint/image/upload/f_auto,q_10/v1643198606/BrabuPrint/default/favicon_axvgc1.png"
 						alt="">
-					<img draggable="false" class="spillImage4 layer2" src="https://res.cloudinary.com/brabuprint/image/upload/f_auto,q_10/v1643198606/BrabuPrint/default/logo2_lawa1s.png" alt="">
+					<img draggable="false" class="spillImage4 layer2"
+						src="https://res.cloudinary.com/brabuprint/image/upload/f_auto,q_10/v1643198606/BrabuPrint/default/logo2_lawa1s.png"
+						alt="">
 				</div>
 
 				<div class="slideshow-container">
 					<!-- Full-width images with number and caption text -->
 					<div class="mySlides fade">
 						<video width="100%" height="100%" autoplay controls>
-							<source src="../img/videos/first-video.mp4" type="video/mp4">
+							<source src="../img/videos/full-video.mp4" type="video/mp4" autoplay>
 						</video>
 					</div>
-					<div class="mySlides fade">
+					<!-- <div class="mySlides fade">
 						<video width="100%" height="100%" controls>
 							<source src="../img/videos/second-video.mp4" type="video/mp4">
 						</video>
@@ -88,10 +90,10 @@
 						<video width="100%" height="100%" controls>
 							<source src="../img/videos/forth-video.mp4" type="video/mp4">
 						</video>
-					</div>
+					</div> -->
 					<!-- Next and previous buttons -->
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 				</div>
 				<br>
 			</section>
@@ -396,7 +398,9 @@
 					<div class="imagesShortSection-div">
 						<marquee direction="right">
 							<% clientArray.forEach(clientFor=> { %>
-								<img class="imageImgSection" src="<%= clientFor.client_logo %> " alt="">
+								<img class="imageImgSection"
+									src="<%= clientFor.client_logo.split('upload/')[0]+'upload/f_auto,q_10/'+clientFor.client_logo.split('upload/')[1] %>"
+									alt="">
 								<% }); %>
 						</marquee>
 					</div>
@@ -431,7 +435,8 @@
 							<div class="swiper-wrapper">
 								<% teamArray.forEach(teamfor=> { %>
 									<div class="swiper-slide">
-										<img src="<%= teamfor.weekly_report_image %> " alt="">
+										<img src="<%= teamfor.weekly_report_image.split('upload/')[0]+'upload/f_auto,q_10/'+teamfor.weekly_report_image.split('upload/')[1] %>"
+											alt="">
 									</div>
 									<% }) %>
 							</div>
@@ -446,13 +451,13 @@
 
 			<%- include('./partials/footer.ejs') %>
 
-			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-			<script src="./javascript/aboutus_home.js"></script>
-			<script src="./javascript/swiper_carousel.js"></script>
-			<script src="./javascript/chatbot.js"></script>
-			<script src="./javascript/nav.js"></script>
-			<script src="./javascript/beq.js"></script>
-			<!-- <script src="./javascript/gsap.js"></script> -->
+				<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+				<script src="./javascript/aboutus_home.js"></script>
+				<script src="./javascript/swiper_carousel.js"></script>
+				<script src="./javascript/chatbot.js"></script>
+				<script src="./javascript/nav.js"></script>
+				<script src="./javascript/beq.js"></script>
+				<!-- <script src="./javascript/gsap.js"></script> -->
 </body>
 
 </html>
