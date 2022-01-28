@@ -114,7 +114,6 @@ router
 // router.post("/:id", upload.fields([
 //     { name: "image" },
 // ]), async (req, res) => {
-//     console.log(req.files)
 //     if (req.files["client_logo"] && req.files["client_poster"]) {
 //         mysqlConnection.query("UPDATE carousel SET client_name=? , client_logo=? , client_poster=? WHERE id=?", [req.body.client_name, req.files["client_logo"][0].path, req.files["client_poster"][0].path, req.params.id], async (err, rows) => {
 //             if (!err) {

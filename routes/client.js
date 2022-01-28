@@ -69,7 +69,6 @@ router.get("/:id", isloggedin, (req, res) => {
 // 	{ name: "client_logo" },
 // 	{ name: "client_poster" },
 // ]), async (req, res) => {
-// 	console.log(req.files)
 // 	if (req.files["client_logo"] && req.files["client_poster"]) {
 // 		mysqlConnection.query("UPDATE clients SET client_name=? , client_logo=? , client_poster=? WHERE id=?", [req.body.client_name, req.files["client_logo"][0].path, req.files["client_poster"][0].path, req.params.id], async (err, rows) => {
 // 			if (!err) {

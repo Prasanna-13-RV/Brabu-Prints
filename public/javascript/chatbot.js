@@ -227,7 +227,6 @@ const coursesDisplay = (content, redirect) => {
 };
 
 const redirectPage = async () => {
-	console.log('hii');
 	await fetch(
 		`/chatbot/${chatBody.getAttribute('data-name')}/${chatBody.getAttribute(
 			'data-email'

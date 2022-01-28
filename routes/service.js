@@ -92,7 +92,6 @@ router
 			[req.params.id],
 			(err, rows) => {
 				if (!err) {
-                    console.log(rows)
 					res.render('./admin/serviceupdate', { data: rows });
 				} else {
 					console.log(err);

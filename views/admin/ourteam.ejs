@@ -49,7 +49,7 @@
                             <tr>
                                 <td>
                                     <img class="img-fluid rounded float-start" style="width: 25rem;"
-                                        src="<%= data[i].weekly_report_image %>" alt="">
+                                        src="<%= data[i].weekly_report_image.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].weekly_report_image.split('upload/')[1] %>" alt="">
                                 </td>
                                 <td>
                                     <%= data[i].weekly_report_para %>
