@@ -42,7 +42,7 @@ app.use(
 	})
 );
 
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(flash());
 
 app.use(bodyParser.urlencoded({ extended: false }));

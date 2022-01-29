@@ -33,8 +33,8 @@ router.post('/contact', (req, res) => {
 		// secure: false,
 		service: 'gmail',
 		auth: {
-			user: 'geniuscriminaloffical@gmail.com',
-			pass: 'Latha13087280$#'
+			user: 'brabuprint@gmail.com',
+			pass: 'superprint'
 		}
 		// tls: {
 		//     rejectUnauthorized: false
@@ -42,8 +42,8 @@ router.post('/contact', (req, res) => {
 	});
 
 	let mailOptions = {
-		from: '"Brabuprint" <geniuscriminaloffical@gmail.com>',
-		to: 'geniuscriminaloffical@gmail.com',
+		from: '"Brabuprint" <brabuprint@gmail.com>',
+		to: 'brabuprint@gmail.com',
 		subject: 'Customer Contact Request',
 		text: 'Hello world?',
 		html: output
