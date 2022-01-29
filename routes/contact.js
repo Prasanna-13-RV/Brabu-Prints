@@ -43,7 +43,7 @@ router.post('/contact', (req, res) => {
 
 	let mailOptions = {
 		from: '"Brabuprint" <geniuscriminaloffical@gmail.com>',
-		to: 'prasannavelmuruganrv.0200@gmail.com',
+		to: 'geniuscriminaloffical@gmail.com',
 		subject: 'Customer Contact Request',
 		text: 'Hello world?',
 		html: output
