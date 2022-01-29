@@ -44,7 +44,7 @@
 						"
 						class="large-file"
 					>
-						Upload files less than 2mb.
+						Upload files less than 1mb.
 					</p>
 					<input
 						type="file"
@@ -71,17 +71,7 @@
 			const files = document.querySelector('#projectcarousel_image');
 			const largeFile = document.querySelector('.large-file');
 			files.addEventListener('input', (e) => {
-				if (e.target.files[0].size > 2000000) {
-					largeFile.style.opacity = 1;
-					e.target.value = '';
-				} else {
-					largeFile.style.opacity = 0;
-				}
-			});
-			const f = document.querySelector('#client_poster');
-			// const largeFile = document.querySelector('.large-file');
-			f.addEventListener('input', (e) => {
-				if (e.target.files[0].size > 2000000) {
+				if (e.target.files[0].size > 1000000) {
 					largeFile.style.opacity = 1;
 					e.target.value = '';
 				} else {
