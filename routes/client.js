@@ -108,10 +108,10 @@ router.get("/:id", isloggedin, (req, res) => {
 router.get("/delete/:id", isloggedin, async (req, res) => {
 	mysqlConnection.query("DELETE FROM clients WHERE id = ?", [req.params.id], async (err, rows) => {
 		if (!err) {
-			const url1 = req.query.client_logo.split("BrabuPrintsMYSQL/")[1].slice(0, -4);
-			const url2 = req.query.client_poster.split("BrabuPrintsMYSQL/")[1].slice(0, -4);
-			await cloudinary.uploader.destroy("BrabuPrintsMYSQL/" + url1);
-			await cloudinary.uploader.destroy("BrabuPrintsMYSQL/" + url2);
+			const url1 = req.query.client_logo.split("BrabuPrint/")[1].slice(0, -4);
+			const url2 = req.query.client_poster.split("BrabuPrint/")[1].slice(0, -4);
+			await cloudinary.uploader.destroy("BrabuPrint/" + url1);
+			await cloudinary.uploader.destroy("BrabuPrint/" + url2);
 			res.redirect("/admin/client")
 		}
 		else {

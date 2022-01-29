@@ -77,9 +77,9 @@ router
 
 	.post(isloggedin, upload.single('weekly_report_image'), async (req, res) => {
 		const oldImageName = req.body.oldImageURL
-			.split('BrabuPrintsMYSQL/')[1]
+			.split('BrabuPrint/')[1]
 			.slice(0, -4);
-		await cloudinary.uploader.destroy(`BrabuPrintsMYSQL/${oldImageName}`);
+		await cloudinary.uploader.destroy(`BrabuPrint/${oldImageName}`);
 		await mysqlConnection.query(
 			'UPDATE weekreport SET weekly_report_image = ?, weekly_report_para = ? WHERE id = ?',
 			[
@@ -105,9 +105,9 @@ router.post(
 	upload.single('weekly_report_image'),
 	async (req, res) => {
 		const url = req.query.cloudinaryName
-			.split('BrabuPrintsMYSQL/')[1]
+			.split('BrabuPrint/')[1]
 			.slice(0, -4);
-		await cloudinary.uploader.destroy('BrabuPrintsMYSQL/' + url);
+		await cloudinary.uploader.destroy('BrabuPrint/' + url);
 		mysqlConnection.query(
 			'UPDATE weekreport SET weekly_report_para=? , weekly_report_image=? WHERE id=?',
 			[req.body.weekly_report_image, req.file.path, req.params.id],
@@ -131,9 +131,9 @@ router.get('/delete/:id', isloggedin, async (req, res) => {
 		async (err, rows) => {
 			if (!err) {
 				const url = req.query.cloudinaryName
-					.split('BrabuPrintsMYSQL/')[1]
+					.split('BrabuPrint/')[1]
 					.slice(0, -4);
-				await cloudinary.uploader.destroy('BrabuPrintsMYSQL/' + url);
+				await cloudinary.uploader.destroy('BrabuPrint/' + url);
 				res.redirect('/admin/weekreport');
 			} else {
 				console.log(err);

@@ -72,9 +72,9 @@ router
 
 	.post(isloggedin, upload.single('image'), async (req, res) => {
 		const oldImageName = req.body.oldImageURL
-			.split('BrabuPrintsMYSQL/')[1]
+			.split('BrabuPrint/')[1]
 			.slice(0, -4);
-		await cloudinary.uploader.destroy(`BrabuPrintsMYSQL/${oldImageName}`);
+		await cloudinary.uploader.destroy(`BrabuPrint/${oldImageName}`);
 		await mysqlConnection.query(
 			'UPDATE carousel SET image = ?, title = ?, sub_title=?,  description = ? WHERE id = ?',
 			[
@@ -143,9 +143,9 @@ router.get('/delete/:id', isloggedin, async (req, res) => {
 		async (err, rows) => {
 			if (!err) {
 				const url = req.query.cloudinaryName
-					.split('BrabuPrintsMYSQL/')[1]
+					.split('BrabuPrint/')[1]
 					.slice(0, -4);
-				await cloudinary.uploader.destroy('BrabuPrintsMYSQL/' + url);
+				await cloudinary.uploader.destroy('BrabuPrint/' + url);
 				res.redirect('/admin/carousel');
 			} else {
 				console.log(err);
