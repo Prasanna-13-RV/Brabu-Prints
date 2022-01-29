@@ -23,7 +23,6 @@ footer {
   align-items: center;
   text-align: center;
   overflow: hidden;
-  padding: 1% 0%;
 }
 
 .footer-heading {
@@ -58,16 +57,16 @@ footer {
 
 .contact-us-footer {
   /* width: 100%; */
-  width: 7rem;
-  padding: 1%;
+  width: 7rem !important;
+  padding: 1% !important;
   background: #fff;
-  height: fit-content;
+  height: fit-content !important;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
   margin: 0% 1%;
   font-weight: 600;
 }

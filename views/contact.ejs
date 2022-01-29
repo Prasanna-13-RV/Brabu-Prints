@@ -22,78 +22,78 @@
 
 <body>
 	<%- include('./partials/header.ejs') %>
-		<%- include('./partials/chatbot.ejs') %>
-			<div class="container">
-				<div class="full-length-contact">
-					<div class="left-contact-us">
-						<div class="image-left-contact-us">
-							<img draggable="false" src="https://res.cloudinary.com/brabuprint/image/upload/v1643198606/BrabuPrint/default/favicon_axvgc1.png"
-								alt="" />
-						</div>
+		<div class="container">
+			<div class="full-length-contact">
+				<div class="left-contact-us">
+					<div class="image-left-contact-us">
+						<img draggable="false"
+							src="https://res.cloudinary.com/brabuprint/image/upload/v1643198606/BrabuPrint/default/favicon_axvgc1.png"
+							alt="" />
 					</div>
-					<div class="right-contact-us">
-						<div class="right-left-conatact-us">
-							<div class="contact">
-								<h1>Email Us</h1>
-								<form method="POST" action="/contact">
-									<div>
-										<label for="name">
-											<h3>Name</h3>
-										</label>
-										<input class="input-contact" type="text" id="name" name="name" required  autofocus/>
-									</div>
-									<div>
-										<label for="email">
-											<h3>Email Address</h3>
-										</label>
-										<input class="input-contact" type="email" id="email" name="email" required />
-									</div>
-									<div>
-										<label for="number">
-											<h3>Phone Number</h3>
-										</label>
-										<input class="input-contact" type="text" id="number" name="phone" minlength="10"
-											maxlength="10" required />
-									</div>
-									<div class="full">
-										<label for="message">
-											<h3>Message</h3>
-										</label>
-										<textarea class="input-contact-message" name="message" id="message" rows="5"
-											required></textarea>
-									</div>
-									<button class="button-contact" type="submit">Submit</button>
-								</form>
-							</div>
+				</div>
+				<div class="right-contact-us">
+					<div class="right-left-conatact-us">
+						<div class="contact">
+							<h1>Email Us</h1>
+							<form method="POST" action="/contact">
+								<div>
+									<label for="name">
+										<h3>Name</h3>
+									</label>
+									<input class="input-contact" type="text" id="name" name="name" required autofocus />
+								</div>
+								<div>
+									<label for="email">
+										<h3>Email Address</h3>
+									</label>
+									<input class="input-contact" type="email" id="email" name="email" required />
+								</div>
+								<div>
+									<label for="number">
+										<h3>Phone Number</h3>
+									</label>
+									<input class="input-contact" type="text" id="number" name="phone" minlength="10"
+										maxlength="10" required />
+								</div>
+								<div class="full">
+									<label for="message">
+										<h3>Message</h3>
+									</label>
+									<textarea class="input-contact-message" name="message" id="message" rows="5"
+										required></textarea>
+								</div>
+								<button class="button-contact" type="submit">Submit</button>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<section class="contactSection">
-				<h1 class="contactUsH1">Contact Us</h1>
-				<div class="contactDetail">
-					<div class="map">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7885.032894667939!2d78.12700056632329!3d8.83141401416524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03e532215a9ddb%3A0x4a86f0026b916c38!2sBrabuprint!5e0!3m2!1sen!2sin!4v1643192990760!5m2!1sen!2sin"
-							style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-						<!-- <iframe
+		<section class="contactSection">
+			<h1 class="contactUsH1">Contact Us</h1>
+			<div class="contactDetail">
+				<div class="map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7885.032894667939!2d78.12700056632329!3d8.83141401416524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03e532215a9ddb%3A0x4a86f0026b916c38!2sBrabuprint!5e0!3m2!1sen!2sin!4v1643192990760!5m2!1sen!2sin"
+						style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+					<!-- <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.797977383323!2d78.1425446056443!3d8.805041502071798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03ef9774172607%3A0xbad6cc22cf2dc488!2sBrabu%20Print!5e0!3m2!1sen!2sin!4v1633244025372!5m2!1sen!2sin"
                             style="border: 0" allowfullscreen="" loading="lazy"></iframe> -->
-					</div>
-					<div class="contactInput">
-						<h1 style="color: white">Call Us</h1>
-						<a class="infoBtn call" href="tel:9994385655">+91 9994385655</a>
-						<a class="infoBtn call" href="tel:8754844505">+91 8754844505</a>
-						<a class="infoBtn contactmail" href="mailto:brabuprint@gmail.com">brabuprint@gmail.com</a>
-					</div>
 				</div>
-			</section>
+				<div class="contactInput">
+					<h1 style="color: white">Call Us</h1>
+					<a class="infoBtn call" href="tel:9994385655">+91 9994385655</a>
+					<a class="infoBtn call" href="tel:8754844505">+91 8754844505</a>
+					<a class="infoBtn contactmail" href="mailto:brabuprint@gmail.com">brabuprint@gmail.com</a>
+				</div>
+			</div>
+		</section>
 
-			<%- include('./partials/footer.ejs') %>
-				<script src="./javascript/chatbot.js"></script>
-				<script src="./javascript/contact.js"></script>
-				<script src="./javascript/nav.js"></script>
+		<%- include('./partials/footer.ejs') %>
+			<script src="./javascript/chatbot.js"></script>
+			<script src="./javascript/contact.js"></script>
+			<script src="./javascript/nav.js"></script>
 </body>
 
 </html>

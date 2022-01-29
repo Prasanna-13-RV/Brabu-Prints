@@ -55,14 +55,17 @@ window.addEventListener('scroll', (e) => {
 	var scroll = window.scrollY;
 	if (scroll >= 100) {
 		botImg.style.top = `${window.innerHeight}px`;
-	} else {
+	} else if (scroll < 100) {
 		botImg.style.top = `${window.innerHeight + 300}px`;
 	}
+	if (document.body.offsetHeight - scroll <= window.innerHeight) {
+		chat.classList.add('open');
+	}
+	// else {
+	// 	chat.classList.remove('open');
+	// }
 });
 
-window.addEventListener('load', () => {
-	chat.classList.add('open');
-});
 
 
 const nameFormSubmit = () => {
@@ -77,31 +80,32 @@ const nameFormSubmit = () => {
 	<span class="chat-span">Enter your e-mail</span>
 	</div>
 	<form class="each-chat client email-form" onsubmit="emailFormSubmit(this)">
-			<button>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 20 20"
-					fill="currentColor"
+	<button>
+	<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 20 20"
+	fill="currentColor"
 					id="email_svg"
-				>
+					>
 					<path
-						fill-rule="evenodd"
-						d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
-						clip-rule="evenodd"
+					fill-rule="evenodd"
+					d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+					clip-rule="evenodd"
 					/>
-				</svg>
-			</button>
-			<input
-				type="email"
-				placeholder="Email"
-				autofocus
-				required
-				id="client_email"
-			/>
-		</form>`;
+					</svg>
+					</button>
+					<input
+					type="email"
+					placeholder="Email"
+					autofocus
+					required
+					id="client_email"
+					/>
+					</form>`;
 	document.querySelector('.name-form input').value =
 		chatBody.getAttribute('data-name');
 	chatBody.scrollTop = chatBody.scrollHeight;
+	document.querySelector('.email-form input').focus();
 	return false;
 };
 
@@ -155,6 +159,7 @@ const emailFormSubmit = () => {
 	document.querySelector('.email-form input').value =
 		chatBody.getAttribute('data-email');
 	chatBody.scrollTop = chatBody.scrollHeight;
+	document.querySelector('.phone-form input').focus();
 	return false;
 };
 

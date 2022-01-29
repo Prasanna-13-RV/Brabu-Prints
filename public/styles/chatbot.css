@@ -3,9 +3,9 @@
 	top: 120vh;
 	transform: translateY(-120%);
 	z-index: 15;
-	width: 6rem;
+	width: 3rem;
 	height: 4rem;
-	right: 0rem;
+	right: 2rem;
 	background: url(../../img/chatbot/chatbot.png) center/contain no-repeat;
 	animation: bot-img-animate 0.5s ease-in-out infinite alternate;
 	cursor: pointer;

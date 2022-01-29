@@ -43,8 +43,22 @@ a.site-logo {
   border-radius: 0% 50% 0% 50%;
 }
 
+.bot-img
+{
+  width: 6rem;
+}
+
 footer {
   margin-top: 5%;
+}
+.contact-us-footer
+{
+  width: 12rem !important;
+}
+.contact-us-social-footer
+{
+  width: 4rem !important;
+  height: 4rem !important;
 }
 
 .carousel-control-prev-icon {
