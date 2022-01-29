@@ -30,6 +30,11 @@
     th {
         text-align: center;
     }
+    .no-record
+    {
+        /* text-align: center; */
+        width: 100%;
+    }
 </style>
 
 <body>
@@ -50,7 +55,7 @@
                 </tr>
                 <% if (data.length<=0) {%>
                     <tr>
-                        <td>
+                        <td class="no-record">
                             No records to show!
                         </td>
                     </tr>
