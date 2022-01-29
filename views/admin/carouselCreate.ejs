@@ -54,7 +54,7 @@
 							margin-bottom: 0;
 							opacity: 0;
 						" class="large-file">
-						Upload files less than 1mb.
+						Upload files less than 2mb.
 					</p>
 					<input type="file" class="form-control form-control-sm" name="image" id="image" required />
 				</div>
@@ -72,7 +72,7 @@
 			const files = document.querySelector('#image');
 			const largeFile = document.querySelector('.large-file');
 			files.addEventListener('input', (e) => {
-				if (e.target.files[0].size > 1000000) {
+				if (e.target.files[0].size > 2000000) {
 					largeFile.style.opacity = 1;
 					e.target.value = '';
 				} else {
