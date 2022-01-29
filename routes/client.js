@@ -32,6 +32,7 @@ router.post("/create", isloggedin, upload.fields([
 	{ name: "client_logo" },
 	{ name: "client_poster" },
 ]), (req, res) => {
+	console.log(req.files)
 	mysqlConnection.query("INSERT INTO clients (client_name, client_logo, client_poster) values(?,?,?)", [req.body.client_name, req.files["client_logo"][0].path, req.files["client_poster"][0].path], (err, rows, response) => {
 		if (!err) {
 			res.render("./admin/clientconform")
