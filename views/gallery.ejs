@@ -18,7 +18,12 @@
 	<link rel="stylesheet" href="./styles/gallery.css">
 	<title>Gallery</title>
 </head>
-
+<style>
+	.containerCarousel1
+	{
+		min-height: 100vh;
+	}
+</style>
 
 <body>
 	<%- include('./partials/header.ejs') %>
@@ -31,7 +36,7 @@
 					<div class="carousel-inner">
 						<% galleryArray.forEach((galleryFor, i)=> { %>
 							<div class="carousel-item <%= i===0 ? " active" : "" %>">
-								<img class="classCarouselgallery"
+								<img draggable="false" class="classCarouselgallery"
 									src="<%= galleryFor.gallery_image.split('upload/')[0]+'upload/f_auto,q_10/'+galleryFor.gallery_image.split('upload/')[1] %>"
 									alt="">
 							</div>
@@ -65,7 +70,7 @@
 					<div class="carousel-inner">
 						<% clientArray.forEach((clientFor , i)=> { %>
 							<div class="item <%= i===0 ? " active" : "" %>">
-								<img class="classCarouselposter"
+								<img draggable="false" class="classCarouselposter"
 									src="<%= clientFor.client_poster.split('upload/')[0]+'upload/f_auto,q_10/'+clientFor.client_poster.split('upload/')[1] %>"
 									alt="">
 							</div>

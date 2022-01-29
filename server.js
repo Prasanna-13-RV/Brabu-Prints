@@ -8,6 +8,7 @@ const session = require('express-session');
 const flash = require('express-flash');
 const methodOverride = require('method-override');
 const multer = require('multer');
+const morgan = require('morgan');
 const { storage, cloudinary } = require('./cloudinary');
 const upload = multer({ storage });
 const brabuprints = require('./routes/home');
@@ -40,6 +41,8 @@ app.use(
 		saveUninitialized: false
 	})
 );
+
+app.use(morgan('dev'));
 app.use(flash());
 
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -30,6 +30,11 @@
     th {
         text-align: center;
     }
+    .no-record
+    {
+        /* text-align: center; */
+        width: 100%;
+    }
 </style>
 
 <body>
@@ -50,7 +55,7 @@
                 </tr>
                 <% if (data.length<=0) {%>
                     <tr>
-                        <td>
+                        <td class="no-record">
                             No records to show!
                         </td>
                     </tr>
@@ -61,23 +66,23 @@
                                     <%= data[i].client_name %>
                                 </td>
                                 <td>
-                                    <img class="img-fluid rounded float-start"
+                                    <img draggable="false" class="img-fluid rounded float-start"
                                         src="<%= data[i].client_logo.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].client_logo.split('upload/')[1] %>"
                                         alt="">
                                 </td>
                                 <td>
-                                    <img class="img-fluid rounded float-start"
+                                    <img draggable="false" class="img-fluid rounded float-start"
                                         src="<%= data[i].client_poster.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].client_poster.split('upload/')[1] %>"
                                         style="width: 60%;" alt="">
                                 </td>
                                 <td class="text-end">
                                     <a href="/admin/client/<%= data[i].id %>" type="button"
-                                        class="btn btn-outline-primary m-2"><img
+                                        class="btn btn-outline-primary m-2"><img draggable="false"
                                             src="https://img.icons8.com/windows/80/000000/visible--v2.png" /></a>
                                     <!-- <a href="/admin/client/update/<%= data[i].id %>" type="button"
-                                        class="btn btn-outline-success m-2"><img src="https://img.icons8.com/windows/32/000000/edit--v1.png"/></a> -->
+                                        class="btn btn-outline-success m-2"><img draggable="false" src="https://img.icons8.com/windows/32/000000/edit--v1.png"/></a> -->
                                     <a href="/admin/client/delete/<%= data[i].id %>?client_logo=<%= data[i].client_logo %>&client_poster=<%= data[i].client_poster %>"
-                                        type="button" class="btn btn-outline-danger m-2"><img
+                                        type="button" class="btn btn-outline-danger m-2"><img draggable="false"
                                             src="https://img.icons8.com/small/80/000000/filled-trash.png" /></a>
                                 </td>
                             </tr>

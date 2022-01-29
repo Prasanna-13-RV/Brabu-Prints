@@ -57,13 +57,13 @@
                         <% for(var i=0; i < data.length; i++) { %>
                             <tr>
                                 <td class="td-photos">
-                                    <img class="img-fluid rounded float-start"
+                                    <img draggable="false" class="img-fluid rounded float-start"
                                         src="<%= data[i].gallery_image.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].gallery_image.split('upload/')[1] %>"
                                         alt="">
                                 </td>
                                 <td class="text-end">
                                     <a href="/admin/gallery/delete/<%= data[i].id %>?cloudinaryName=<%= data[i].gallery_image %>"
-                                        type="button" class="btn btn-outline-danger m-2"><img
+                                        type="button" class="btn btn-outline-danger m-2"><img draggable="false"
                                             src="https://img.icons8.com/small/32/000000/filled-trash.png" /></a>
                                 </td>
                             </tr>

@@ -48,7 +48,7 @@
                         <% for(var i=0; i < data.length; i++) { %>
                             <tr>
                                 <td>
-                                    <img class="img-fluid rounded float-start" style="width: 25rem;"
+                                    <img draggable="false" class="img-fluid rounded float-start" style="width: 25rem;"
                                         src="<%= data[i].weekly_report_image.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].weekly_report_image.split('upload/')[1] %>" alt="">
                                 </td>
                                 <td>
@@ -56,13 +56,13 @@
                                 </td>
                                 <td class="text-end">
                                     <a href="/admin/weekreport/<%= data[i].id %>" type="button"
-                                        class="btn btn-outline-primary m-2"><img
+                                        class="btn btn-outline-primary m-2"><img draggable="false"
                                             src="https://img.icons8.com/windows/32/000000/visible--v2.png" /></a>
                                     <a href="/admin/weekreport/update/<%= data[i].id %>" type="button"
-                                        class="btn btn-outline-success m-2"><img
+                                        class="btn btn-outline-success m-2"><img draggable="false"
                                             src="https://img.icons8.com/windows/32/000000/edit--v1.png" /></a>
                                     <a href="/admin/weekreport/delete/<%= data[i].id %>?cloudinaryName=<%= data[i].weekly_report_image %>"
-                                        type="button" class="btn btn-outline-danger m-2"><img
+                                        type="button" class="btn btn-outline-danger m-2"><img draggable="false"
                                             src="https://img.icons8.com/small/32/000000/filled-trash.png" /></a>
                                 </td>
                             </tr>
