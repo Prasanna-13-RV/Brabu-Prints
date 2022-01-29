@@ -51,24 +51,35 @@
 					<label class="form-label" for="weekly_report_image">
 						<h3>Picture</h3>
 					</label>
+					<p
+						style="
+							color: #da2c27;
+							font-size: 0.9rem;
+							margin-bottom: 0;
+							opacity: 0;
+						"
+						class="large-file"
+					>
+						Upload files less than 2mb.
+					</p>
 					<input
 						class="form-control form-control-sm"
 						type="file"
 						class="weekly_report_image"
 						name="weekly_report_image"
 						id="weekly_report_image"
-                        />
-                    </div>
-                    <input
+					/>
+				</div>
+				<input
 					class="form-control form-control-sm"
 					class="btn"
 					style="background-color: rgb(247, 167, 7); color: white"
 					type="submit"
-                    />
-                    <input
+				/>
+				<input
 					type="checkbox"
 					name="oldImageURL"
-                    value="<%= data[i].weekly_report_image %>"
+					value="<%= data[i].weekly_report_image %>"
 					readonly
 					checked
 					style="opacity: 0"
@@ -82,5 +93,17 @@
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			const files = document.querySelector('#weekly_report_image');
+			const largeFile = document.querySelector('.large-file');
+			files.addEventListener('input', (e) => {
+				if (e.target.files[0].size > 2000000) {
+					largeFile.style.opacity = 1;
+					e.target.value = '';
+				} else {
+					largeFile.style.opacity = 0;
+				}
+			});
+		</script>
 	</body>
 </html>
