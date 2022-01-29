@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="shortcut icon" href="../img/favicon.png" type="image/png" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="../../styles/admin.blog.css" />
-		<title>Blogs | ADMIN</title>
-	</head>
-	<style>
-		.adminNavBlog {
-			color: #da2c27 !important;
-			background: #fff !important;
-		}
 
-		.blog-content {
-			text-align: left;
-		}
-	</style>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="../img/favicon.png" type="image/png" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+	<link rel="stylesheet" href="../../styles/admin.blog.css" />
+	<title>Blogs | ADMIN</title>
+</head>
+<style>
+	.adminNavBlog {
+		color: #da2c27 !important;
+		background: #fff !important;
+	}
 
-	<body>
-		<%- include('../partials/admin-header.ejs') %>
+	.blog-content {
+		text-align: left;
+	}
+</style>
+
+<body>
+	<%- include('../partials/admin-header.ejs') %>
 
 		<div class="container pt-3">
-			<a
-				class="btn"
-				style="background-color: rgb(247, 167, 7); color: white"
-				href="/admin/blog/create"
-				>Create Blog</a
-			>
+			<a class="btn" style="background-color: rgb(247, 167, 7); color: white" href="/admin/blog/create">Create
+				Blog</a>
 		</div>
 		<div class="container pt-3 pl-3">
 			<table class="table table-striped table-hover table align-middle">
@@ -45,53 +38,43 @@
 					<th scope="col" class="text-end">Actions</th>
 				</tr>
 				<% if (data.length<=0) {%>
-				<tr>
-					<td>No blog found!</td>
-				</tr>
-				<% } else {%> <% for(var i=0; i < data.length; i++) { %>
-				<tr>
-					<td>
-						<img draggable="false"
-							class="img-fluid rounded float-start"
-							src="<%= data[i].image.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].image.split('upload/')[1] %>"
-							alt=""
-						/>
-					</td>
-					<td><%= data[i].blog_title %></td>
-					<td class="blog-content">
-						<%= data[i].blog_content.slice(0,250) %>...
-					</td>
-					<td class="text-end">
-						<a
-							href="/admin/blog/<%= data[i].id %>"
-							type="button"
-							class="btn btn-outline-primary m-2"
-							><img draggable="false"
-								src="https://img.icons8.com/windows/32/000000/visible--v2.png"
-						/></a>
-						<a
-							href="/admin/blog/update/<%= data[i].id %>"
-							type="button"
-							class="btn btn-outline-success m-2"
-							><img draggable="false" src="https://img.icons8.com/windows/32/000000/edit--v1.png"
-						/></a>
-						<a
-							href="/admin/blog/delete/<%= data[i].id %>?cloudinaryName=<%= data[i].image %>"
-							type="button"
-							class="btn btn-outline-danger m-2"
-							><img draggable="false"
-								src="https://img.icons8.com/small/32/000000/filled-trash.png"
-						/></a>
-					</td>
-				</tr>
-				<% } %> <% } %>
+					<tr>
+						<td>No blog found!</td>
+					</tr>
+					<% } else {%>
+                        <% for(var i=data.length-1 ; i>=0; i--) { %>
+							<tr>
+								<td>
+									<img draggable="false" class="img-fluid rounded float-start"
+										src="<%= data[i].image.split('upload/')[0]+'upload/f_auto,q_10/'+data[i].image.split('upload/')[1] %>"
+										alt="" />
+								</td>
+								<td>
+									<%= data[i].blog_title %>
+								</td>
+								<td class="blog-content">
+									<%= data[i].blog_content.slice(0,250) %>...
+								</td>
+								<td class="text-end">
+									<a href="/admin/blog/<%= data[i].id %>" type="button"
+										class="btn btn-outline-primary m-2"><img draggable="false"
+											src="https://img.icons8.com/windows/32/000000/visible--v2.png" /></a>
+									<a href="/admin/blog/update/<%= data[i].id %>" type="button"
+										class="btn btn-outline-success m-2"><img draggable="false"
+											src="https://img.icons8.com/windows/32/000000/edit--v1.png" /></a>
+									<a href="/admin/blog/delete/<%= data[i].id %>?cloudinaryName=<%= data[i].image %>"
+										type="button" class="btn btn-outline-danger m-2"><img draggable="false"
+											src="https://img.icons8.com/small/32/000000/filled-trash.png" /></a>
+								</td>
+							</tr>
+							<% } %>
+								<% } %>
 			</table>
 		</div>
 
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-			crossorigin="anonymous"
-		></script>
-	</body>
+			crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -30,8 +30,8 @@
     th {
         text-align: center;
     }
-    .no-record
-    {
+
+    .no-record {
         /* text-align: center; */
         width: 100%;
     }
@@ -60,7 +60,7 @@
                         </td>
                     </tr>
                     <% } else {%>
-                        <% for(var i=0; i < data.length; i++) { %>
+                        <% for(var i=data.length-1 ; i>=0; i--) { %>
                             <tr>
                                 <td>
                                     <%= data[i].client_name %>
