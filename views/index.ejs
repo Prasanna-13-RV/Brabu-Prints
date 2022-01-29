@@ -106,7 +106,7 @@
 				<div class="aboutUsMainDiv">
 					<div class="aboutUsFirstDiv aboutUsFirstDiv1">
 						<div class="aboutUsFirstImage">
-							<img src="../img/EP1A3512.jpg" alt="">
+							<img draggable="false" src="../img/EP1A3512.jpg" alt="">
 						</div>
 						<div class="aboutUsFirstContent">
 							<h1>Pamphelets/Flyers</h1>
@@ -134,12 +134,12 @@
 							</p>
 						</div>
 						<div class="aboutUsFirstImage aboutUsFirstImage2">
-							<img src="../img/EP1A3514.jpg" alt="">
+							<img draggable="false" src="../img/EP1A3514.jpg" alt="">
 						</div>
 					</div>
 					<div class="aboutUsFirstDiv">
 						<div class="aboutUsFirstImage">
-							<img src="../img/EP1A3515.jpg" alt="">
+							<img draggable="false" src="../img/EP1A3515.jpg" alt="">
 						</div>
 						<div class="aboutUsFirstContent">
 							<h1>Packaging Box Prints</h1>
@@ -167,12 +167,12 @@
 								quis in! Rem iusto et suscipit.</p>
 						</div>
 						<div class="aboutUsFirstImage aboutUsFirstImage2">
-							<img src="../img/EP1A3514.jpg" alt="">
+							<img draggable="false" src="../img/EP1A3514.jpg" alt="">
 						</div>
 					</div>
 					<div class="aboutUsFirstDiv">
 						<div class="aboutUsFirstImage">
-							<img src="../img/EP1A3515.jpg" alt="">
+							<img draggable="false" src="../img/EP1A3515.jpg" alt="">
 						</div>
 						<div class="aboutUsFirstContent">
 							<h1>Lorem ipsum dolor</h1>
@@ -380,7 +380,7 @@
 					<div class="imagesShortSection-div">
 						<marquee direction="left">
 							<% clientArray.forEach(clientFor=> { %>
-								<img class="imageImgSection"
+								<img draggable="false" class="imageImgSection"
 									src="<%= clientFor.client_logo.split('upload/')[0]+'upload/f_auto,q_10/'+clientFor.client_logo.split('upload/')[1] %>"
 									alt="">
 								<% }); %>
@@ -417,7 +417,8 @@
 							<div class="swiper-wrapper">
 								<% teamArray.forEach(teamfor=> { %>
 									<div class="swiper-slide">
-										<img src="<%= teamfor.weekly_report_image.split('upload/')[0]+'upload/f_auto,q_10/'+teamfor.weekly_report_image.split('upload/')[1] %>"
+										<img draggable="false"
+											src="<%= teamfor.weekly_report_image.split('upload/')[0]+'upload/f_auto,q_10/'+teamfor.weekly_report_image.split('upload/')[1] %>"
 											alt="">
 									</div>
 									<% }) %>

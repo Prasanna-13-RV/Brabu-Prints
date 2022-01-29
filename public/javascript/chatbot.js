@@ -17,11 +17,11 @@ const chatBody = document.querySelector('.chat-body');
 
 chatReset.addEventListener('click', () => {
 	chatBody.innerHTML = `<div class="each-chat bot">
-	<img src="../img/chatbot/chatbot1.png" alt="" />
+	<img draggable="false" src="../img/chatbot/chatbot1.png" alt="" />
 	<span class="chat-span">Hello</span>
 </div>
 <div class="each-chat bot">
-	<img src="../img/chatbot/chatbot1.png" alt="" />
+	<img draggable="false" src="../img/chatbot/chatbot1.png" alt="" />
 	<span class="chat-span">Enter your name</span>
 </div>
 <form class="each-chat client name-form" onsubmit="nameFormSubmit()">
@@ -60,6 +60,11 @@ window.addEventListener('scroll', (e) => {
 	}
 });
 
+window.addEventListener('load', () => {
+	chat.classList.add('open');
+});
+
+
 const nameFormSubmit = () => {
 	document.querySelector('.name-form button').style.display = 'none';
 	document.querySelector('.name-form input').setAttribute('disabled', true);
@@ -68,7 +73,7 @@ const nameFormSubmit = () => {
 		document.querySelector('.name-form input').value
 	);
 	chatBody.innerHTML += `<div class="each-chat bot">
-	<img src="../img/chatbot/chatbot1.png">
+	<img draggable="false" src="../img/chatbot/chatbot1.png">
 	<span class="chat-span">Enter your e-mail</span>
 	</div>
 	<form class="each-chat client email-form" onsubmit="emailFormSubmit(this)">
@@ -115,7 +120,7 @@ const emailFormSubmit = () => {
 		document.querySelector('.email-form input').value
 	);
 	chatBody.innerHTML += `<div class="each-chat bot">
-	<img src="../img/chatbot/chatbot1.png">
+	<img draggable="false" src="../img/chatbot/chatbot1.png">
 	<span class="chat-span">Enter your phone number</span>
 	</div>
 	<form class="each-chat client phone-form" onsubmit="phoneFormSubmit(this)">
@@ -171,7 +176,7 @@ const phoneFormSubmit = async () => {
 		"We're Dedicated to Providing Growth Services Our goal is to deliver the perfect company growth services at the right time so that businesses can leverage on the momentum and thrive for a long time.  Every suggestion we make has a direct positive impact. You will become a significant corporate associate for us.";
 
 	chatBody.innerHTML += `<div class="each-chat bot">
-	<img src="../img/chatbot/chatbot1.png">
+	<img draggable="false" src="../img/chatbot/chatbot1.png">
 	<p>Thank you, our admin will contact you as soon as possible.</p>
 	</div>`;
 	// <span class="chat-span">Choose stream</span>
