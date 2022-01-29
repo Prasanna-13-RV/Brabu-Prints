@@ -27,7 +27,7 @@
 }
 
 .chat {
-	width: 19rem;
+	width: 19rem !important;
 	transform: scaleY(0);
 	/* background: white linear-gradient( 
 180deg, #e11013 0%, rgba(225, 16, 19, 0.73) 27.6%, rgba(225, 16, 19, 0.55) 52.08%, rgba(225, 16, 19, 0.219411) 78.06%, rgba(225, 16, 19, 0) 100% ); */
