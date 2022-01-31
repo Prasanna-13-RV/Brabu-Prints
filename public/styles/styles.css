@@ -580,7 +580,6 @@ body {
   /* background: #f7a708; */
   color: #1e1e1e;
   margin: 1% 0%;
-  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); */
 }
 
 .common-on-both {
@@ -594,8 +593,9 @@ body {
   padding: 3% 5%;
   font-size: 1.2rem;
   text-align: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   z-index: 2;
-  /* border: 2px solid #f7a708; */
+  border-radius: 20px;
 }
 .common-on-both h1 {
   margin: 1%;
