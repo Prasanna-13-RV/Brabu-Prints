@@ -18,7 +18,7 @@ router.get('/', isloggedin, function (req, res, next) {
 			console.log(err);
 		}
 	});
-});
+});``
 
 // create carousel
 router.get('/create', isloggedin, (req, res) => {

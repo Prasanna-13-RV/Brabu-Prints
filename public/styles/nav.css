@@ -281,7 +281,7 @@ a.site-logo {
 /* mobile breakpoint start */
 @media screen and (max-width: 400px) {
   nav {
-    height: 6rem;
+    height: 5rem;
   }
   a.site-logo {
     width: 10rem;
@@ -323,8 +323,12 @@ a.site-logo {
     transition: 0.3s;
   }
   .site-navbar ul li {
-    width: 100%;
+    width: 75%;
     text-align: center;
+  }
+  li
+  {
+    left: 0%;
   }
   .site-navbar ul li a {
     padding: 25px;
@@ -337,7 +341,7 @@ a.site-logo {
     max-height: 100vh;
     overflow: visible;
     z-index: 20;
-    padding-top: 1%;
+    padding-top: 20%;
   }
   .intro-area h2 {
     font-size: 36px;

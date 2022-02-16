@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.container1 {
+.container2 {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -43,8 +43,7 @@
   position: relative;
 }
 
-.image-left-contact-us-images
-{
+.image-left-contact-us-images {
   width: 80%;
   height: 90%;
   display: flex;
@@ -52,7 +51,6 @@
   justify-content: right;
   align-items: center;
   background: #fff;
-
 }
 
 .image-left-contact-us-images img:nth-child(1) {
@@ -115,7 +113,8 @@
   border: none;
   /* border-bottom: 1px solid #000; */
   background: transparent;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
   color: #000;
   font-size: 16px;
   outline: none;
@@ -129,7 +128,8 @@
   /* border-bottom: 1px solid #000; */
   background: transparent;
   color: #000;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
+    rgb(209, 213, 219) 0px 0px 0px 1px inset;
   font-size: 16px;
   padding: 15px;
   outline: none;
@@ -158,14 +158,19 @@
 }
 
 @media (max-width: 900px) {
-  .image-left-contact-us-images img:nth-child(1)
-  {
+  .image-left-contact-us-images img:nth-child(1) {
     width: 100%;
     object-fit: contain;
   }
+  .input-contact {
+    width: 70%;
+  }
+  .input-contact-message {
+    width: 70%;
+  }
 }
 
-@media (max-width:700px) {
+@media (max-width: 700px) {
   .full-length-contact {
     flex-direction: column;
     margin-bottom: 1.5rem;
@@ -179,9 +184,8 @@
   }
   .image-left-contact-us {
     justify-content: center;
-
-   }
-  .container1 {
+  }
+  .container2 {
     height: auto;
   }
 }

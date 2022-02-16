@@ -85,10 +85,36 @@ footer {
 }
 
 @media (max-width: 930px) {
+  .containerCarousel1
+  {
+    min-height: 70vh !important;
+  }
+  .carousel-inner
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .carousel
+  {
+    width: 95% !important;
+    height: 30rem !important;
+  }
+  .carousel-item
+  {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .classCarouselgallery
+  {
+    height: 100% !important;
+    width: 100% !important;
+  }
   footer
   {
-    height: 30rem;
+    height: 20rem;
     font-size: 2.5rem;
+    margin-top: 40%;
   }
   h1
   {
@@ -103,7 +129,7 @@ footer {
     width: 20rem;
   }
   nav {
-    height: 10rem;
+    height: 8rem;
   } 
   
   .carousel
@@ -116,9 +142,30 @@ footer {
   }
 }
 @media (max-width: 400px) {
+  .containerCarousel1
+  {
+    min-height: 60vh !important;
+  }
+  .carousel-inner
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
   .carousel
   {
-    width: 95%;
+    width: 95% !important;
+    height: 30rem !important;
+  }
+  .carousel-item
+  {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .classCarouselgallery
+  {
+    height: 100% !important;
+    width: 100% !important;
   }
   .classCarouselposter, .classCarouselgallery
   {
@@ -137,7 +184,7 @@ footer {
     width: 16rem;
   }
   nav {
-    height: 10rem;
+    height: 8rem;
   } 
   
   .carousel

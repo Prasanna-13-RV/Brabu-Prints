@@ -602,7 +602,7 @@ body {
 }
 
 .common-on-both p {
-  text-align: justify;
+  text-align: center;
 }
 
 .mission {
@@ -755,7 +755,8 @@ body {
   .mission-vision-main-div {
     flex-direction: column;
   }
-  .mission , .vision {
+  .mission,
+  .vision {
     transform: translate(0px);
     padding: 5% !important;
   }
@@ -774,8 +775,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .infoBtn
-  {
+  .infoBtn {
     width: 65%;
   }
 }
@@ -852,6 +852,7 @@ body {
     margin: 5% 0%;
     height: fit-content;
     font-size: 30px;
+    width: 75%;
   }
   .infoBtn {
     width: 80%;
@@ -862,6 +863,7 @@ body {
   }
   .projectsMainDivFlex1,
   .projectsMainDivFlex2 {
+    grid-template-columns: repeat(1, 1fr);
     flex-direction: column;
   }
   .projectsSubDivDetails {
@@ -913,7 +915,7 @@ body {
     flex-direction: column;
   }
   .common-on-both {
-    width: 90%;
+    width: 100%;
     margin: 5% 0%;
     padding: 0% 6%;
     text-align: left;
