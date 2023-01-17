@@ -1,0 +1,1000 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	font-family: "Poppins";
+	overflow: hidden;
+	background-color: #eee;
+}
+
+section {
+	overflow: hidden;
+}
+
+/* .hero {
+	background-color: rgba(219, 29, 29, 0.897);
+} */
+
+.herodiv {
+	height: 100%;
+}
+
+.cardright1,
+.cardright2,
+.cardright3,
+.card2 {
+	transform: translateX(-500px);
+}
+.cardleft1,
+.cardleft2,
+.cardright3,
+.contactDetail {
+	transform: translateX(500px);
+}
+
+/* Animation Effects start*/
+main {
+	font-size: 1.3em;
+	/* background: #f9f9f9; */
+}
+.container {
+	max-width: 1100px;
+	margin: auto;
+	overflow: auto;
+	padding: 5rem 2rem 0rem 2rem;
+	overflow: hidden;
+}
+
+.main-header {
+	height: 55vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2rem;
+	transform: translate(50px);
+}
+
+.main-header h1 {
+	font-size: 4rem;
+	margin-bottom: 2rem;
+}
+.main-header h1 span {
+	color: #ffffff;
+}
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.imagesbg {
+	width: 15rem;
+	height: 16rem;
+	background-color: #1e90ff;
+	align-content: center;
+	background: url(https://assets.entrepreneur.com/content/3x2/2000/20191112054904-FotoJet32.jpeg)
+		center/cover;
+	-webkit-box-reflect: below 1px
+		linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.267));
+}
+
+.text-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	justify-content: center;
+}
+.text-card h3 {
+	margin: 10px;
+}
+
+.contain {
+	overflow: hidden;
+	margin-top: 4rem;
+}
+
+.cards {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 20px;
+	width: 70%;
+	left: 50%;
+	transform: translateX(-50%);
+	grid-row-gap: 5rem;
+	overflow: hidden;
+}
+
+.contain h1 {
+	text-align: center;
+	font-size: 35px;
+	transform: translateX(-500px);
+}
+
+.contain span {
+	border-bottom: 2px solid black;
+}
+
+.card {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+	background: linear-gradient(45deg, rgb(242, 135, 13), rgb(219, 29, 29));
+	margin-bottom: 6rem;
+	color: white;
+	padding: 0% 3%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.carderror {
+	padding: 3%;
+}
+.card h3 {
+	margin-bottom: 1rem;
+	overflow: hidden;
+	color: white;
+}
+.card img {
+	height: 400px;
+	position: relative;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+.card > div {
+	padding: 2rem;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.card:nth-child(even) img {
+	order: 2;
+}
+.btn {
+	display: inline-block;
+	font-weight: bold;
+	color: #000;
+	padding: 0.8rem 1.8rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 700px) {
+	card {
+		display: block;
+	}
+}
+
+/* Animation Effects Ends*/
+.main-header {
+	position: relative;
+	height: 85vh;
+	background: url(https://www.groupe-psa.com/content/uploads/2018/05/NEWS-DIG-FACTORY-915x450.jpg);
+	animation: change 10s ease-in-out infinite;
+	background-position: fixed;
+}
+
+.main-header::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	backdrop-filter: blur(5px);
+	z-index: 1;
+}
+.main-header p,
+.main-header h1 {
+	z-index: 2;
+}
+.main-header p {
+	color: white;
+	z-index: 2;
+}
+
+/* Part 3 */
+
+.project {
+	width: 100%;
+	height: fit-content;
+}
+.project h1 {
+	text-align: center;
+	font-size: 35px;
+	padding: 40px;
+	padding-top: 80px;
+	transform: translateX(-500px);
+}
+.project span {
+	border-bottom: 2px solid black;
+}
+
+.projectBox {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-row-gap: 1rem;
+	justify-items: center;
+	overflow: hidden;
+}
+
+.projectPart3 {
+	background-color: rgb(87, 85, 85);
+	width: 70%;
+	background: url("https://media.istockphoto.com/photos/digital-marketing-concept-online-advertisement-picture-id1284549946?b=1&k=20&m=1284549946&s=170667a&w=0&h=DaMSS8u0nwYARehKE5DoEdjTPy96UQJ_B3LMRWnhBUY=")
+		center/cover;
+	border-radius: 5%;
+	margin: 20px;
+	height: 180px;
+}
+
+.buttonText {
+	width: 15%;
+	height: 50px;
+	margin: 10px;
+	color: white;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 23px;
+	font-weight: 400;
+	background-color: rgba(219, 29, 29, 0.897);
+}
+
+.ourTeam {
+	text-align: center;
+	font-size: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.ourTeamcontent {
+	overflow: hidden;
+	margin-top: 5%;
+}
+
+.ourTeamcontent span {
+	border-bottom: 2px solid black;
+}
+.ourTeamcontent h1 {
+	margin: 10px;
+	transform: translateX(500px);
+	overflow: hidden;
+}
+.ourTeamcontent p {
+	margin: 2% 10%;
+	transform: translateY(-50px);
+}
+.ourTeamContainer {
+	width: 20rem;
+	height: 15rem;
+	margin: 20px;
+	border-radius: 5%;
+	background-color: rgb(87, 85, 85);
+	background: url("https://www.orfonline.org/wp-content/uploads/2021/06/Digital.jpg")
+		center/cover;
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+	transform: rotate(45deg);
+	overflow: hidden;
+}
+
+.gridOurTeam {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 5rem;
+	grid-row-gap: 2rem;
+	overflow: hidden;
+}
+
+.gallery {
+	overflow: hidden;
+}
+
+.galleryDiv {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 20px 70px 0px 60px;
+	overflow: hidden;
+}
+
+.galleryBox {
+	background-color: rgb(87, 85, 85);
+	width: 17rem;
+	margin: 20px;
+	border-radius: 5%;
+	background: url("https://wayup.my/wp-content/uploads/2020/12/digitaltransformation.jpg")
+		center/cover;
+	height: 180px;
+	overflow: hidden;
+	transform-origin: bottom;
+}
+
+.galleryBox1 {
+	background: url(../img/EP1A3512.jpg) center/cover;
+}
+.galleryBox2 {
+	background: url(../img/EP1A3514.jpg) center/cover;
+}
+.galleryBox3 {
+	background: url(../img/EP1A3515.jpg) center/cover;
+}
+.galleryBox4 {
+	background: url(../img/EP1A3517.jpg) center/cover;
+}
+.galleryBox5 {
+	background: url(../img/EP1A3521.jpg) center/cover;
+}
+.galleryBox6 {
+	background: url(../img/EP1A3522.jpg) center/cover;
+}
+.galleryBox7 {
+	background: url(../img/EP1A3565.jpg) center/cover;
+}
+.galleryBox8 {
+	background: url(../img/EP1A3570.jpg) center/cover;
+}
+.galleryBox9 {
+	background: url(../img/EP1A3596.jpg) center/cover;
+}
+.galleryBox10 {
+	background: url(../img/EP1A3603.jpg) center/cover;
+}
+.galleryBox11 {
+	background: url(../img/EP1A3689.jpg) center/cover;
+}
+.galleryBox12 {
+	background: url(../img/EP1A3695.jpg) center/cover;
+}
+.galleryBox13 {
+	background: url(../img/EP1A3698.jpg) center/cover;
+}
+.galleryBox14 {
+	background: url(../img/EP1A3703.jpg) center/cover;
+}
+.galleryBox15 {
+	background: url(../img/EP1A3711.jpg) center/cover;
+}
+.galleryBox16 {
+	background: url(../img/EP1A3715.jpg) center/cover;
+}
+
+.gallery h1 {
+	text-align: center;
+	font-size: 45px;
+	margin: 4%;
+	transform: translateY(-50px);
+}
+.gallery span {
+	border-bottom: 3px solid black;
+}
+.galleryaTag {
+	position: relative;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	background-color: rgba(219, 29, 29, 0.897);
+	padding: 10px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 12%;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 4% 0%;
+	cursor: pointer;
+}
+
+.galleryaTag1 {
+	display: none;
+}
+
+.business {
+	position: relative;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 3rem;
+}
+.business h1 {
+	padding-bottom: 20px;
+}
+.image {
+	width: 50%;
+}
+img {
+	width: 100%;
+}
+.card2 {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	background: url(https://besthqwallpapers.com/Uploads/12-4-2021/162775/thumb2-blue-digital-circuit-texture-blue-digital-background-circuit-board-background-blue-neon-lines.jpg)
+		center/cover;
+	justify-content: space-between;
+	height: 500px;
+	border-radius: 10px;
+	text-align: center;
+}
+.businessGrowth {
+	position: relative;
+	background-color: rgb(255, 255, 255);
+	max-width: 540px;
+	padding: 3rem;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 1rem;
+	display: none;
+	overflow: hidden;
+	text-align: justify;
+	order: 2;
+}
+.businessGrowth h1 {
+	margin: 1rem;
+	text-align: center;
+}
+.businessGrowth ul {
+	margin-top: 1.5rem;
+}
+.businessGrowth p {
+	line-height: 2rem;
+	text-align: justify;
+}
+.business2 p {
+	margin-top: 0.5rem;
+}
+
+.business3 p {
+	margin-top: 1.5rem;
+}
+.business3 p:nth-child(3) {
+	margin-top: 0rem;
+}
+.business3 p:nth-child(4) {
+	margin-top: 0rem;
+}
+.absolutecontainer {
+	transition: all 0.5s ease-in-out;
+	position: relative;
+}
+
+.options3 {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	width: 50%;
+	align-items: center;
+	padding: 3rem;
+}
+
+.show {
+	position: relative;
+}
+
+.option {
+	width: 80%;
+	background-color: #ffffff;
+	text-align: center;
+	margin: 1rem;
+	padding: 1.5rem;
+	border-radius: 50px;
+	font-size: 1.1rem;
+	font-weight: 500;
+	display: flex;
+	z-index: 2;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 5px 20px rgb(155, 207, 255);
+}
+.option span {
+	display: flex;
+	flex-direction: column;
+}
+.color {
+	background-color: rgba(219, 29, 29, 0.897);
+	box-shadow: 0px 3px 30px rgb(155, 207, 255);
+	color: #f5f7fb;
+	transform: translateY(-5px);
+}
+
+.info {
+	background-color: rgb(248, 248, 248);
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 6rem;
+	display: flex;
+	justify-content: center;
+	border-radius: 20px;
+}
+.infoBtn {
+	box-shadow: 0px 8px 15px rgba(219, 29, 29, 0.897);
+	background-color: rgba(219, 29, 29, 0.897);
+	padding: 1.5rem;
+	width: 300px;
+	border-radius: 20px;
+	margin: 2rem;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.infoBtn a {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+
+.show {
+	display: block;
+}
+.gridBox {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: 1fr;
+	/* grid-column-gap: 3rem; */
+	/* grid-row-gap: 1rem; */
+}
+.grid {
+	height: 150px;
+}
+.innerCard {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+}
+.innerCard h1 {
+	margin-bottom: 1rem;
+	font-size: 2rem;
+	text-align: center;
+	color: #3db2ff;
+}
+.innerCard span {
+	width: 100px;
+	text-align: center;
+}
+.flex-3 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.contactDetail {
+	background-color: rgb(248, 248, 248);
+	margin-top: 4rem;
+	width: 80%;
+	border-radius: 20px;
+	height: fit-content;
+	padding-bottom: 2rem;
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2rem;
+	overflow: hidden;
+}
+.map {
+	width: 45%;
+}
+.map iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+.contactInput {
+	width: 50%;
+}
+.contactInput form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.contactInput input:nth-child(1) {
+	margin-top: 0rem;
+}
+.contactInput input {
+	margin-top: 3rem;
+	width: 80%;
+	height: 25px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	border: none;
+	box-shadow: 0px 0px 5px rgb(192, 192, 192);
+}
+#checkbox {
+	width: auto;
+	height: fit-content;
+	margin: 5%;
+}
+.chexboxDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 65%;
+	padding: 5% 0%;
+}
+
+.text-card1,
+.text-card4 {
+	transform: translateX(-500px);
+}
+.text-card3,
+.text-card6 {
+	transform: translateX(500px);
+}
+.text-card2,
+.text-card5 {
+	transform: translateY(-100px);
+}
+
+.rightProjectPart1,
+.rightProjectPart2,
+.rightProjectPart5,
+.rightProjectPart6 {
+	transform: translateX(-500px);
+}
+.rightProjectPart3,
+.rightProjectPart4,
+.rightProjectPart7,
+.rightProjectPart8 {
+	transform: translateX(500px);
+}
+
+.gallerySection {
+	overflow: hidden;
+}
+
+.showMore1 {
+	display: none;
+}
+
+.info {
+	transform: translateY(-50px);
+}
+
+footer {
+	width: 100%;
+	height: fit-content;
+	background-color: rgb(43, 43, 43);
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+}
+.footerclass h1 {
+	padding: 2.5rem 0rem 1.5rem 0rem;
+}
+
+.footerclass span {
+	border-top: 2px solid rgb(255, 255, 255);
+	margin-bottom: 25px;
+	padding-top: 10px;
+}
+.iconsSocial {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.iconsSocial a {
+	padding: 14px;
+	font-size: 40px;
+	color: white;
+}
+
+.footerptag {
+	font-size: 20px;
+}
+
+.footerclass p {
+	padding: 0.5rem;
+}
+
+.footerclass p:nth-child(1) {
+	font-size: 5px;
+}
+
+.sectionproject {
+	position: relative;
+	overflow: hidden;
+}
+
+.showMore1.displayjs {
+	display: block;
+}
+
+input.submitInput
+{
+	width: 25%;
+	color: white;
+	background-color: rgba(219, 29, 29, 0.897);
+	height: 30px;
+	cursor: pointer;
+
+}
+
+@media (max-width: 400px) {
+	.main-header h1 {
+		font-size: 2.5rem;
+	}
+	.container {
+		padding: 2rem 1rem 0rem 1rem;
+	}
+	.card {
+		grid-template-columns: 1fr;
+		text-align: justify;
+		padding-left: 0%;
+		margin-bottom: 2rem;
+		grid-gap: 0rem;
+	}
+	.card img {
+		height: 100%;
+		/* top: 55%; */
+	}
+	.card:nth-child(even) img {
+		order: 0;
+	}
+	.card2 {
+		position: relative;
+		width: 90%;
+		flex-direction: column;
+		margin-top: 1rem;
+		height: fit-content;
+	}
+	.info {
+		flex-direction: column;
+		width: 80%;
+		margin-top: 3rem;
+		align-items: center;
+		justify-content: center;
+	}
+	.infoBtn {
+		padding: 1rem;
+		width: 250px;
+		margin: 1rem;
+		border-radius: 10px;
+	}
+	.contactDetail {
+		flex-direction: column;
+	}
+	.map {
+		width: 100%;
+		text-align: center;
+		padding: 20px;
+	}
+	.contactDetail {
+		padding-top: 0rem;
+	}
+	.contactInput {
+		width: 100%;
+	}
+	.chexboxDiv {
+		width: 80%;
+	}
+	.contain h1 {
+		font-size: 28px;
+	}
+	.cards {
+		grid-template-columns: 1fr;
+		margin: 0;
+		width: 70%;
+		grid-row-gap: 1rem;
+		margin-top: 2rem;
+	}
+	.projectBox {
+		grid-template-columns: 1fr;
+		position: relative;
+		height: 100%;
+	}
+	.buttonText {
+		width: 80%;
+	}
+	.gridOurTeam {
+		grid-template-columns: 1fr;
+	}
+	.galleryDiv {
+		grid-template-columns: 1fr;
+		overflow: hidden;
+		padding: 0 40px;
+		min-height: 100vh;
+		justify-content: center;
+	}
+	.galleryaTag {
+		width: 40%;
+	}
+	.options3 {
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		top: auto;
+		width: 100%;
+		align-items: center;
+		padding: 3rem;
+		order: 1;
+		z-index: 20;
+		/* transform: translateX(100%); */
+		transform: translateX(-500px);
+		display: none;
+	}
+	.iconabsolute {
+		position: fixed;
+		color: rgb(0, 0, 0);
+		width: 15%;
+		top: 25%;
+		transform: translateY(-50%);
+		left: 85%;
+		z-index: 500;
+	}
+
+	.options3.iconbuttonjs {
+		transform: translateX(0px);
+	}
+	.options3::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		backdrop-filter: blur(6px);
+		width: 80%;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 100%;
+		z-index: 1;
+	}
+	.businessGrowth {
+		flex-direction: column;
+		display: block;
+		padding: 1.5rem;
+	}
+	.flex-3 {
+		flex-direction: column;
+	}
+	.name-backdrop {
+		top: 15%;
+	}
+}
+
+@media (max-width: 800px) {
+	.card {
+		grid-template-columns: 1fr;
+	}
+	.card2 {
+		position: relative;
+		width: 90%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 1rem;
+		font-size: 20px;
+		height: fit-content;
+	}
+	.businessGrowth {
+		flex-direction: column;
+		display: block;
+		padding: 1.5rem;
+	}
+	.options3 {
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		top: auto;
+		width: 100%;
+		align-items: center;
+		padding: 3rem;
+		order: 1;
+		z-index: 20;
+		/* transform: translateX(100%); */
+		transform: translateX(-500px);
+		display: none;
+	}
+	.grid {
+		height: fit-content;
+	}
+	.info {
+		width: 70%;
+	}
+	.contactDetail {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.map {
+		width: 80%;
+		height: 300px;
+		overflow: hidden;
+	}
+	.contactInput {
+		width: 70%;
+	}
+	.contactInput form {
+		margin-top: 50px;
+	}
+	.cards {
+		grid-template-columns: 1fr;
+	}
+	.imagesbg {
+		width: 100%;
+		height: 22rem;
+	}
+	.projectBox {
+		grid-template-columns: 1fr;
+	}
+	.projectPart3 {
+		height: 300px;
+	}
+	.buttonText {
+		width: 50%;
+		height: 70px;
+	}
+	.gridOurTeam {
+		grid-template-columns: 1fr;
+	}
+	.ourTeamContainer {
+		width: 30rem;
+		height: 20rem;
+	}
+	.galleryDiv {
+		grid-template-columns: 1fr;
+		position: relative;
+		justify-items: center;
+		/* padding: 0;
+		left: 50%;
+		transform: translateX(-50%); */
+	}
+	.galleryBox {
+		width: 30rem;
+		height: 320px;
+		left: 0;
+	}
+	.galleryaTag {
+		width: 25%;
+		height: 65px;
+	}
+	.text-card h3
+	{
+		font-size: 25px;
+	}
+	.contactInput input
+	{
+		/* width: 30%; */
+		height: 30px;
+	}
+}
